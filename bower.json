@@ -1,0 +1,24 @@
+{
+  "name": "4pics1wordJQM",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Philip Cesar Garay <philipgaray2@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jbagaresgaray/4pics1wordJQM",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "nativeDroid2": "^2.0.3",
+    "jquery-mobile-bower": "^1.4.5"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4"
+  }
+}

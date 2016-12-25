@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- STYLINGS -->
+    <link rel="stylesheet" type="text/css" href="lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="lib/nativeDroid2/css/nativedroid2.css" />
+    <link rel="stylesheet" type="text/css" href="lib/Waves/dist/waves.css" />
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="lib/nativeDroid2/js/nativedroid2.js"></script>
+    <script type="text/javascript" src="lib/Waves/dist/waves.min.js"></script>
+    <title>4Pics1Word</title>
+</head>
+
+<body>
+    <div data-role="page" id="home">
+        <nd2-include data-src="templates/home/panel.left.html"></nd2-include>
+        <div data-role="panel" id="bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
+            <nd2-include data-src="templates/home/bottom.sheet.html"></nd2-include>
+        </div>
+        <div data-role="panel" id="bottomsheetblock" class="ui-bottom-sheet" data-animate="false" data-position='bottom' data-display="overlay">
+            <nd2-include data-src="templates/home/bottom.sheet.html"></nd2-include>
+        </div>
+        <div data-role="header" data-position="fixed" class="wow fadeIn">
+            <a href="#bottomsheetblock" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
+            <h1 class="wow fadeIn" data-wow-delay='0.4s'>4Pics1Word</h1>
+            <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+        </div>
+        <div data-role="content" class="jqm-content">
+            <a onclick="viewGameInfo()" data-role="button" data-theme="c">Game Info</a>
+            <a onclick="viewAuthor()" data-role="button" data-theme="c">Author</a>
+            <a onclick="viewCategory()" data-role="button" data-theme="g">Start Game</a>
+            <a onclick="closeApp()" data-role="button" data-theme="d">Quit</a>
+        </div>
+    </div>
+</body>
+
+</html>
