@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- STYLINGS -->
+    <link rel="stylesheet" type="text/css" href="../lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/nativeDroid2/css/nativedroid2.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/Waves/dist/waves.css" />
+    <!-- CUSTOM STYLING -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="../lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../lib/nativeDroid2/js/nativedroid2.js"></script>
+    <script type="text/javascript" src="../lib/Waves/dist/waves.min.js"></script>
+    <title>1KWORDS:WORD GUESSING GAME</title>
+</head>
+
+<body>
+    <div data-role="page" id="name">
+        <div data-role="panel" id="bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
+            <nd2-include data-src="../templates/home/bottom.sheet.html"></nd2-include>
+        </div>
+        <div data-role="header" data-position="fixed" class="wow fadeIn">
+            <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
+            <h1 class="wow fadeIn" data-wow-delay='0.4s'></h1>
+        </div>
+        <div class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+            <span class="nd2-title">New Player?</span>
+            <form>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="box">
+                            <label for="name2b">Enter Name:</label>
+                            <input type="text" name="name2" id="name2b" value="" data-clear-btn="true" placeholder="John Doe">
+                            <a href="welcome.html" rel="external" data-ajax="true" class="ui-btn clr-btn-blue">Save</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <hr>
+            <span class="nd2-title">Returning Player?</span>
+            <ul data-role="listview" data-icon="false">
+                <li data-role="list-divider">
+                    Existing Players
+                </li>
+                <li>
+                    <a href="welcome.html" rel="external" data-ajax="true">
+                        <img src="//lorempixel.com/150/150/people/1/" class="ui-thumbnail ui-thumbnail-circular" />
+                        <h2>Ethel Chancy</h2>
+                        <p>ehtel.chancy@example.com</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="welcome.html" rel="external" data-ajax="true">
+                        <img src="//lorempixel.com/150/150/people/2/" class="ui-thumbnail ui-thumbnail-circular" />
+                        <h2>Lorean Gainer</h2>
+                        <p>lorean87@mail.com</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="welcome.html" rel="external" data-ajax="true">
+                        <img src="//lorempixel.com/150/150/people/2/" class="ui-thumbnail ui-thumbnail-circular" />
+                        <h2>Lorean Gainer</h2>
+                        <p>lorean87@mail.com</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="welcome.html" rel="external" data-ajax="true">
+                        <img src="//lorempixel.com/150/150/people/2/" class="ui-thumbnail ui-thumbnail-circular" />
+                        <h2>Lorean Gainer</h2>
+                        <p>lorean87@mail.com</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="welcome.html" rel="external" data-ajax="true">
+                        <img src="//lorempixel.com/150/150/people/2/" class="ui-thumbnail ui-thumbnail-circular" />
+                        <h2>Lorean Gainer</h2>
+                        <p>lorean87@mail.com</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

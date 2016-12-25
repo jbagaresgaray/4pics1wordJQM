@@ -25,7 +25,7 @@
 
 <body>
     <div data-role="page" id="home">
-        <nd2-include data-src="templates/home/panel.left.html"></nd2-include>
+        <!-- <nd2-include data-src="templates/home/panel.left.html"></nd2-include> -->
         <div data-role="panel" id="bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
             <nd2-include data-src="templates/home/bottom.sheet.html"></nd2-include>
         </div>
@@ -34,13 +34,13 @@
         </div>
         <div data-role="header" data-position="fixed" class="wow fadeIn">
             <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
-            <h1 class="wow fadeIn" data-wow-delay='0.4s'>1KWORDS</h1>
-            <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+            <h1 class="wow fadeIn" data-wow-delay='0.4s'></h1>
+            <!-- <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a> -->
         </div>
         <div data-role="content" class="padding-top">
             <ul data-role="listview" data-icon="false">
                 <li>
-                    <a href="#popupDialog" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" class="ui-btn clr-primary">Play</a>
+                    <a href="templates/name.html" rel="external" data-ajax="true" class="ui-btn clr-primary">Play</a>
                 </li>
                 <li>
                     <a href="#popupDialog" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" class="ui-btn clr-warning">Quit</a>
