@@ -90,7 +90,7 @@ gulp.task('serve', function() {
         }
     });
 
-    gulp.watch(['www/index.html','www/templates/**/*.*','www/js/**/*.*','www/css/*.*'])
+    gulp.watch(['www/index.html','www/templates/*.*','www/templates/**/*.*','www/js/*.*','www/js/**/*.*','www/css/*.*'])
         .on('change', browserSync.reload);
 });
 

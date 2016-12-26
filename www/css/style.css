@@ -1,6 +1,8 @@
 .ui-listview {
     margin: 1em 0px !important;
 }
+
+
 /**
  * Content Padding
  * --------------------------------------------------
@@ -10,26 +12,47 @@
     padding: 10px;
 }
 
-.padding-top,
-.padding-vertical {
+.padding-top {
     padding-top: 10px;
 }
 
-.padding-right,
-.padding-horizontal {
+.padding-right {
     padding-right: 10px;
 }
 
-.padding-bottom,
-.padding-vertical {
+.padding-bottom {
     padding-bottom: 10px;
 }
 
-.padding-left,
-.padding-horizontal {
+.padding-left {
     padding-left: 10px;
 }
 
+
+/**
+ * Content Margin
+ * --------------------------------------------------
+ */
+
+.margin {
+    margin: 10px;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.margin-right {
+    margin-right: 10px;
+}
+
+.margin-bottom {
+    margin-bottom: 10px;
+}
+
+.margin-left {
+    margin-left: 10px;
+}
 
 /**
  * Rounded
@@ -67,10 +90,25 @@
 }
 
 .text-left {
-  text-align: left; }
+    text-align: left;
+}
 
 .text-right {
-  text-align: right; }
+    text-align: right;
+}
 
 .text-center {
-  text-align: center; }
+    text-align: center;
+}
+
+
+/**
+ * Welcome Page Animation
+ * --------------------------------------------------
+ */
+
+#welcome h1.nd2-title {
+   
+}
+
+

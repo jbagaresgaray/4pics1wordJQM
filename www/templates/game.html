@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- STYLINGS -->
+    <link rel="stylesheet" type="text/css" href="../lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/nativeDroid2/css/nativedroid2.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/Waves/dist/waves.css" />
+    <!-- CUSTOM STYLING -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="../lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../lib/nativeDroid2/js/nativedroid2.js"></script>
+    <script type="text/javascript" src="../lib/Waves/dist/waves.min.js"></script>
+    <title>1KWORDS:WORD GUESSING GAME</title>
+</head>
+
+<body>
+    <div data-role="page" id="name">
+        <div data-role="header" data-position="fixed" class="wow fadeIn">
+            <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'>
+                <i class="zmdi info-outline zmd-2x"></i>
+            </a>
+            <h1 class="wow fadeIn" data-wow-delay='0.4s'>&nbsp</h1>
+            <a href="#" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-chevron-left zmd-2x"></i></a>
+        </div>
+        <div class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="nd2-card">
+                        <div class="card-media">
+                            <img src="http://nd2.godesign.ch/img/examples/card_bg_1.jpg" height="100px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="nd2-card">
+                        <div class="card-media">
+                            <img src="http://nd2.godesign.ch/img/examples/card_bg_1.jpg" height="100px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="nd2-card">
+                        <div class="card-media">
+                            <img src="http://nd2.godesign.ch/img/examples/card_bg_1.jpg" height="100px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="nd2-card">
+                        <div class="card-media">
+                            <img src="http://nd2.godesign.ch/img/examples/card_bg_1.jpg" height="100px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top:20px">
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-blue-grey">&nbsp</button>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-blue-grey">&nbsp</button>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-blue-grey">&nbsp</button>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-blue-grey">&nbsp</button>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-blue-grey">&nbsp</button>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-blue-grey">&nbsp</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top:40px">
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-grey"><i class="zmd-2x">A</i></button>
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-grey margin-top"><i class="zmd-2x">C</i></button>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-grey"><i class="zmd-2x">B</i></button>
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-grey margin-top"><i class="zmd-2x">B</i></button>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-grey"><i class="zmd-2x">B</i></button>
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-grey margin-top"><i class="zmd-2x">B</i></button>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-grey"><i class="zmd-2x">B</i></button>
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-grey margin-top"><i class="zmd-2x">B</i></button>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-grey"><i class="zmd-2x">B</i></button>
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-grey margin-top"><i class="zmd-2x">B</i></button>
+                    </div>
+                </div>
+                <!-- Unique -->
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <div class="box">
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-green"><i class="zmdi zmdi-help-outline zmd-2x"></i></button>
+                        <button class="ui-btn ui-btn-inline ui-mini clr-btn-green margin-top"><i class="zmdi zmdi-delete zmd-2x"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
