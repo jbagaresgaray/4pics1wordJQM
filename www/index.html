@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" type="text/css" href="lib/nativeDroid2/css/nativedroid2.css" />
     <link rel="stylesheet" type="text/css" href="lib/Waves/dist/waves.css" />
+    <link rel="stylesheet" type="text/css" href="lib/animate.css/animate.min.css" />
     <!-- CUSTOM STYLING -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- JAVASCRIPT -->
@@ -20,33 +21,46 @@
     <script type="text/javascript" src="lib/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="lib/nativeDroid2/js/nativedroid2.js"></script>
     <script type="text/javascript" src="lib/Waves/dist/waves.min.js"></script>
+    <script type="text/javascript" src="lib/lodash/dist/lodash.min.js"></script>
+    <!-- CUSTOM JS -->
+    <script type="text/javascript" src="../js/home/home.js"></script>
+    <script type="text/javascript" src="../js/welcome/welcome.js"></script>
+    <script type="text/javascript" src="../js/category/category.js"></script>
+    <script type="text/javascript" src="../js/game/game.js"></script>
     <title>1KWORDS:WORD GUESSING GAME</title>
 </head>
 
 <body>
     <div data-role="page" id="home">
         <!-- <nd2-include data-src="templates/home/panel.left.html"></nd2-include> -->
-        <div data-role="panel" id="bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
+        <div data-role="panel" id="home_bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
             <nd2-include data-src="templates/home/bottom.sheet.html"></nd2-include>
         </div>
         <div data-role="popup" id="popupDialog">
             <nd2-include data-src="templates/home/quit.dialog.html"></nd2-include>
         </div>
-        <div data-role="header" data-position="fixed" class="wow fadeIn">
-            <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
-            <h1 class="wow fadeIn" data-wow-delay='0.4s'></h1>
-            <!-- <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a> -->
+        <nd2-include data-src="templates/home.html"></nd2-include>
+    </div>
+    <div data-role="page" id="name">
+        <div data-role="panel" id="name_bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
+            <nd2-include data-src="templates/home/bottom.sheet.html"></nd2-include>
         </div>
-        <div data-role="content" class="padding-top">
-            <ul data-role="listview" data-icon="false">
-                <li>
-                    <a href="templates/name.html" rel="external" data-ajax="true" class="ui-btn clr-primary">Play</a>
-                </li>
-                <li>
-                    <a href="#popupDialog" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" class="ui-btn clr-warning">Quit</a>
-                </li>
-            </ul>
+        <nd2-include data-src="templates/name.html"></nd2-include>
+    </div>
+    <div data-role="page" id="welcome">
+        <div data-role="panel" id="welcome_bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
+            <nd2-include data-src="templates/home/bottom.sheet.html"></nd2-include>
         </div>
+        <nd2-include data-src="templates/welcome.html"></nd2-include>
+    </div>
+    <div data-role="page" id="category">
+        <div data-role="panel" id="category_bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
+            <nd2-include data-src="templates/home/bottom.sheet.html"></nd2-include>
+        </div>
+        <nd2-include data-src="templates/category.html"></nd2-include>
+    </div>
+    <div data-role="page" id="game">
+        <nd2-include data-src="templates/game.html"></nd2-include>
     </div>
 </body>
 

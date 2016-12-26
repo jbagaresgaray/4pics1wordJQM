@@ -16,7 +16,10 @@
   ],
   "dependencies": {
     "nativeDroid2": "^2.0.3",
-    "jquery-mobile-bower": "^1.4.5"
+    "jquery-mobile-bower": "^1.4.5",
+    "textillate": "^0.4.0",
+    "animate.css": "^3.5.2",
+    "lodash": "^4.17.3"
   },
   "resolutions": {
     "jquery": "~2.1.4"

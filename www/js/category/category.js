@@ -3,21 +3,23 @@ $(document).ready(function(){
 
 	console.log('category');
 
-	$('#sports_card').click(function(){
+	$(document).on("click","#sports_card",function(){
 		console.log('sports_card');
-		// $.mobile.changePage( "../templates/game.html", { transition: "pop", changeHash: false });
-		window.location.href= "game.html";
+		$.mobile.changePage("#game");
 	});
 
-	$('#vocabulary_card').click(function(){
-		console.log('sports_card');
+	$(document).on("click","#vocabulary_card",function(){
+		console.log('vocabulary_card');
+		$.mobile.changePage("#game");
 	});
 
-	$('#countries_card').click(function(){
-		console.log('sports_card');
+	$(document).on("click","#countries_card",function(){
+		console.log('countries_card');
+		$.mobile.changePage("#game");
 	});
 
-	$('#computer_card').click(function(){
-		console.log('sports_card');
+	$(document).on("click","#computer_card",function(){
+		console.log('computer_card');
+		$.mobile.changePage("#game");
 	});
 });
