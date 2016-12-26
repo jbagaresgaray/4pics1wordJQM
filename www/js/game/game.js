@@ -45,6 +45,8 @@ $(document).ready(function() {
                 var newIndex = (parseInt(obj.index) - 1);
                 if (newIndex == index) {
                     $(item).find('.zmd-lg').text('');
+                    $(item).removeClass('clr-btn-teal');
+                    $(item).addClass('clr-btn-grey');
                 }
             });
         }
