@@ -15,10 +15,12 @@ $(document).ready(function() {
     }
 
     function generateBlocks(len) {
+        $('.word-gen').empty();
+
         for (var i = 0; i < len; i++) {
-            var html = ' <div class="col-xs-2 col-sm-2 col-md-2">\
+            var html = ' <div class="col-xs-2 col-sm-2 col-md-2" style="padding-left: 0px;">\
             <div class="box">\
-                <button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer" style="height: 45px;width: 49px;">\
+                <button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer">\
                     <i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i>\
                 </button>\
             </div>\
@@ -33,11 +35,17 @@ $(document).ready(function() {
         var click_letter = $('.click_letter');
 
         if (word_stack.length <= click_answer.length) {
+
+            word_stack.push({
+                text: obj.text,
+                index: obj.index
+            });
+
             $.each(click_answer, function(index, item) {
                 var text = $(item).find('.zmd-lg').text();
                 if (_.isEmpty(text) && (word_stack.length == (index + 1))) {
                     $(item).find('.zmd-lg').text(obj.text);
-                    $(item).find('.zmd-lg').attr('data-appindex',obj.index);
+                    $(item).find('.zmd-lg').attr('data-appindex', obj.index);
                 }
             });
 
@@ -53,31 +61,30 @@ $(document).ready(function() {
     }
 
     function removeWorkValue(obj) {
-    	console.log('obj: ',obj);
-
         var click_answer = $('.click_answer');
         var click_letter = $('.click_letter');
 
         if (word_stack.length > 0) {
-            var arr_index = _.findIndex(word_stack, { 'index': obj.appindex });
-            console.log('arr_index: ', arr_index);
-
             $.each(click_answer, function(index, item) {
-                var text = $(item).find('.zmd-lg').text();
-                if (_.isEmpty(text) && (word_stack.length == (index + 1))) {
-                    $(item).find('.zmd-lg').text(obj.text);
-                }
-            });
-
-            $.each(click_letter, function(index, item) {
-                var newIndex = (parseInt(obj.index) - 1);
-                if (newIndex == index) {
+            	var appindex = $(item).find('.zmd-lg').attr('data-appindex');
+                if (obj.appindex == appindex) {
                     $(item).find('.zmd-lg').text('');
                 }
             });
 
-            // word_stack = _.filter(word_stack, { 'index': obj.word_stack, 'text': obj.text });
-            console.log('word_stack: ', word_stack);
+            $.each(click_letter, function(index, item) {
+                var indexs = $(this).find('.zmd-lg').data('index');
+                if (obj.appindex == indexs) {
+                    $(item).find('.zmd-lg').text(obj.text);
+
+                    $(item).addClass('clr-btn-teal');
+                    $(item).removeClass('clr-btn-grey');
+                }
+            });
+
+            word_stack = _.filter(word_stack, function(row) {
+                return row.index !== obj.appindex;
+            });
         }
     }
 
@@ -113,11 +120,6 @@ $(document).ready(function() {
         var index = $(this).find('.zmd-lg').data('index');
 
         if (!_.isEmpty(text)) {
-            word_stack.push({
-                text: text,
-                index: index
-            });
-
             addWorkValue({
                 text: text,
                 index: index

@@ -54,6 +54,7 @@
     margin-left: 10px;
 }
 
+
 /**
  * Rounded
  * --------------------------------------------------
@@ -107,8 +108,39 @@
  * --------------------------------------------------
  */
 
-#welcome h1.nd2-title {
-   
+#welcome h1.nd2-title {}
+
+
+/**
+ * Game Page Animation
+ * --------------------------------------------------
+ */
+
+#game h1.ui-title {
+    line-height: 2.1em;
 }
 
+#game .ui-btn-score {
+    margin-right: 45px;
+    width: 3em;
+    line-height: 2.1em;
+}
 
+#game .click_answer {
+    height: 45px;
+    width: 49px;
+    box-shadow: 0px 0px 10px 1px #fff;
+}
+
+.ui-mobile #game.ui-page {
+    background: #2b2e31 !important;
+}
+
+#game .ui-footer {
+    background-color: transparent;
+    border: transparent;
+}
+
+#game .word-gen{
+    padding-top:20px;
+}
