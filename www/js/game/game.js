@@ -147,13 +147,35 @@ $(document).ready(function() {
 
         var boxindex = getRandomInt((word.length - 1));
         var letter = _.toArray(word);
+        var appindex;
+
+        $.each($('.click_letter'), function(index, item) {
+            var text = $(item).find('.zmd-lg').text();
+            if (letter[boxindex] == text) {
+                $(item).find('.zmd-lg').text('');
+
+                appindex = $(this).find('.zmd-lg').data('index');
+                console.log('appindex: ', appindex);
+
+                $(item).removeClass('clr-btn-teal');
+                $(item).addClass('clr-btn-grey');
+                return false;
+            }
+        });
 
         $.each($('.click_answer'), function(index, item) {
             var text = $(item).find('.zmd-lg').text();
             if (boxindex == index) {
                 if (_.isEmpty(text)) {
                     $(item).find('.zmd-lg').text(letter[boxindex]);
+                    $(item).find('.zmd-lg').attr('data-appindex', appindex);
+                    
                     hint_stack.push(letter[boxindex]);
+
+                    word_stack.push({
+                        text: letter[boxindex],
+                        index: appindex
+                    });
                 }
             } else {
                 if (_.isEmpty(text)) {
@@ -162,18 +184,10 @@ $(document).ready(function() {
             }
         });
 
-        $.each($('.click_letter'), function(index, item) {
-            var text = $(item).find('.zmd-lg').text();
-            if (letter[boxindex] == text) {
-                $(item).find('.zmd-lg').text('');
-                $(item).removeClass('clr-btn-teal');
-                $(item).addClass('clr-btn-grey');
-                return false;
-            }
-        });
+
 
         if (hint_stack.length == word.length) {
-        	var hintvalue = [];
+            var hintvalue = [];
             $.each($('.click_answer'), function(index, item) {
                 var text = $(item).find('.zmd-lg').text();
                 hintvalue.push(text);
