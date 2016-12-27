@@ -2,6 +2,10 @@
     margin: 1em 0px !important;
 }
 
+.clr-white {
+    color: #FFFFFF;
+}
+
 
 /**
  * Content Padding
@@ -141,6 +145,19 @@
     border: transparent;
 }
 
-#game .word-gen{
-    padding-top:20px;
+#game .word-gen {
+    padding-top: 20px;
+}
+
+#game .ui-popup-container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 70px !important;
+    left: 0 !important;
+    max-width: 100% !important;
+}
+
+#game .ui-popup .ui-header .ui-title{
+    text-align: center;
 }

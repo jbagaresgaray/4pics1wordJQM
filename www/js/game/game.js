@@ -30,11 +30,36 @@ $(document).ready(function() {
         }
     }
 
+    function animateWrongAnswer() {
+        var blinker = function() {
+            $('.word-gen').fadeOut(500);
+            $('.word-gen').fadeIn(500);
+        }
+
+        $.each($('.click_answer'), function(index, item) {
+            var text = $(item).find('.zmd-lg').text();
+            $(item).find('.zmd-lg').addClass('clr-red');
+        });
+
+        var refreshIntervalId = setInterval(blinker, 400);
+
+        setTimeout(function() {
+            clearInterval(refreshIntervalId);
+
+            setTimeout(function() {
+                $.each($('.click_answer'), function(index, item) {
+                    var text = $(item).find('.zmd-lg').text();
+                    $(item).find('.zmd-lg').addClass('clr-white');
+                });
+            }, 400);
+        }, 1000)
+    }
+
     function addWorkValue(obj) {
         var click_answer = $('.click_answer');
         var click_letter = $('.click_letter');
 
-        if (word_stack.length <= click_answer.length) {
+        if (word_stack.length < click_answer.length) {
 
             word_stack.push({
                 text: obj.text,
@@ -57,6 +82,24 @@ $(document).ready(function() {
                     $(item).addClass('clr-btn-grey');
                 }
             });
+
+            var answord = _.map(word_stack, function(row) {
+                return row.text
+            }).join().replace(/,/g, "");
+
+            console.log('word_stack: ', answord);
+
+            if (word_stack.length == word.length) {
+                if (answord == word) {
+                    setTimeout(function() {
+                        console.log('show modal');
+                        $('#showCorrect').trigger('click');
+                        // $.mobile.changePage("#correctDialog", { role: "dialog", transition: "pop" });
+                    }, 600);
+                } else {
+                    animateWrongAnswer();
+                }
+            }
         }
     }
 
@@ -66,7 +109,7 @@ $(document).ready(function() {
 
         if (word_stack.length > 0) {
             $.each(click_answer, function(index, item) {
-            	var appindex = $(item).find('.zmd-lg').attr('data-appindex');
+                var appindex = $(item).find('.zmd-lg').attr('data-appindex');
                 if (obj.appindex == appindex) {
                     $(item).find('.zmd-lg').text('');
                 }
@@ -88,16 +131,8 @@ $(document).ready(function() {
         }
     }
 
-
-
-    $(document).on("pagebeforeshow", "#game", function() { // When entering pagetwo
-        console.log("game is about to be shown");
-    });
-
-    $(document).on("pageshow", "#game", function() { // When entering pagetwo
-        console.log("game is now shown");
-
-        $('#zoom_thumbnail').hide();
+    function generateGame() {
+        word_stack = [];
 
         word = 'play';
         var len = 12 - parseInt(word.length);
@@ -113,7 +148,33 @@ $(document).ready(function() {
             var idname = '#letter_' + i;
             $(idname).text(row);
         });
+
+        $.each($('.click_letter'), function(index, item) {
+            $(item).addClass('clr-btn-teal');
+            $(item).removeClass('clr-btn-grey');
+        });
+    }
+
+
+
+    $(document).on("pagebeforeshow", "#game", function() { // When entering pagetwo
+        console.log("game is about to be shown");
     });
+
+    $(document).on("pageshow", "#game", function() { // When entering pagetwo
+        console.log("game is now shown");
+
+        $('#zoom_thumbnail').hide();
+
+        generateGame();
+    });
+
+    $("#correctDialog").on("popupafterclose", function(event, ui) {
+        console.log('correctDialog has closed.');
+
+        generateGame();
+    });
+
 
     $(document).on("click", ".click_letter", function() {
         var text = $(this).find('.zmd-lg').text();
@@ -142,8 +203,6 @@ $(document).ready(function() {
             });
         }
     });
-
-
 
     $(document).on("click", ".zoom_thumbnail", function() {
         console.log('hide zoom');
