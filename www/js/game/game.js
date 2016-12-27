@@ -217,6 +217,9 @@ $(document).ready(function() {
         usedQuestions = [];
         question = {};
 
+        $('.contentinfo').hide();
+        $('#grid_thumbnail').empty();
+        $('.word-gen').empty();
 
         var game = new GameServices();
         params = store.get('params');
@@ -244,6 +247,8 @@ $(document).ready(function() {
                         i++;
                         $('#letter_' + i).text(row);
                     });
+
+                    $('.contentinfo').show();
                 }
 
 
@@ -275,6 +280,7 @@ $(document).ready(function() {
                         i++;
                         $('#letter_' + i).text(row);
                     });
+                    $('.contentinfo').show();
                 }
             });
         } else if (params == 'vocabulary') {
@@ -301,10 +307,11 @@ $(document).ready(function() {
                         i++;
                         $('#letter_' + i).text(row);
                     });
+                    $('.contentinfo').show();
                 }
             });
         } else if (params == 'computer') {
-            game.getComputerData().then(function(data) {
+            /*game.getComputerData().then(function(data) {
                 console.log('computer: ', data);
                 questions = data;
                 questions = _.shuffle(questions);
@@ -327,8 +334,9 @@ $(document).ready(function() {
                         i++;
                         $('#letter_' + i).text(row);
                     });
+                    $('.contentinfo').show();
                 }
-            });
+            });*/
         }
 
 
