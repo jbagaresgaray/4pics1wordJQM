@@ -131,6 +131,10 @@ $(document).ready(function() {
         }
     }
 
+    function generateHint(){
+    	
+    }
+
     function generateGame() {
         word_stack = [];
 
