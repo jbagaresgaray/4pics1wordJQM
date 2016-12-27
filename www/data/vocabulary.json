@@ -1,0 +1,34 @@
+[{
+    "answer": "pretty",
+    "images": [
+        "assets/vocabulary/pretty/1.png",
+        "assets/vocabulary/pretty/2.png",
+        "assets/vocabulary/pretty/3.png",
+        "assets/vocabulary/pretty/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "attractive to look at usually in a simple or delicate way : pleasant to look at or listen to"
+}, {
+    "answer": "read",
+    "images": [
+        "assets/vocabulary/read/1.png",
+        "assets/vocabulary/read/2.png",
+        "assets/vocabulary/read/3.png",
+        "assets/vocabulary/read/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "to look at and understand the meaning of letters, words, symbols, etc. : to read the words of (a book, magazine, etc.) : to speak aloud the words of (something written)"
+}, {
+    "answer": "love",
+    "images": [
+        "assets/vocabulary/love/1.png",
+        "assets/vocabulary/love/2.png",
+        "assets/vocabulary/love/3.png",
+        "assets/vocabulary/love/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "strong affection for another arising out of kinship or personal ties <maternal love for a child> (2) :  attraction based on sexual desire :  affection and tenderness felt by lovers (3):  affection based on admiration, benevolence, or common interests <love for his old schoolmates>"
+}]

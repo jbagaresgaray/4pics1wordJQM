@@ -31,6 +31,9 @@
 </head>
 
 <body>
+    <!-- 
+        HOME
+     -->
     <div data-role="page" id="home">
         <!-- <nd2-include data-src="templates/home/panel.left.html"></nd2-include> -->
         <div data-role="panel" id="home_bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
@@ -41,30 +44,57 @@
         </div>
         <nd2-include data-src="templates/home.html"></nd2-include>
     </div>
+    <!-- 
+        ABOUT
+     -->
     <div data-role="page" id="about">
         <nd2-include data-src="templates/about.html"></nd2-include>
     </div>
+    <!-- 
+        HELP
+     -->
     <div data-role="page" id="help">
         <nd2-include data-src="templates/help.html"></nd2-include>
     </div>
+    <!-- 
+        SETTINGS
+     -->
+    <div data-role="page" id="settings">
+        <nd2-include data-src="templates/settings.html"></nd2-include>
+    </div>
+    <!-- 
+        NAME
+     -->
     <div data-role="page" id="name">
         <div data-role="panel" id="name_bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
             <nd2-include data-src="templates/home/bottom.sheet.html"></nd2-include>
         </div>
         <nd2-include data-src="templates/name.html"></nd2-include>
     </div>
+    <!-- 
+        WELCOME
+     -->
     <div data-role="page" id="welcome">
         <div data-role="panel" id="welcome_bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
             <nd2-include data-src="templates/home/bottom.sheet.html"></nd2-include>
         </div>
+        <div data-role="popup" id="quitpopupDialog">
+            <nd2-include data-src="templates/home/quit.dialog.html"></nd2-include>
+        </div>
         <nd2-include data-src="templates/welcome.html"></nd2-include>
     </div>
+    <!-- 
+        CATEGORY
+     -->
     <div data-role="page" id="category">
         <div data-role="panel" id="category_bottomsheet" class="ui-bottom-sheet ui-bottom-sheet-list" data-animate="false" data-position='bottom' data-display="overlay">
             <nd2-include data-src="templates/home/bottom.sheet.html"></nd2-include>
         </div>
         <nd2-include data-src="templates/category.html"></nd2-include>
     </div>
+    <!-- 
+        GAME
+     -->
     <div data-role="page" id="game">
         <div data-role="popup" id="jokerDialog">
             <nd2-include data-src="templates/game/more.sheet.html"></nd2-include>

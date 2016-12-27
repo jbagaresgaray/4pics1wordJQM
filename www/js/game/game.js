@@ -9,7 +9,6 @@ $(document).ready(function() {
     function stringGen(len) {
         var text = "";
         var charset = "abcdefghijklmnopqrstuvwxyz";
-
         for (var i = 0; i < len; i++)
             text += charset.charAt(Math.floor(Math.random() * charset.length));
 
@@ -21,14 +20,7 @@ $(document).ready(function() {
         $('.word-gen').empty();
 
         for (var i = 0; i < len; i++) {
-            var html = ' <div class="col-xs-2 col-sm-2 col-md-2" style="padding-left: 0px;">\
-            <div class="box">\
-                <button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer">\
-                    <i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i>\
-                </button>\
-            </div>\
-        </div>';
-
+            var html = ' <div class="col-xs-2 col-sm-2 col-md-2" style="padding-left: 0px;"><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
             $('.word-gen').append(html);
         }
     }
@@ -59,17 +51,11 @@ $(document).ready(function() {
     }
 
     function addWorkValue(obj) {
-        var click_answer = $('.click_answer');
-        var click_letter = $('.click_letter');
+        if (word_stack.length < $('.click_answer').length) {
 
-        if (word_stack.length < click_answer.length) {
+            word_stack.push({ text: obj.text, index: obj.index });
 
-            word_stack.push({
-                text: obj.text,
-                index: obj.index
-            });
-
-            $.each(click_answer, function(index, item) {
+            $.each($('.click_answer'), function(index, item) {
                 var text = $(item).find('.zmd-lg').text();
                 if (_.isEmpty(text) && (word_stack.length == (index + 1))) {
                     $(item).find('.zmd-lg').text(obj.text);
@@ -77,13 +63,14 @@ $(document).ready(function() {
                 }
             });
 
-            $.each(click_letter, function(index, item) {
+            $.each($('.click_letter'), function(index, item) {
                 var newIndex = (parseInt(obj.index) - 1);
                 if (newIndex == index) {
                     $(item).find('.zmd-lg').text('');
                     $(item).removeClass('clr-btn-teal');
                     $(item).addClass('clr-btn-grey');
                 }
+
             });
 
             var answord = _.map(word_stack, function(row) {
@@ -91,39 +78,37 @@ $(document).ready(function() {
             }).join().replace(/,/g, "");
 
             if (word_stack.length == word.length) {
-                if (answord == word) {
+                if (answord == word)
                     setTimeout(function() {
                         console.log('show modal');
                         $('#showCorrect').trigger('click');
                         // $.mobile.changePage("#correctDialog", { role: "dialog", transition: "pop" });
                     }, 600);
-                } else {
+                else
                     animateWrongAnswer();
-                }
+
             }
         }
     }
 
     function removeWorkValue(obj) {
-        var click_answer = $('.click_answer');
-        var click_letter = $('.click_letter');
-
         if (word_stack.length > 0) {
-            $.each(click_answer, function(index, item) {
+            $.each($('.click_answer'), function(index, item) {
                 var appindex = $(item).find('.zmd-lg').attr('data-appindex');
-                if (obj.appindex == appindex) {
+                if (obj.appindex == appindex)
                     $(item).find('.zmd-lg').text('');
-                }
             });
 
-            $.each(click_letter, function(index, item) {
+            $.each($('.click_letter'), function(index, item) {
                 var indexs = $(this).find('.zmd-lg').data('index');
+
                 if (obj.appindex == indexs) {
                     $(item).find('.zmd-lg').text(obj.text);
 
                     $(item).addClass('clr-btn-teal');
                     $(item).removeClass('clr-btn-grey');
                 }
+
             });
 
             word_stack = _.filter(word_stack, function(row) {
@@ -169,7 +154,7 @@ $(document).ready(function() {
                 if (_.isEmpty(text)) {
                     $(item).find('.zmd-lg').text(letter[boxindex]);
                     $(item).find('.zmd-lg').attr('data-appindex', appindex);
-                    
+
                     hint_stack.push(letter[boxindex]);
 
                     word_stack.push({
@@ -263,12 +248,8 @@ $(document).ready(function() {
         var text = $(this).find('.zmd-lg').text();
         var index = $(this).find('.zmd-lg').data('index');
 
-        if (!_.isEmpty(text)) {
-            addWorkValue({
-                text: text,
-                index: index
-            });
-        }
+        if (!_.isEmpty(text))
+            addWorkValue({ text: text, index: index });
     });
 
     $(document).on("click", ".click_answer", function() {
@@ -278,13 +259,8 @@ $(document).ready(function() {
         var index = $(this).find('.zmd-lg').data('index');
         var appindex = $(this).find('.zmd-lg').data('appindex');
 
-        if (!_.isEmpty(text)) {
-            removeWorkValue({
-                text: text,
-                index: index,
-                appindex: appindex
-            });
-        }
+        if (!_.isEmpty(text))
+            removeWorkValue({ text: text, index: index, appindex: appindex });
     });
 
     $(document).on("click", ".zoom_thumbnail", function() {

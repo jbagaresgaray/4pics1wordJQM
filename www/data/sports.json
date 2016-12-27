@@ -1,8 +1,34 @@
-[
-	{
-		"answer":"backdoor",
-		"images":[{
-			
-		}]
-	}
-]
+[{
+    "answer": "backdoor",
+    "images": [
+        "assets/vocabulary/backdoor/1.png",
+        "assets/vocabulary/backdoor/2.png",
+        "assets/vocabulary/backdoor/3.png",
+        "assets/vocabulary/backdoor/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "involving or being a play in basketball in which a player moves behind the defense and toward the basket to receive a quick pass"
+}, {
+    "answer": "hit",
+    "images": [
+        "assets/vocabulary/hit/1.png",
+        "assets/vocabulary/hit/2.png",
+        "assets/vocabulary/hit/3.png",
+        "assets/vocabulary/hit/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "to obtain (as a goal) through effort."
+}, {
+    "answer": "forecourt",
+    "images": [
+        "assets/vocabulary/forecourt/1.png",
+        "assets/vocabulary/forecourt/2.png",
+        "assets/vocabulary/forecourt/3.png",
+        "assets/vocabulary/forecourt/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "the area near the net in a court game"
+}]

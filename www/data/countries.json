@@ -1,0 +1,36 @@
+[{
+    "answer": "cyprus",
+    "images": [
+        "assets/vocabulary/cyprus/1.png",
+        "assets/vocabulary/cyprus/2.png",
+        "assets/vocabulary/cyprus/3.png",
+        "assets/vocabulary/cyprus/4.png"
+    ],
+    "hastip": false,
+    "tipimage": "",
+    "tip": "involving or being a play in basketball in which a player moves behind the defense and toward the basket to receive a quick pass"
+},
+{
+    "answer": "georgia",
+    "images": [
+        "assets/vocabulary/georgia/1.png",
+        "assets/vocabulary/georgia/2.png",
+        "assets/vocabulary/georgia/3.png",
+        "assets/vocabulary/georgia/4.png"
+    ],
+    "hastip": false,
+    "tipimage": "",
+    "tip": "involving or being a play in basketball in which a player moves behind the defense and toward the basket to receive a quick pass"
+},
+{
+    "answer": "pakistan",
+    "images": [
+        "assets/vocabulary/pakistan/1.png",
+        "assets/vocabulary/pakistan/2.png",
+        "assets/vocabulary/pakistan/3.png",
+        "assets/vocabulary/pakistan/4.png"
+    ],
+    "hastip": false,
+    "tipimage": "",
+    "tip": "involving or being a play in basketball in which a player moves behind the defense and toward the basket to receive a quick pass"
+}]
