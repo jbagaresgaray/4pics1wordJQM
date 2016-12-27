@@ -217,6 +217,11 @@ $(document).ready(function() {
             $(item).addClass('clr-btn-teal');
             $(item).removeClass('clr-btn-grey');
         });
+
+        var game = new GameServices();
+        game.getSportsData().then(function(data){
+            console.log('sports: ',data);
+        });
     }
 
 
