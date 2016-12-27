@@ -1,10 +1,10 @@
 [{
     "answer": "backdoor",
     "images": [
-        "assets/vocabulary/backdoor/1.png",
-        "assets/vocabulary/backdoor/2.png",
-        "assets/vocabulary/backdoor/3.png",
-        "assets/vocabulary/backdoor/4.png"
+        "assets/sports/backdoor/1.png",
+        "assets/sports/backdoor/2.png",
+        "assets/sports/backdoor/3.png",
+        "assets/sports/backdoor/4.png"
     ],
     "hastip": true,
     "tipimage": "",
@@ -12,10 +12,10 @@
 }, {
     "answer": "hit",
     "images": [
-        "assets/vocabulary/hit/1.png",
-        "assets/vocabulary/hit/2.png",
-        "assets/vocabulary/hit/3.png",
-        "assets/vocabulary/hit/4.png"
+        "assets/sports/hit/1.png",
+        "assets/sports/hit/2.png",
+        "assets/sports/hit/3.png",
+        "assets/sports/hit/4.png"
     ],
     "hastip": true,
     "tipimage": "",
@@ -23,10 +23,10 @@
 }, {
     "answer": "forecourt",
     "images": [
-        "assets/vocabulary/forecourt/1.png",
-        "assets/vocabulary/forecourt/2.png",
-        "assets/vocabulary/forecourt/3.png",
-        "assets/vocabulary/forecourt/4.png"
+        "assets/sports/forecourt/1.png",
+        "assets/sports/forecourt/2.png",
+        "assets/sports/forecourt/3.png",
+        "assets/sports/forecourt/4.png"
     ],
     "hastip": true,
     "tipimage": "",

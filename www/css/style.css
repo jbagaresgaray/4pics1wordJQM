@@ -131,9 +131,13 @@
 }
 
 #game .click_answer {
-    height: 45px;
+    /*height: 45px;
     width: 49px;
+    box-shadow: 0px 0px 10px 1px #fff;*/
+    height: 35px;
+    width: 39px;
     box-shadow: 0px 0px 10px 1px #fff;
+    font-size: 10px;
 }
 
 .ui-mobile #game.ui-page {
@@ -149,7 +153,7 @@
     padding-top: 20px;
 }
 
-#game .ui-popup-container{
+#game .ui-popup-container {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -158,6 +162,6 @@
     max-width: 100% !important;
 }
 
-#game .ui-popup .ui-header .ui-title{
+#game .ui-popup .ui-header .ui-title {
     text-align: center;
 }

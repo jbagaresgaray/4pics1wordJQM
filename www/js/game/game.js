@@ -5,6 +5,10 @@ $(document).ready(function() {
     var word_stack = [];
     var hint_stack = [];
     var numbers = [];
+    var params;
+    var questions = [];
+    var usedQuestions = [];
+    var question = {};
 
     function stringGen(len) {
         var text = "";
@@ -18,10 +22,22 @@ $(document).ready(function() {
 
     function generateBlocks(len) {
         $('.word-gen').empty();
-
         for (var i = 0; i < len; i++) {
-            var html = ' <div class="col-xs-2 col-sm-2 col-md-2" style="padding-left: 0px;"><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
+            var html;
+            if((i + 1) > 6){
+                html = ' <div class="col-xs-2 col-sm-2 col-md-2" style="padding-left: 0px;padding-top: 10px;"><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
+            }else{
+                html = ' <div class="col-xs-2 col-sm-2 col-md-2" style="padding-left: 0px;"><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
+            }
             $('.word-gen').append(html);
+        }
+    }
+
+    function generateGridThumbnails(array) {
+        $('#grid_thumbnail').empty();
+        for (var i = 0; i < array.length; i++) {
+            var html = '<div class="col-xs-6 col-sm-6 col-md-6"><div class="nd2-card grid-media"><div class="card-media"><img src="' + array[i] + '" height="100%"></div></div></div>';
+            $('#grid_thumbnail').append(html);
         }
     }
 
@@ -197,40 +213,141 @@ $(document).ready(function() {
         word_stack = [];
         numbers = [];
         hint_stack = [];
+        questions = [];
+        usedQuestions = [];
+        question = {};
 
-        word = 'play';
-        var len = 12 - parseInt(word.length);
-        var stringgen = stringGen(len);
-        var newword = word + stringgen;
-        var shuffleword = _.shuffle(newword);
 
-        generateBlocks(parseInt(word.length));
+        var game = new GameServices();
+        params = store.get('params');
+        if (params == 'sports') {
+            game.getSportsData().then(function(data) {
+                console.log('sports: ', data);
+                questions = data;
+                questions = _.shuffle(questions);
 
-        var i = 0;
-        _.each(shuffleword, function(row) {
-            i++;
-            var idname = '#letter_' + i;
-            $(idname).text(row);
-        });
+                question = questions[Math.floor(Math.random() * questions.length)];
+                if (!_.isEmpty(question)) {
+
+                    generateGridThumbnails(question.images);
+
+                    word = question.answer;
+                    var len = 12 - parseInt(word.length);
+                    var stringgen = stringGen(len);
+                    var newword = word + stringgen;
+                    var shuffleword = _.shuffle(newword);
+
+                    generateBlocks(parseInt(word.length));
+
+                    var i = 0;
+                    _.each(shuffleword, function(row) {
+                        i++;
+                        $('#letter_' + i).text(row);
+                    });
+                }
+
+
+
+                /*usedQuestions.push(rand);
+                store.set('usedquestions',JSON.stringify(usedQuestions));*/
+            });
+        } else if (params == 'countries') {
+            game.getCountriesData().then(function(data) {
+                console.log('countries: ', data);
+                questions = data;
+                questions = _.shuffle(questions);
+
+                question = questions[Math.floor(Math.random() * questions.length)];
+                if (!_.isEmpty(question)) {
+
+                    generateGridThumbnails(question.images);
+
+                    word = question.answer;
+                    var len = 12 - parseInt(word.length);
+                    var stringgen = stringGen(len);
+                    var newword = word + stringgen;
+                    var shuffleword = _.shuffle(newword);
+
+                    generateBlocks(parseInt(word.length));
+
+                    var i = 0;
+                    _.each(shuffleword, function(row) {
+                        i++;
+                        $('#letter_' + i).text(row);
+                    });
+                }
+            });
+        } else if (params == 'vocabulary') {
+            game.getVocabularyData().then(function(data) {
+                console.log('vocabulary: ', data);
+                questions = data;
+                questions = _.shuffle(questions);
+
+                question = questions[Math.floor(Math.random() * questions.length)];
+                if (!_.isEmpty(question)) {
+
+                    generateGridThumbnails(question.images);
+
+                    word = question.answer;
+                    var len = 12 - parseInt(word.length);
+                    var stringgen = stringGen(len);
+                    var newword = word + stringgen;
+                    var shuffleword = _.shuffle(newword);
+
+                    generateBlocks(parseInt(word.length));
+
+                    var i = 0;
+                    _.each(shuffleword, function(row) {
+                        i++;
+                        $('#letter_' + i).text(row);
+                    });
+                }
+            });
+        } else if (params == 'computer') {
+            game.getComputerData().then(function(data) {
+                console.log('computer: ', data);
+                questions = data;
+                questions = _.shuffle(questions);
+
+                question = questions[Math.floor(Math.random() * questions.length)];
+                if (!_.isEmpty(question)) {
+
+                    generateGridThumbnails(question.images);
+
+                    word = question.answer;
+                    var len = 12 - parseInt(word.length);
+                    var stringgen = stringGen(len);
+                    var newword = word + stringgen;
+                    var shuffleword = _.shuffle(newword);
+
+                    generateBlocks(parseInt(word.length));
+
+                    var i = 0;
+                    _.each(shuffleword, function(row) {
+                        i++;
+                        $('#letter_' + i).text(row);
+                    });
+                }
+            });
+        }
+
+
+
 
         $.each($('.click_letter'), function(index, item) {
             $(item).addClass('clr-btn-teal');
             $(item).removeClass('clr-btn-grey');
         });
 
-        var game = new GameServices();
-        game.getSportsData().then(function(data){
-            console.log('sports: ',data);
-        });
     }
 
 
 
-    $(document).on("pagebeforeshow", "#game", function() { // When entering pagetwo
+    $(document).on("pagebeforeshow", "#game", function(event, data) { // When entering pagetwo
         console.log("game is about to be shown");
     });
 
-    $(document).on("pageshow", "#game", function() { // When entering pagetwo
+    $(document).on("pageshow", "#game", function(event, data) { // When entering pagetwo
         console.log("game is now shown");
 
         $('#zoom_thumbnail').hide();
@@ -269,14 +386,15 @@ $(document).ready(function() {
     });
 
     $(document).on("click", ".zoom_thumbnail", function() {
-        console.log('hide zoom');
         $('#grid_thumbnail').show();
         $('#zoom_thumbnail').hide();
     });
 
     $(document).on("click", ".grid-media", function() {
-        console.log('hide grid');
         $('#grid_thumbnail').hide();
         $('#zoom_thumbnail').show();
+
+        var img = $(this).find('.card-media img').attr('src');
+        $('.zoom_thumbnail').find('.card-media img').attr('src',img);
     });
 });
