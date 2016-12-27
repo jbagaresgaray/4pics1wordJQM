@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     var word;
     var word_stack = [];
+    var numbers = [];
 
     function stringGen(len) {
         var text = "";
@@ -13,6 +14,7 @@ $(document).ready(function() {
 
         return text;
     }
+
 
     function generateBlocks(len) {
         $('.word-gen').empty();
@@ -87,8 +89,6 @@ $(document).ready(function() {
                 return row.text
             }).join().replace(/,/g, "");
 
-            console.log('word_stack: ', answord);
-
             if (word_stack.length == word.length) {
                 if (answord == word) {
                     setTimeout(function() {
@@ -131,12 +131,40 @@ $(document).ready(function() {
         }
     }
 
-    function generateHint(){
-    	
+    function generateHint() {
+        var getRandomInt = function(max) {
+            var num = Math.floor(Math.random() * (max - 0 + 1)) + 0;
+            var result = _.indexOf(numbers, num);
+            if (result > -1) {
+                return getRandomInt(max);
+            } else {
+                numbers.push(num);
+                return num;
+            }
+        }
+
+
+        var boxindex = getRandomInt((word.length - 1));
+        var letter =  _.toArray(word);
+        console.log('letter: ', letter[boxindex]);
+
+        $.each($('.click_answer'), function(index, item) {
+            var text = $(item).find('.zmd-lg').text();
+            if (boxindex == index) {
+                if (_.isEmpty(text)) {
+                    $(item).find('.zmd-lg').text(letter[boxindex]);
+                }
+            } else {
+                if (_.isEmpty(text)) {
+                    $(item).find('.zmd-lg').text('');
+                }
+            }
+        });
     }
 
     function generateGame() {
         word_stack = [];
+        numbers = [];
 
         word = 'play';
         var len = 12 - parseInt(word.length);
@@ -175,8 +203,12 @@ $(document).ready(function() {
 
     $("#correctDialog").on("popupafterclose", function(event, ui) {
         console.log('correctDialog has closed.');
-
         generateGame();
+    });
+
+    $(document).on("click", "#game .hint-confirm", function() {
+        console.log('generate Hint');
+        generateHint();
     });
 
 
