@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     var word;
     var word_stack = [];
+    var hint_stack = [];
     var numbers = [];
 
     function stringGen(len) {
@@ -145,14 +146,14 @@ $(document).ready(function() {
 
 
         var boxindex = getRandomInt((word.length - 1));
-        var letter =  _.toArray(word);
-        console.log('letter: ', letter[boxindex]);
+        var letter = _.toArray(word);
 
         $.each($('.click_answer'), function(index, item) {
             var text = $(item).find('.zmd-lg').text();
             if (boxindex == index) {
                 if (_.isEmpty(text)) {
                     $(item).find('.zmd-lg').text(letter[boxindex]);
+                    hint_stack.push(letter[boxindex]);
                 }
             } else {
                 if (_.isEmpty(text)) {
@@ -160,11 +161,43 @@ $(document).ready(function() {
                 }
             }
         });
+
+        $.each($('.click_letter'), function(index, item) {
+            var text = $(item).find('.zmd-lg').text();
+            if (letter[boxindex] == text) {
+                $(item).find('.zmd-lg').text('');
+                $(item).removeClass('clr-btn-teal');
+                $(item).addClass('clr-btn-grey');
+                return false;
+            }
+        });
+
+        if (hint_stack.length == word.length) {
+        	var hintvalue = [];
+            $.each($('.click_answer'), function(index, item) {
+                var text = $(item).find('.zmd-lg').text();
+                hintvalue.push(text);
+            });
+
+            var answord = _.map(hintvalue, function(row) {
+                return row
+            }).join().replace(/,/g, "");
+
+            if (answord == word) {
+                setTimeout(function() {
+                    console.log('show modal');
+                    $('#showCorrect').trigger('click');
+                }, 600);
+            } else {
+                animateWrongAnswer();
+            }
+        }
     }
 
     function generateGame() {
         word_stack = [];
         numbers = [];
+        hint_stack = [];
 
         word = 'play';
         var len = 12 - parseInt(word.length);
