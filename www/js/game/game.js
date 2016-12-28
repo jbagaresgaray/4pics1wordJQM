@@ -9,6 +9,7 @@ $(document).ready(function() {
     var questions = [];
     var usedQuestions = [];
     var question = {};
+    var activePlayer = {};
 
     function stringGen(len) {
         var text = "";
@@ -75,7 +76,7 @@ $(document).ready(function() {
                     $(item).find('.zmd-lg').text(obj.text);
                     $(item).find('.zmd-lg').attr('data-appindex', obj.index);
                     return false;
-                }else if (_.isEmpty(text)) {
+                } else if (_.isEmpty(text)) {
                     $(item).find('.zmd-lg').text(obj.text);
                     $(item).find('.zmd-lg').attr('data-appindex', obj.index);
                     return false;
@@ -96,24 +97,29 @@ $(document).ready(function() {
             }).join().replace(/,/g, "");
 
             if (word_stack.length == word.length) {
-                if (answord == word)
+                if (answord == word) {
+                    var game = new GameServices();
+                    game.saveScore(params, 'quiz', activePlayer);
+                    game.saveLevel(params,activePlayer);
+
                     setTimeout(function() {
                         $('#showCorrect').trigger('click');
                     }, 600);
-                else
+                } else {
                     animateWrongAnswer();
-
+                }
             }
+
         }
     }
 
     function removeWorkValue(obj) {
         if (word_stack.length > 0) {
             $.each($('.click_answer'), function(index, item) {
-                var appindex = $(item).find('.zmd-lg').attr('data-appindex');                
-                if (obj.appindex == appindex){
+                var appindex = $(item).find('.zmd-lg').attr('data-appindex');
+                if (obj.appindex == appindex) {
                     $(item).find('.zmd-lg').text('');
-                    $(item).find('.zmd-lg').attr('data-appindex','');
+                    $(item).find('.zmd-lg').attr('data-appindex', '');
                     return false;
                 }
             });
@@ -175,6 +181,16 @@ $(document).ready(function() {
                         text: letter[boxindex],
                         index: appindex
                     });
+
+                    // Deduct points on every hint
+                    var game = new GameServices();
+                    game.saveScore(params, 'hint', activePlayer);
+                    game.saveLevel(params,activePlayer);
+
+                    // Refresh Scoring
+                    activePlayer = game.getActivePlayer();
+                    $('#game .game-score').text(activePlayer[params]);
+
                 }
             } else {
                 if (_.isEmpty(text)) {
@@ -197,8 +213,10 @@ $(document).ready(function() {
             }).join().replace(/,/g, "");
 
             if (answord == word) {
+                var game = new GameServices();
+                game.saveScore(params, 'quiz', activePlayer);
+
                 setTimeout(function() {
-                    console.log('show modal');
                     $('#showCorrect').trigger('click');
                 }, 600);
             } else {
@@ -221,7 +239,16 @@ $(document).ready(function() {
 
         var game = new GameServices();
         params = store.get('params');
+        activePlayer = game.getActivePlayer();
+        $('#game .game-score').text(activePlayer[params]);
+
+        function formatN(n) {
+            return n > 9 ? "" + n : "0" + n;
+        }
+
         if (params == 'sports') {
+            $('#game .leveling').text(formatN(activePlayer.sports_level));
+
             game.getSportsData().then(function(data) {
                 console.log('sports: ', data);
                 questions = data;
@@ -254,7 +281,9 @@ $(document).ready(function() {
                 /*usedQuestions.push(rand);
                 store.set('usedquestions',JSON.stringify(usedQuestions));*/
             });
-        } else if (params == 'countries') {
+        } else if (params == 'country') {
+            $('#game .leveling').text(formatN(activePlayer.country_level));
+
             game.getCountriesData().then(function(data) {
                 console.log('countries: ', data);
                 questions = data;
@@ -282,6 +311,8 @@ $(document).ready(function() {
                 }
             });
         } else if (params == 'vocabulary') {
+            $('#game .leveling').text(formatN(activePlayer.vocabulary_level));
+
             game.getVocabularyData().then(function(data) {
                 console.log('vocabulary: ', data);
                 questions = data;
@@ -309,6 +340,8 @@ $(document).ready(function() {
                 }
             });
         } else if (params == 'computer') {
+            $('#game .leveling').text(formatN(activePlayer.computer_level));
+
             /*game.getComputerData().then(function(data) {
                 console.log('computer: ', data);
                 questions = data;
@@ -348,10 +381,6 @@ $(document).ready(function() {
     }
 
 
-
-    $(document).on("pagebeforeshow", "#game", function(event, data) { // When entering pagetwo
-        console.log("game is about to be shown");
-    });
 
     $(document).on("pageshow", "#game", function(event, data) { // When entering pagetwo
         console.log("game is now shown");

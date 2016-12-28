@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     $(document).on("click", "#countries_card", function() {
         console.log('countries_card');
-        store.set('params', 'countries');
+        store.set('params', 'country');
         $.mobile.changePage("#game");
     });
 

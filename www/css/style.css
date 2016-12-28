@@ -112,8 +112,13 @@
  * --------------------------------------------------
  */
 
-#welcome h1.nd2-title {}
+#welcome h3.nd2-title {
+    text-transform: uppercase;
+}
 
+#welcome .row{
+    margin-top: 60px;
+}
 
 /**
  * Game Page Animation
