@@ -25,9 +25,9 @@ $(document).ready(function() {
         for (var i = 0; i < len; i++) {
             var html;
             if((i + 1) > 6){
-                html = ' <div class="col-xs-2 col-sm-2 col-md-2" style="padding-left: 0px;padding-top: 10px;"><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
+                html = ' <div class="col-xs-2 col-sm-2 col-md-2" style="padding-top: 10px;"><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
             }else{
-                html = ' <div class="col-xs-2 col-sm-2 col-md-2" style="padding-left: 0px;"><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
+                html = ' <div class="col-xs-2 col-sm-2 col-md-2"><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
             }
             $('.word-gen').append(html);
         }

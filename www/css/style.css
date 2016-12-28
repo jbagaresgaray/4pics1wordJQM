@@ -165,3 +165,71 @@
 #game .ui-popup .ui-header .ui-title {
     text-align: center;
 }
+
+span.leveling {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    margin-left: 7px;
+    padding-bottom: 7px;
+    bottom: 1px;
+}
+
+.burst-8 {
+    margin-left: 5px;
+    background: red;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20eg);
+}
+
+.burst-8:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background: red;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+}
+
+.burst-12 {
+    margin-left: 5px;
+    background: red;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+}
+.burst-12:before, .burst-12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background: red;
+}
+.burst-12:before {
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+}
+.burst-12:after {
+    -webkit-transform: rotate(60deg);
+       -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+         -o-transform: rotate(60deg);
+}
