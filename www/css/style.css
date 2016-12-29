@@ -142,6 +142,15 @@
     background-color: #e8e2b3;
 }
 
+.ui-page-theme-a .correct-sheet {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+#correctDialog.ui-popup.ui-body-inherit {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 
 /**
  * Home Page Animation
@@ -266,7 +275,7 @@
 // }
 #game .ui-btn-score {
     margin-right: 40px;
-    width: 4em;
+    width: 4.5em;
     display: flex;
     height: 2em;
 }

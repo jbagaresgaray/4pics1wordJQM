@@ -87,7 +87,7 @@ $(document).ready(function() {
                 var newIndex = (parseInt(obj.index) - 1);
                 if (newIndex == index) {
                     $(item).find('.zmd-lg').text('');
-                    $(item).removeClass('clr-btn-teal');
+                    $(item).removeClass('clr-btn-indigo');
                     $(item).addClass('clr-btn-grey');
                 }
             });
@@ -128,7 +128,7 @@ $(document).ready(function() {
                 var indexs = $(this).find('.zmd-lg').data('index');
                 if (obj.appindex == indexs) {
                     $(item).find('.zmd-lg').text(obj.text);
-                    $(item).addClass('clr-btn-teal');
+                    $(item).addClass('clr-btn-indigo');
                     $(item).removeClass('clr-btn-grey');
                     return false;
                 }
@@ -163,7 +163,7 @@ $(document).ready(function() {
             if (letter[boxindex] == text) {
                 $(item).find('.zmd-lg').text('');
                 appindex = $(this).find('.zmd-lg').data('index');
-                $(item).removeClass('clr-btn-teal');
+                $(item).removeClass('clr-btn-indigo');
                 $(item).addClass('clr-btn-grey');
                 return false;
             }
@@ -255,6 +255,7 @@ $(document).ready(function() {
                 questions = _.shuffle(questions);
 
                 question = questions[Math.floor(Math.random() * questions.length)];
+                console.log('question: ', question);
                 if (!_.isEmpty(question)) {
 
                     generateGridThumbnails(question.images);
@@ -290,6 +291,7 @@ $(document).ready(function() {
                 questions = _.shuffle(questions);
 
                 question = questions[Math.floor(Math.random() * questions.length)];
+                console.log('question: ', question);
                 if (!_.isEmpty(question)) {
 
                     generateGridThumbnails(question.images);
@@ -319,6 +321,7 @@ $(document).ready(function() {
                 questions = _.shuffle(questions);
 
                 question = questions[Math.floor(Math.random() * questions.length)];
+                console.log('question: ', question);
                 if (!_.isEmpty(question)) {
 
                     generateGridThumbnails(question.images);
@@ -374,7 +377,7 @@ $(document).ready(function() {
 
 
         $.each($('.click_letter'), function(index, item) {
-            $(item).addClass('clr-btn-teal');
+            $(item).addClass('clr-btn-indigo');
             $(item).removeClass('clr-btn-grey');
         });
 
