@@ -37,7 +37,7 @@ $(document).ready(function() {
     function generateGridThumbnails(array) {
         $('#grid_thumbnail').empty();
         for (var i = 0; i < array.length; i++) {
-            var html = '<div class="col-xs-6 col-sm-6 col-md-6"><div class="nd2-card grid-media"><div class="card-media"><img src="' + array[i] + '" height="100%"></div></div></div>';
+            var html = '<div class="col-xs-6 col-sm-6 col-md-6"><div class="grid-media"><img src="' + array[i] + '" height="100%" class="img-thumbnail"></div></div>';
             $('#grid_thumbnail').append(html);
         }
     }
@@ -434,7 +434,7 @@ $(document).ready(function() {
         $('#grid_thumbnail').hide();
         $('#zoom_thumbnail').show();
 
-        var img = $(this).find('.card-media img').attr('src');
-        $('.zoom_thumbnail').find('.card-media img').attr('src', img);
+        var img = $(this).find('img').attr('src');
+        $('.zoom_thumbnail').find('img').attr('src', img);
     });
 });

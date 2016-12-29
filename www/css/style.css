@@ -6,6 +6,20 @@
     color: #FFFFFF;
 }
 
+.img-thumbnail {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
 
 /**
  * Content Padding
@@ -123,12 +137,16 @@
     background: #e8e2b3;
 }
 
+.ui-mobile .ui-page .ui-btn:hover,
+.ui-mobile .ui-page .ui-btn:active {
+    background-color: #e8e2b3;
+}
+
 
 /**
  * Home Page Animation
  * --------------------------------------------------
  */
-
 
 #home .ui-content {
     position: absolute;
@@ -155,41 +173,64 @@
     color: #ffffff;
 }
 
+
 /**
  * PLAYER Page Animation
  * --------------------------------------------------
  */
 
- #name #name_bottomsheet {
+#name #name_bottomsheet {
     background: #518ea0;
 }
 
- #name #name_bottomsheet .ui-bottom-sheet-link strong {
+#name #name_bottomsheet .ui-bottom-sheet-link strong {
     display: block;
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
 }
+
 
 /**
  * Welcome Page Animation
  * --------------------------------------------------
  */
 
-#welcome h3.nd2-title {
+#welcome h1.appuser {
     text-transform: uppercase;
+    font-weight: 600;
+    /*text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+    color: #fff;*/
+    background-color: #171616;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
 }
 
 #welcome #welcome_bottomsheet {
     background: #518ea0;
 }
 
- #welcome #welcome_bottomsheet .ui-bottom-sheet-link strong {
+#welcome #welcome_bottomsheet .ui-bottom-sheet-link strong {
     display: block;
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
 }
+
 
 /**
  * Category Page Animation
@@ -200,11 +241,18 @@
     background: #518ea0;
 }
 
- #category #category_bottomsheet .ui-bottom-sheet-link strong {
+#category #category_bottomsheet .ui-bottom-sheet-link strong {
     display: block;
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
+}
+
+#category .nd2-card {
+    background: url('../assets/app/categorybox.png') no-repeat;
+    background-size: 100% 100%;
+    box-shadow: none;
+    padding: 20px;
 }
 
 
@@ -213,14 +261,14 @@
  * --------------------------------------------------
  */
 
-#game h1.ui-title {
-    line-height: 2.1em;
-}
-
+// #game h1.ui-title {
+//     line-height: 2.1em;
+// }
 #game .ui-btn-score {
-    margin-right: 45px;
-    width: 3em;
-    line-height: 2.1em;
+    margin-right: 40px;
+    width: 4em;
+    display: flex;
+    height: 2em;
 }
 
 #game .click_answer {
@@ -234,9 +282,15 @@
 }
 
 .ui-mobile #game.ui-page {
-    background: #2b2e31 !important;
+    background: #518ea0 !important;
 }
 
+// #game.ui-page .game-ui-header {
+//     background-color: #223e8b !important;
+//     color: #ffffff !important;
+//     border-color: #162059 !important;
+//     border-width: 0 1px 4px 1px !important;
+// }
 #game .ui-footer {
     background-color: transparent;
     border: transparent;
@@ -263,9 +317,9 @@ span.leveling {
     display: block;
     position: absolute;
     z-index: 2;
-    margin-left: 7px;
-    padding-bottom: 7px;
     bottom: 1px;
+    margin-left: 85px;
+    padding-bottom: 20px;
 }
 
 .burst-8 {

@@ -1,20 +1,26 @@
-<div data-role="header" data-position="fixed" class="wow fadeIn">
-    <a href="#jokerDialog" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" class="ui-btn ui-btn-right ui-btn-inline wow fadeIn" data-wow-delay='1.2s'>
-        <i class="zmdi zmdi-info-outline zmd-lg"></i>
+<div data-role="header" data-position="fixed" class="wow fadeIn game-ui-header">
+    <a href="#jokerDialog" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" class="ui-btn ui-btn-right ui-btn-inline wow fadeIn" data-wow-delay='1.2s' data-theme="none" data-shadow="false">
+        <img src="assets/app/info.png" border="0" style="height: 40px;" />
     </a>
     <a class="ui-btn-score ui-btn ui-btn-right ui-btn-inline wow fadeIn" data-wow-delay='1.2s'>
-        <i class="zmdi zmdi-money zmd-lg"></i>
+        <img src="assets/app/greenribon.png" border="0" style="height: 40px;margin-right: 5px;" />
         <span class="game-score">0</span>
     </a>
-    <h1 class="wow fadeIn" data-wow-delay='0.4s'><span class="leveling">15</span><div class="burst-12"></div></h1>
-    <a data-rel="back" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-chevron-left zmd-2x"></i></a>
+    <!-- <h1 class="wow fadeIn" data-wow-delay='0.4s'><span class="leveling">15</span><div class="burst-12"></div></h1> -->
+    <div class="text-left" style="height: 4em">
+        <img src="assets/app/leveling1.png" border="0" style="height: 50px;margin-top: 8px;margin-left: 70px;" />
+        <span class="leveling">15</span>
+    </div>
+    <a data-rel="back" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='1.2s' data-theme="none" data-shadow="false">
+        <img src="assets/app/back.png" border="0" style="height: 40px;" />
+    </a>
 </div>
 <div class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
     <div class="row" id="zoom_thumbnail">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="nd2-card zoom_thumbnail">
+            <div class="zoom_thumbnail">
                 <div class="card-media">
-                    <img src="assets/computer.png" height="100%">
+                    <img src="assets/computer.png" height="100%" class="img-thumbnail" style="margin: 0 auto;display: flex;">
                 </div>
             </div>
         </div>
