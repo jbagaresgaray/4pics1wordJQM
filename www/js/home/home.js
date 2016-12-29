@@ -16,6 +16,16 @@ $(document).ready(function() {
         $('#name .player-listview').listview('refresh');
     }
 
+    function exitFromApp() {
+        if (navigator.app) {
+            navigator.app.exitApp();
+        } else if (navigator.device) {
+            navigator.device.exitApp();
+        } else {
+            console.log('window.close();');
+        }
+    }
+
     $(document).on("pageshow", "#name", function(event, data) { // When entering pagetwo
         $('#name input[name="playername"]').empty();
 
@@ -51,5 +61,12 @@ $(document).ready(function() {
         setTimeout(function() {
             $.mobile.changePage("#welcome");
         }, 600);
+    });
+
+
+
+    $(document).on("click", "#popupDialog .ui-btn-quit", function() {
+        console.log('quit app');
+        exitFromApp();
     });
 });

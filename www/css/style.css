@@ -108,6 +108,54 @@
 
 
 /**
+ * General Animation
+ * --------------------------------------------------
+ */
+
+.ui-page-theme-a .ui-header {
+    background-color: #ec4b74 !important;
+    color: #ffffff;
+    border-color: #b71841;
+    border-width: 0 1px 4px 1px;
+}
+
+.ui-mobile .ui-page {
+    background: #e8e2b3;
+}
+
+
+/**
+ * Home Page Animation
+ * --------------------------------------------------
+ */
+
+
+#home .ui-content {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 10px solid #b9b388;
+    border-radius: 15px;
+}
+
+#home #popupDialog {
+    background: #e8e2b3;
+}
+
+#home #home_bottomsheet {
+    background: #518ea0;
+}
+
+#home #home_bottomsheet .ui-bottom-sheet-link strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/**
  * Welcome Page Animation
  * --------------------------------------------------
  */
@@ -116,9 +164,10 @@
     text-transform: uppercase;
 }
 
-#welcome .row{
+#welcome .row {
     margin-top: 60px;
 }
+
 
 /**
  * Game Page Animation
@@ -217,7 +266,9 @@ span.leveling {
     position: relative;
     text-align: center;
 }
-.burst-12:before, .burst-12:after {
+
+.burst-12:before,
+.burst-12:after {
     content: "";
     position: absolute;
     top: 0;
@@ -226,15 +277,17 @@ span.leveling {
     width: 30px;
     background: red;
 }
+
 .burst-12:before {
     -webkit-transform: rotate(30deg);
-       -moz-transform: rotate(30deg);
-        -ms-transform: rotate(30deg);
-         -o-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
 }
+
 .burst-12:after {
     -webkit-transform: rotate(60deg);
-       -moz-transform: rotate(60deg);
-        -ms-transform: rotate(60deg);
-         -o-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
 }
