@@ -1,23 +1,29 @@
 <div data-role="header" data-position="fixed" class="wow fadeIn">
-    <a href="#name_bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'  data-theme="none" data-shadow="false">
+    <a href="#name_bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s' data-theme="none" data-shadow="false">
         <img src="assets/app/more.png" border="0" style="height: 40px;" />
     </a>
-    <h1 class="wow fadeIn" data-wow-delay='0.4s'>&nbsp</h1>
-    <a data-rel="back" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-chevron-left zmd-2x"></i></a>
+    <div class="text-center" style="height: 4em">
+        <img src="assets/app/player.png" border="0" style="height: 40px;margin-top: 15px;" />
+    </div>
+    <a data-rel="back" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='1.2s' data-theme="none" data-shadow="false">
+        <img src="assets/app/back.png" border="0" style="height: 40px;" />
+    </a>
 </div>
 <div class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
-    <span class="nd2-title">New Player?</span>
-    <form>
+    <h1 class="nd2-title">New Player?</h1>
+    <!-- <form>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="box">
-                    <label for="playername">Enter Name:</label>
                     <input type="text" name="playername" id="playername" value="" data-clear-btn="true" placeholder="John Doe">
-                    <a href="#" data-ajax="true" class="ui-btn clr-btn-blue player-save">Save</a>
+                    
                 </div>
             </div>
         </div>
-    </form>
+    </form> -->
+    <a href="#createPlayerDialog" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-transition="pop" data-ajax="true" data-theme="none" data-shadow="false" class="ui-btn">
+        <img src="assets/app/createplayer.png" border="0" height="70px" />
+    </a>
     <hr>
     <span class="nd2-title">Existing Players</span>
     <ul data-role="listview" data-icon="false" class="player-listview">

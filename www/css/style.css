@@ -156,6 +156,22 @@
 }
 
 /**
+ * PLAYER Page Animation
+ * --------------------------------------------------
+ */
+
+ #name #name_bottomsheet {
+    background: #518ea0;
+}
+
+ #name #name_bottomsheet .ui-bottom-sheet-link strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/**
  * Welcome Page Animation
  * --------------------------------------------------
  */
@@ -164,8 +180,31 @@
     text-transform: uppercase;
 }
 
-#welcome .row {
-    margin-top: 60px;
+#welcome #welcome_bottomsheet {
+    background: #518ea0;
+}
+
+ #welcome #welcome_bottomsheet .ui-bottom-sheet-link strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/**
+ * Category Page Animation
+ * --------------------------------------------------
+ */
+
+#category #category_bottomsheet {
+    background: #518ea0;
+}
+
+ #category #category_bottomsheet .ui-bottom-sheet-link strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 
