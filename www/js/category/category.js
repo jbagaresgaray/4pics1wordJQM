@@ -5,8 +5,12 @@ $(document).ready(function() {
 
     $(document).on("click", "#sports_card", function() {
         console.log('sports_card');
-        store.set('params', 'sports');
-        $.mobile.changePage("#game");
+        if (store.get('actions') == 'play') {
+            store.set('params', 'sports');
+            $.mobile.changePage("#game");
+        } else {
+            $.mobile.changePage("#scoreboard");
+        }
     });
 
     $(document).on("click", "#vocabulary_card", function() {
