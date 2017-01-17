@@ -1,34 +1,45 @@
 [{
+    "answer": "backalley",
+    "images": [
+        "assets/sports/back_alley/1.jpg",
+        "assets/sports/back_alley/2.jpg",
+        "assets/sports/back_alley/3.jpg",
+        "assets/sports/back_alley/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/back_alley/definition/1.gif",
+    "tip": "Area between the back boundary line and the long service line for doubles."
+},{
     "answer": "backdoor",
     "images": [
-        "assets/sports/backdoor/1.png",
-        "assets/sports/backdoor/2.png",
-        "assets/sports/backdoor/3.png",
-        "assets/sports/backdoor/4.png"
+        "assets/sports/backdoor/1.jpg",
+        "assets/sports/backdoor/2.jpg",
+        "assets/sports/backdoor/3.jpg",
+        "assets/sports/backdoor/4.jpg"
     ],
     "hastip": true,
-    "tipimage": "",
-    "tip": "involving or being a play in basketball in which a player moves behind the defense and toward the basket to receive a quick pass"
-}, {
-    "answer": "hit",
+    "tipimage": "assets/sports/backdoor/definition/1.jpg",
+    "tip": "involving or being a play in basketball in which a player moves behind the defense and toward the basket to receive a quick pass ."
+},{
+    "answer": "backhand",
     "images": [
-        "assets/sports/hit/1.png",
-        "assets/sports/hit/2.png",
-        "assets/sports/hit/3.png",
-        "assets/sports/hit/4.png"
+        "assets/sports/backhand/1.jpg",
+        "assets/sports/backhand/2.jpg",
+        "assets/sports/backhand/3.png",
+        "assets/sports/backhand/4.jpg"
     ],
     "hastip": true,
-    "tipimage": "",
-    "tip": "to obtain (as a goal) through effort."
-}, {
-    "answer": "forecourt",
+    "tipimage": "assets/sports/backhand/definition/1.png",
+    "tip": "a stroke made with the back of the hand turned in the direction of movement; also :  the side on which such strokes are made."
+},{
+    "answer": "backspin",
     "images": [
-        "assets/sports/forecourt/1.png",
-        "assets/sports/forecourt/2.png",
-        "assets/sports/forecourt/3.png",
-        "assets/sports/forecourt/4.png"
+        "assets/sports/backspin/1.jpg",
+        "assets/sports/backspin/2.jpg",
+        "assets/sports/backspin/3.jpg",
+        "assets/sports/backspin/4.jpg"
     ],
     "hastip": true,
-    "tipimage": "",
-    "tip": "the area near the net in a court game"
+    "tipimage": "assets/sports/backspin/definition/1.jpg",
+    "tip": "a backward rotary motion of a ball"
 }]

@@ -28,13 +28,13 @@ $(document).ready(function() {
         }
     }, false);
 
-    $(document).on("click", ".ui-btn-play", function() {
+    $(document).on("click", "#welcome .ui-btn-play", function() {
         console.log('ui-btn-play');
         store.set('actions', 'play');
         $.mobile.changePage("#category");
     });
 
-    $(document).on("click", ".ui-btn-scoreboard", function() {
+    $(document).on("click", "#welcome .ui-btn-scoreboard", function() {
         console.log('ui-btn-scoreboard');
         store.set('actions', 'scoreboard');
         $.mobile.changePage("#category");
