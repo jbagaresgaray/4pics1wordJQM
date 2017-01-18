@@ -42,4 +42,103 @@
     "hastip": true,
     "tipimage": "assets/sports/backspin/definition/1.jpg",
     "tip": "a backward rotary motion of a ball"
+},{
+    "answer": "backswing",
+    "images": [
+        "assets/sports/backswing/1.jpg",
+        "assets/sports/backswing/2.jpg",
+        "assets/sports/backswing/3.jpg",
+        "assets/sports/backswing/4.gif"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/backswing/definition/1.jpg",
+    "tip": "the movement of a club, racket, bat, or arm backward to a position from which the forward or downward swing is made."
+},{
+    "answer": "baseline",
+    "images": [
+        "assets/sports/baseline/1.jpg",
+        "assets/sports/baseline/2.jpg",
+        "assets/sports/baseline/3.png",
+        "assets/sports/baseline/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/baseline/definition/1.png",
+    "tip": "a line serving as a basis; especially :  one of known measure or position used (as in surveying or navigation) to calculate or locate something"
+},{
+    "answer": "block",
+    "images": [
+        "assets/sports/block/1.jpg",
+        "assets/sports/block/2.jpg",
+        "assets/sports/block/3.jpg",
+        "assets/sports/block/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/block/definition/1.jpg",
+    "tip": "an obstruction of an opponent&#39;s play in sports; especially :  a halting or impeding of the progress or movement of an opponent in football by use of the body."
+},{
+    "answer": "bouncepass",
+    "images": [
+        "assets/sports/bounce_pass/1.jpg",
+        "assets/sports/bounce_pass/2.jpg",
+        "assets/sports/bounce_pass/3.jpg",
+        "assets/sports/bounce_pass/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/bounce_pass/definition/1.png",
+    "tip": "a pass to a teammate that is made by bouncing the ball once"
+},{
+    "answer": "crosscourt",
+    "images": [
+        "assets/sports/crosscourt/1.jpg",
+        "assets/sports/crosscourt/2.jpg",
+        "assets/sports/crosscourt/3.jpg",
+        "assets/sports/crosscourt/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/crosscourt/definition/1.jpg",
+    "tip": "to or toward the opposite side of a court (as in tennis or basketball)"
+},{
+    "answer": "fastbreak",
+    "images": [
+        "assets/sports/fast_break/1.jpg",
+        "assets/sports/fast_break/2.jpg",
+        "assets/sports/fast_break/3.jpg",
+        "assets/sports/fast_break/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/fast_break/definition/1.jpg",
+    "tip": "a quick offensive drive toward a goal (as in basketball) in an attempt to score before the opponent&#39;s defense is set up"
+},{
+    "answer": "forehand",
+    "images": [
+        "assets/sports/forehand/1.jpg",
+        "assets/sports/forehand/2.jpg",
+        "assets/sports/forehand/3.jpg",
+        "assets/sports/forehand/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/forehand/definition/1.jpg",
+    "tip": "a quick offensive drive toward a goal (as in basketball) in an attempt to score before the opponent&#39;s defense is set up"
+},{
+    "answer": "sidespin",
+    "images": [
+        "assets/sports/sidespin/1.jpg",
+        "assets/sports/sidespin/2.jpg",
+        "assets/sports/sidespin/3.png",
+        "assets/sports/sidespin/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/sidespin/definition/1.jpg",
+    "tip": "a rotary motion that causes a ball to revolve horizontally"
+},{
+    "answer": "sweeping",
+    "images": [
+        "assets/sports/sweeping/1.png",
+        "assets/sports/sweeping/2.jpg",
+        "assets/sports/sweeping/3.png",
+        "assets/sports/sweeping/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/sweeping/definition/1.jpg",
+    "tip": "moving or extending in a wide curve or over a wide area Yellow card - yellow card that a referee holds in the air to indicate that a player has broken the rules of the game and is being officially warned"
 }]
