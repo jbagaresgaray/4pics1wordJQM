@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var my_media = null;
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -28,20 +31,41 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-        console.log('Media: ',Media);
+        console.log('Media: ', Media);
+
+        function getCordovaPath() {
+            var path = window.location.pathname;
+            if (device.platform == "Android") {
+                path = "/android_asset/www/";
+            }
+            // path = cordova.file.applicationDirectory + 'www/'
+            // path = path.substr( path, path.length - 23 );
+
+            //path = path + 'audio/'+audiofile+'.mp3';
+            return 'file://' + path;
+        }
+
+        if (!!window.cordova) {
+            console.log('pumasok: ', getCordovaPath());
+
+            my_media = new Media(getCordovaPath() + 'assets/bgmusic2.mp3', function() {
+                console.log("playAudio():Audio Success");
+            }, function(err) {
+                console.log("playAudio():Audio Error: " + err);
+            }, function(status) {
+                if (status === Media.MEDIA_STOPPED) {
+                    my_media.play();
+                }
+            });
+            my_media.play();
+        }
     },
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
         console.log('Received Event: ' + id);
     }
 };
 
 app.initialize();
+
