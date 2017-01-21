@@ -100,7 +100,7 @@ $(document).ready(function() {
                 if (answord == word) {
                     var game = new GameServices();
                     game.saveScore(params, 'quiz', activePlayer);
-                    game.saveLevel(params,activePlayer);
+                    game.saveLevel(params, activePlayer);
 
                     setTimeout(function() {
                         $('#showCorrect').trigger('click');
@@ -185,7 +185,7 @@ $(document).ready(function() {
                     // Deduct points on every hint
                     var game = new GameServices();
                     game.saveScore(params, 'hint', activePlayer);
-                    game.saveLevel(params,activePlayer);
+                    game.saveLevel(params, activePlayer);
 
                     // Refresh Scoring
                     activePlayer = game.getActivePlayer();
@@ -345,7 +345,7 @@ $(document).ready(function() {
         } else if (params == 'computer') {
             $('#game .leveling').text(formatN(activePlayer.computer_level));
 
-            /*game.getComputerData().then(function(data) {
+            game.getComputerData().then(function(data) {
                 console.log('computer: ', data);
                 questions = data;
                 questions = _.shuffle(questions);
@@ -370,7 +370,7 @@ $(document).ready(function() {
                     });
                     $('.contentinfo').show();
                 }
-            });*/
+            });
         }
 
 

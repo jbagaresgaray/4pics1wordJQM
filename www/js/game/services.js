@@ -116,23 +116,61 @@ function GameServices() {
                 store.set('players', JSON.stringify(players));
             }
         },
-        saveLevel(category,player) {
+        saveLevel(category, player) {
             if (!_.isEmpty(store.get('players'))) {
                 var players = JSON.parse(store.get('players')) || [];
                 _.each(players, function(row) {
                     if (row.uuid == player.uuid) {
                         if (category == 'sports') {
                             row.sports_level = parseInt(row.sports_level) + 1;
-                        }else if(category == 'vocabulary'){
+                        } else if (category == 'vocabulary') {
                             row.vocabulary_level = parseInt(row.vocabulary_level) + 1;
-                        }else if(category == 'computer'){
+                        } else if (category == 'computer') {
                             row.computer_level = parseInt(row.computer_level) + 1;
-                        }else if(category == 'country'){
+                        } else if (category == 'country') {
                             row.country_level = parseInt(row.country_level) + 1;
                         }
                     }
                 });
                 store.set('players', JSON.stringify(players));
+            }
+        },
+        getScoreboard(category) {
+            if (!!category) {
+                if (!_.isEmpty(store.get('players'))) {
+                    var players = JSON.parse(store.get('players')) || [];
+                    if (players && players.length > 0) {
+                        var mapp = _.map(players, function(row) {
+                            var categ = row[category];
+                            var level = 0;
+
+                            if (category == 'sports') {
+                                level = row.sports_level;
+                            } else if (category == 'country') {
+                                level = row.country_level;
+                            } else if (category == 'computer') {
+                                level = row.computer_level;
+                            } else if (category == 'vocabulary') {
+                                level = row.vocabulary_level;
+                            }
+
+                            return {
+                                name: row.name,
+                                uuid: row.uuid,
+                                score: categ,
+                                sports: row.sports,
+                                level: level
+                            }
+                        });
+                        return mapp;
+                    } else {
+                        return [];
+                    }
+                } else {
+                    return [];
+                }
+            } else {
+                console.log('no category input');
             }
         }
     };

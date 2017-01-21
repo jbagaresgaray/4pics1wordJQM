@@ -28,6 +28,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        console.log('Media: ',Media);
     },
 
     // Update DOM on a Received Event
