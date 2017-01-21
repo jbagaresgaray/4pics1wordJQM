@@ -1,8 +1,100 @@
 [{
-    "answer": "",
+    "answer": "blender",
     "images": [
+    	"assets/technology/blender/1.png",
+    	"assets/technology/blender/2.jpg",
+    	"assets/technology/blender/3.jpg",
+    	"assets/technology/blender/4.jpg"
     ],
     "hastip": true,
+    "tipimage": "assets/technology/blender/ANS/1.jpg",
+    "tip": "a person or thing that mixes things together, in particular an electric mixing machine used in food preparation for liquefying, chopping, or pureeing."
+},{
+    "answer": "cooler",
+    "images": [
+    	"assets/technology/cooler/1.png",
+    	"assets/technology/cooler/2.jpg",
+    	"assets/technology/cooler/3.jpg",
+    	"assets/technology/cooler/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/cooler/ANS/1.jpg",
+    "tip": "As the American populace went forth after World War II into the woods to camp,onto the lakes to fish, and into the parking lots to tailgate, it required a gadget capable of keeping beer cool and food from spoiling. The portable cooler, patented in 1953 by Richard Laramy and popularized by the Coleman Company, was that obvious, but essential device."
+},{
+    "answer": "ducktape",
+    "images": [
+    	"assets/technology/duck_tape/1.jpg",
+    	"assets/technology/duck_tape/2.png",
+    	"assets/technology/duck_tape/3.jpg",
+    	"assets/technology/duck_tape/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/duck_tape/ANS/1.png",
+    "tip": "NASA astronauts have used it to make repairs on the moon and in space. The MythBusters built a boat and held a car together with the stuff. Brookhaven National Laboratory fixed their particle accelerator with it. And enthusiasts have used it to make prom dresses and wallets. You might say it&#39;s a material, not a gadget, but trust us: Duct tape is the ultimate multitool."
+},{
+    "answer": "flashdrive",
+    "images": [
+    	"assets/technology/flash_drive/1.jpg",
+    	"assets/technology/flash_drive/2.png",
+    	"assets/technology/flash_drive/3.jpg",
+    	"assets/technology/flash_drive/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/flash_drive/ANS/1.jpg",
+    "tip": "a small electronic device containing flash memory that is used for storing data or transferring it to or from a computer, digital camera, etc."
+},{
+    "answer": "hearingaid",
+    "images": [
+    	"assets/technology/hearing_aid/1.jpg",
+    	"assets/technology/hearing_aid/2.jpg",
+    	"assets/technology/hearing_aid/3.jpg",
+    	"assets/technology/hearing_aid/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/hearing_aid/ANS/1.jpg",
+    "tip": "According to the National Institutes of Health, only one out of five people who could benefit from a hearing aid actually wear one."
+},{
+    "answer": "roomba",
+    "images": [
+    	"assets/technology/roomba/1.jpg",
+    	"assets/technology/roomba/2.jpg",
+    	"assets/technology/roomba/3.jpg",
+    	"assets/technology/roomba/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/roomba/ANS/1.jpg",
+    "tip": "Roomba is a series of autonomous robotic vacuum cleaners sold by iRobot."
+},{
+    "answer": "stapler",
+    "images": [
+    	"assets/technology/stapler/1.jpg",
+    	"assets/technology/stapler/2.jpg",
+    	"assets/technology/stapler/3.jpg",
+    	"assets/technology/stapler/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/stapler/ANS/1.jpg",
+    "tip": "a device for fastening together sheets of paper with a staple or staples."
+},{
+    "answer": "sunglasses",
+    "images": [
+    	"assets/technology/sunglasses/1.png",
+    	"assets/technology/sunglasses/2.jpg",
+    	"assets/technology/sunglasses/3.jpg",
+    	"assets/technology/sunglasses/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/sunglasses/ANS/1.jpg",
+    "tip": "glasses tinted to protect the eyes from sunlight or glare."
+},{
+    "answer": "toaster",
+    "images": [
+    	"assets/technology/toaster/1.jpg",
+    	"assets/technology/toaster/2.jpg",
+    	"assets/technology/toaster/3.jpg",
+    	"assets/technology/toaster/4.jpg"
+    ],
+    "hastip": false,
     "tipimage": "",
     "tip": ""
 }]

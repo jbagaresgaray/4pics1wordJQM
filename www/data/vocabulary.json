@@ -1,34 +1,177 @@
 [{
-    "answer": "pretty",
+    "answer": "big",
     "images": [
-        "assets/vocabulary/pretty/1.png",
-        "assets/vocabulary/pretty/2.png",
-        "assets/vocabulary/pretty/3.png",
-        "assets/vocabulary/pretty/4.png"
+        "assets/vocabulary/big/1.jpg",
+        "assets/vocabulary/big/2.jpg",
+        "assets/vocabulary/big/3.jpg",
+        "assets/vocabulary/big/4.jpg"
     ],
     "hastip": true,
     "tipimage": "",
-    "tip": "attractive to look at usually in a simple or delicate way : pleasant to look at or listen to"
+    "tip": ": large or great in dimensions, bulk, or extent &lt;a big house&gt;; also :  large or great in quantity, number, or amount &lt;a big fleet&gt;."
 }, {
+    "answer": "burnout",
+    "images": [
+        "assets/vocabulary/burnout/1.jpg",
+        "assets/vocabulary/burnout/2.jpg",
+        "assets/vocabulary/burnout/3.jpg",
+        "assets/vocabulary/burnout/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": ": to drive out or destroy the property of by fire : to cause to fail, wear out, or become exhausted especially from overwork or overuse"
+}, {
+    "answer": "clean",
+    "images": [
+        "assets/vocabulary/clean/1.jpg",
+        "assets/vocabulary/clean/2.jpg",
+        "assets/vocabulary/clean/3.jpg",
+        "assets/vocabulary/clean/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "free from dirt or pollution &lt;changed to clean clothes&gt; &lt;clean solar energy&gt;b :  free from contamination or disease &lt;a clean wound&gt;c :  free or relatively free from radioactivity &lt;a clean atomic explosion&gt;"
+},{
+    "answer": "dirty",
+    "images": [
+        "assets/vocabulary/dirty/1.jpg",
+        "assets/vocabulary/dirty/2.jpg",
+        "assets/vocabulary/dirty/3.jpg",
+        "assets/vocabulary/dirty/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "not clean or pure &lt;dirty clothes&gt;b :  likely to befoul or defile with dirt &lt;dirty jobs&gt;c :  contaminated with infecting organisms &lt;dirty wounds&gt;d :  containing impurities &lt;dirty coal&gt;"
+},{
+    "answer": "dry",
+    "images": [
+        "assets/vocabulary/dry/1.jpg",
+        "assets/vocabulary/dry/2.jpg",
+        "assets/vocabulary/dry/3.jpg",
+        "assets/vocabulary/dry/4.jpg"
+    ],
+    "hastip": false,
+    "tipimage": "",
+    "tip": ""
+},{
+    "answer": "gesture",
+    "images": [
+        "assets/vocabulary/gesture/1.jpg",
+        "assets/vocabulary/gesture/2.jpg",
+        "assets/vocabulary/gesture/3.jpg",
+        "assets/vocabulary/gesture/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "movement usually of the body or limbs that expresses or emphasizes an idea, sentiment, or attitude :  the use of motions of the limbs or body as a means of expression :  something said or done by way of formality or courtesy, as a symbol or token, or for its effect on the attitudes of others &lt;a political gesture to draw popular support — V. L. Parrington&gt;"
+},{
+    "answer": "pair",
+    "images": [
+        "assets/vocabulary/pair/1.jpg",
+        "assets/vocabulary/pair/2.jpg",
+        "assets/vocabulary/pair/3.jpg",
+        "assets/vocabulary/pair/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "two corresponding things designed for use together &lt;a pair of shoes&gt; (2) :  two corresponding bodily parts or members &lt;a pair of hands&gt;b :  something made up of two corresponding pieces &lt;a pair of trousers&gt; :  two similar or associated things: as (1) :  two mated animals (2) :  a couple in love, engaged, or married &lt;were a devoted pair&gt; (3) :  two playing cards of the same value or denomination and especially of the same rank (4) :  two horses harnessed side by side (5) :  two members of a deliberative body that agree not to vote on a specific issue during a time agreed on; also :  an agreement not to vote made by the two members b :  a partnership especially of two players in a contest against another partnership"
+},{
+    "answer": "palm",
+    "images": [
+        "assets/vocabulary/palm/1.jpg",
+        "assets/vocabulary/palm/2.jpg",
+        "assets/vocabulary/palm/3.jpg",
+        "assets/vocabulary/palm/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "any of a family (Palmae syn. Arecaceae) of mostly tropical or subtropical monocotyledonous trees, shrubs, or vines with usually a simple stem and a terminal crown of large pinnate or fan-shaped leaves :  a leaf of the palm as a symbol of victory or rejoicing; also :  a branch (as of laurel) similarly used :  a symbol of triumph or superiority; also :  VICTORY, TRIUMPH :  an addition to a military decoration in the form of a palm frond especially to indicate a second award of the basic decoration"
+},{
+    "answer": "produce",
+    "images": [
+        "assets/vocabulary/produce/1.jpg",
+        "assets/vocabulary/produce/2.jpg",
+        "assets/vocabulary/produce/3.jpg",
+        "assets/vocabulary/produce/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": ": to make (something) especially by using machines : to make or create (something) by a natural process : to cause (something) to exist or happen : to cause (a particular result or effect)"
+},{
     "answer": "read",
     "images": [
-        "assets/vocabulary/read/1.png",
-        "assets/vocabulary/read/2.png",
-        "assets/vocabulary/read/3.png",
-        "assets/vocabulary/read/4.png"
+        "assets/vocabulary/read/1.jpg",
+        "assets/vocabulary/read/2.jpg",
+        "assets/vocabulary/read/3.jpg",
+        "assets/vocabulary/read/4.jpg"
     ],
     "hastip": true,
     "tipimage": "",
-    "tip": "to look at and understand the meaning of letters, words, symbols, etc. : to read the words of (a book, magazine, etc.) : to speak aloud the words of (something written)"
-}, {
-    "answer": "love",
+    "tip": ": to look at and understand the meaning of letters,words, symbols, etc.: to read the words of (a book, magazine, etc.) : to speak aloud the words of (something written)"
+},{
+    "answer": "recycle",
     "images": [
-        "assets/vocabulary/love/1.png",
-        "assets/vocabulary/love/2.png",
-        "assets/vocabulary/love/3.png",
-        "assets/vocabulary/love/4.png"
+        "assets/vocabulary/recycle/1.jpg",
+        "assets/vocabulary/recycle/2.jpg",
+        "assets/vocabulary/recycle/3.jpg",
+        "assets/vocabulary/recycle/4.jpg"
     ],
     "hastip": true,
     "tipimage": "",
-    "tip": "strong affection for another arising out of kinship or personal ties <maternal love for a child> (2) :  attraction based on sexual desire :  affection and tenderness felt by lovers (3):  affection based on admiration, benevolence, or common interests <love for his old schoolmates>"
+    "tip": ": to make something new from (something that has been used before) : to send (used newspapers, bottles, cans, etc.) to a place where they are made into something new"
+},{
+    "answer": "sad",
+    "images": [
+        "assets/vocabulary/sad/1.jpg",
+        "assets/vocabulary/sad/2.jpg",
+        "assets/vocabulary/sad/3.jpg",
+        "assets/vocabulary/sad/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": ":  affected with or expressive of grief or unhappiness :  DOWNCASTb (1) :  causing or associated with grief or unhappiness :  DEPRESSING &lt;sad news&gt; (2) :  REGRETTABLE, DEPLORABLE &lt;a sad relaxation of morals — C. W. Cunnington&gt;c :  of little worth"
+},{
+    "answer": "soft",
+    "images": [
+        "assets/vocabulary/soft/1.jpg",
+        "assets/vocabulary/soft/2.jpg",
+        "assets/vocabulary/soft/3.jpg",
+        "assets/vocabulary/soft/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "- pleasing or agreeable to the senses : bringing ease, comfort, or quiet &lt;the soft influences of home&gt;b :  having a bland or mellow rather than a sharp or acid tastec (1) :  not bright or glaring :  SUBDUED (2) : having or producing little contrast or a relatively short range of tones &lt;a soft photographic print&gt;d :  quiet in pitch or volumee of the eyes :  having a liquid or gentle appearancef :  smooth or delicate in texture, grain, or fiber &lt;soft cashmere&gt; &lt;soft fur&gt;g (1) :  balmy, mild, or clement in weather or temperature (2) :  moving or falling with slight force or impact :  not violent &lt;soft breezes&gt;"
+},{
+    "answer": "stink",
+    "images": [
+        "assets/vocabulary/stink/1.jpg",
+        "assets/vocabulary/stink/2.png",
+        "assets/vocabulary/stink/3.jpg",
+        "assets/vocabulary/stink/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "to emit a strong offensive odor &lt;stank of urine&gt;:  to be offensive &lt;the election stank of corruption&gt;; also :  to be in bad repute :  to possess something to an offensive degree &lt;stinking with wealth&gt; :  to be extremely bad or unpleasant &lt;the performance stank&gt; &lt;that news really stinks&gt;"
+},{
+    "answer": "water",
+    "images": [
+        "assets/vocabulary/water/1.jpg",
+        "assets/vocabulary/water/2.jpg",
+        "assets/vocabulary/water/3.jpg",
+        "assets/vocabulary/water/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "the liquid that descends from the clouds as rain, forms streams, lakes, and seas, and is a major constituent of all living matter and that when pure is an odorless, tasteless, very slightly compressible liquid oxide of hydrogen H 2 O which appears bluish in thick layers, freezes at 0° C and boils at 100° C, has a maximum density at 4° C and a high specific heat, is feebly ionized to hydrogen and hydroxyl ions, and is a poor conductor of electricity and a good solventb :  a natural mineral water —usually used in plural"
+},{
+    "answer": "wet",
+    "images": [
+        "assets/vocabulary/wet/1.jpg",
+        "assets/vocabulary/wet/2.jpg",
+        "assets/vocabulary/wet/3.jpg",
+        "assets/vocabulary/wet/4.gif"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "consisting of, containing, covered with, or soaked with liquid (as water)b of natural gas :  containing appreciable quantities of readily condensable hydrocarbons."
 }]
