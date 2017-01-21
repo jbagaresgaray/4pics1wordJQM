@@ -40,14 +40,16 @@ $(document).ready(function() {
     }
 
     $(document).on("click", ".ui-btn", function() {
-        new Media(getCordovaPath() + 'assets/1.mp3', function() {
-            console.log("playAudio():Audio Success");
-        }, function(err) {
-            console.log("playAudio():Audio Error: " + err);
-        }).play();
+        if (!!window.cordova) {
+            new Media(getCordovaPath() + 'assets/1.mp3', function() {
+                console.log("playAudio():Audio Success");
+            }, function(err) {
+                console.log("playAudio():Audio Error: " + err);
+            }).play();
+        }
     });
 
-    
+
 
     $(document).on("pageshow", "#name", function(event, data) { // When entering pagetwo
         $('#name input[name="playername"]').empty();
