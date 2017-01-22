@@ -154,7 +154,7 @@ $(document).ready(function() {
             });
 
             if (!isHint) {
-                console.log('isHint: ',isHint)
+                console.log('isHint: ', isHint)
                 $.each($('.click_letter'), function(index, item) {
                     var indexs = $(this).find('.zmd-lg').data('index');
                     if (obj.appindex == indexs) {
@@ -168,8 +168,8 @@ $(document).ready(function() {
                 word_stack = _.filter(word_stack, function(row) {
                     return (parseInt(row.index) !== parseInt(obj.appindex));
                 });
-            }else{
-                console.log('isHint2 : ',isHint)
+            } else {
+                console.log('isHint2 : ', isHint)
             }
         }
     }
@@ -274,7 +274,6 @@ $(document).ready(function() {
 
         var game = new GameServices();
         params = store.get('params');
-        game.clearHintCache(params, activePlayer);
         activePlayer = game.getActivePlayer();
         $('#game .game-score').text(activePlayer[params]);
         console.log('activePlayer: ', activePlayer);
@@ -596,6 +595,9 @@ $(document).ready(function() {
                     $('#showTipDialog').trigger('click');
                 }, 100);
             } else {
+                var game = new GameServices();
+                game.clearHintCache(params, activePlayer);
+
                 generateGame();
             }
         }
@@ -619,6 +621,9 @@ $(document).ready(function() {
     });
 
     $("#tipDialog").on("popupafterclose", function(event, ui) {
+        var game = new GameServices();
+        game.clearHintCache(params, activePlayer);
+
         generateGame();
     });
 
