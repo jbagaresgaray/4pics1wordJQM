@@ -1,8 +1,6 @@
 $(document).ready(function() {
     'use strict';
 
-    console.log('settings');
-
     $(document).on("pageshow", "#settings", function(event, data) {
         if (!!store.get('isSounds')) {
             $("#settings #flip-checkbox").val(store.get('isSounds').toString()).flipswitch("refresh");

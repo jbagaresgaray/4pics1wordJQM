@@ -1,7 +1,6 @@
 $(document).ready(function() {
     'use strict';
-    console.log('welcome');
-
+    
     var game = new GameServices();
 
     function getActivePlayer() {

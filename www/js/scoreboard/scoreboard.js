@@ -1,11 +1,7 @@
 $(document).ready(function() {
     'use strict';
 
-    console.log('scoreboard');
-
     var scoreboards = [];
-
-
 
     $(document).on("pageshow", "#scoreboard", function(event, data) { // When entering pagetwo
         var params = store.get('params')

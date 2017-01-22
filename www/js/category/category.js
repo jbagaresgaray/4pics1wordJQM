@@ -1,8 +1,6 @@
 $(document).ready(function() {
     'use strict';
 
-    console.log('category');
-
     $(document).on("click", "#sports_card", function() {
         console.log('sports_card');
         store.set('params', 'sports');

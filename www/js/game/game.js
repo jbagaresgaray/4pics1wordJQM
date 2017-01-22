@@ -4,12 +4,14 @@ $(document).ready(function() {
     var word;
     var word_stack = [];
     var hint_stack = [];
+    var word_answer = [];
     var numbers = [];
     var params;
     var questions = [];
     var usedQuestions = [];
     var question = {};
     var activePlayer = {};
+    var num;
 
     function stringGen(len) {
         var text = "";
@@ -70,15 +72,27 @@ $(document).ready(function() {
         if (word_stack.length < $('.click_answer').length) {
             word_stack.push({ text: obj.text, index: obj.index });
 
+            word_answer = [];
+
             $.each($('.click_answer'), function(index, item) {
                 var text = $(item).find('.zmd-lg').text();
                 if (_.isEmpty(text) && (word_stack.length == (index + 1))) {
                     $(item).find('.zmd-lg').text(obj.text);
                     $(item).find('.zmd-lg').attr('data-appindex', obj.index);
+
+                    numbers = _.filter(numbers, function(row) {
+                        return row != index
+                    });
+                    console.log('new numbers: ', numbers);
                     return false;
                 } else if (_.isEmpty(text)) {
                     $(item).find('.zmd-lg').text(obj.text);
                     $(item).find('.zmd-lg').attr('data-appindex', obj.index);
+
+                    numbers = _.filter(numbers, function(row) {
+                        return row != index
+                    });
+                    console.log('new numbers: ', numbers);
                     return false;
                 }
             });
@@ -92,20 +106,23 @@ $(document).ready(function() {
                 }
             });
 
-            console.log('word_stack: ', word_stack)
+            $.each($('.click_answer'), function(index, item) {
+                var text = $(item).find('.zmd-lg').text();
+                if (text) {
+                    word_answer.push(text);
+                }
+            });
 
-            var answord = _.map(word_stack, function(row) {
-                return row.text
+            var answord = _.map(word_answer, function(row) {
+                return row
             }).join().replace(/,/g, "");
 
-            console.log('answord: ', answord)
-
-            if (word_stack.length == word.length) {
+            if (word_answer.length == word.length) {
                 if (answord == word) {
                     var game = new GameServices();
-                    game.saveScore(params, 'quiz', activePlayer);
+                    game.saveScore(params, 'quiz', num, null, activePlayer);
                     game.saveLevel(params, activePlayer);
-
+                    store.set(params, -1);
                     setTimeout(function() {
                         $('#showCorrect').trigger('click');
                     }, 600);
@@ -124,6 +141,8 @@ $(document).ready(function() {
                 if (obj.appindex == appindex) {
                     $(item).find('.zmd-lg').text('');
                     $(item).find('.zmd-lg').attr('data-appindex', '');
+                    numbers.splice(index, 0, index);
+                    console.log('new numbers: ', numbers);
                     return false;
                 }
             });
@@ -146,18 +165,13 @@ $(document).ready(function() {
     }
 
     function generateHint() {
-        var getRandomInt = function(max) {
-            var num = Math.floor(Math.random() * (max - 0 + 1)) + 0;
-            var result = _.indexOf(numbers, num);
-            if (result > -1) {
-                return getRandomInt(max);
-            } else {
-                numbers.push(num);
-                return num;
-            }
-        }
-
-        var boxindex = getRandomInt((word.length - 1));
+        var rand = Math.floor(Math.random() * numbers.length);
+        var randomNum = numbers[rand];
+        numbers = _.filter(numbers, function(row) {
+            return row != randomNum
+        });
+        // var boxindex = getRandomInt((word.length - 1));
+        var boxindex = randomNum;
         var letter = _.toArray(word);
         var appindex;
 
@@ -172,6 +186,7 @@ $(document).ready(function() {
             }
         });
 
+        word_answer = [];
         $.each($('.click_answer'), function(index, item) {
             var text = $(item).find('.zmd-lg').text();
             if (boxindex == index) {
@@ -184,10 +199,13 @@ $(document).ready(function() {
                         text: letter[boxindex],
                         index: appindex
                     });
-
                     // Deduct points on every hint
                     var game = new GameServices();
-                    game.saveScore(params, 'hint', activePlayer);
+                    game.saveScore(params, 'hint', null, {
+                        text: letter[boxindex],
+                        appindex: appindex,
+                        index: index
+                    }, activePlayer);
                     game.saveLevel(params, activePlayer);
 
                     // Refresh Scoring
@@ -202,22 +220,23 @@ $(document).ready(function() {
             }
         });
 
+        $.each($('.click_answer'), function(index, item) {
+            var text = $(item).find('.zmd-lg').text();
+            if (text) {
+                word_answer.push(text);
+            }
+        });
 
+        var answord = _.map(word_answer, function(row) {
+            return row
+        }).join().replace(/,/g, "");
 
-        if (hint_stack.length == word.length) {
-            var hintvalue = [];
-            $.each($('.click_answer'), function(index, item) {
-                var text = $(item).find('.zmd-lg').text();
-                hintvalue.push(text);
-            });
-
-            var answord = _.map(hintvalue, function(row) {
-                return row
-            }).join().replace(/,/g, "");
-
+        if (word_answer.length == word.length) {
             if (answord == word) {
                 var game = new GameServices();
-                game.saveScore(params, 'quiz', activePlayer);
+                game.saveScore(params, 'quiz', num, null, activePlayer);
+                game.saveLevel(params, activePlayer);
+                store.set(params, -1);
 
                 setTimeout(function() {
                     $('#showCorrect').trigger('click');
@@ -242,8 +261,10 @@ $(document).ready(function() {
 
         var game = new GameServices();
         params = store.get('params');
+        game.clearHintCache(params, activePlayer);
         activePlayer = game.getActivePlayer();
         $('#game .game-score').text(activePlayer[params]);
+        console.log('activePlayer: ', activePlayer);
 
         function formatN(n) {
             return n > 9 ? "" + n : "0" + n;
@@ -254,10 +275,36 @@ $(document).ready(function() {
 
             game.getSportsData().then(function(data) {
                 questions = data;
-                questions = _.shuffle(questions);
+                // questions = _.shuffle(questions);
 
-                question = questions[Math.floor(Math.random() * questions.length)];
-                console.log('question: ', question);
+                if (usedQuestions && usedQuestions.length < 1) {
+                    for (var i = 0; i < questions.length; i++) {
+                        usedQuestions.push(i);
+                    }
+                }
+                console.log('usedQuestions: ', usedQuestions);
+
+                if (activePlayer.sports_ques && activePlayer.sports_ques.length > 0) {
+                    for (var i = 0; i < activePlayer.sports_ques.length; i++) {
+                        var index = activePlayer.sports_ques[i];
+                        usedQuestions = _.filter(usedQuestions, function(row) {
+                            return row !== index;
+                        });
+                    }
+                }
+                console.log('usedQuestions2: ', usedQuestions);
+
+                var rand = Math.floor(Math.random() * usedQuestions.length);
+                var randomNum = usedQuestions[rand];
+
+                if (store.get(params) > -1) {
+                    num = store.get(params);
+                } else {
+                    console.log('randomNum: ', randomNum);
+                    num = randomNum;
+                    store.set(params, num);
+                }
+                question = questions[num];
                 if (!_.isEmpty(question)) {
 
                     generateGridThumbnails(question.images);
@@ -277,22 +324,49 @@ $(document).ready(function() {
                     });
 
                     $('.contentinfo').show();
+
+                    if (numbers && numbers.length < 1) {
+                        for (var i = 0; i < word.length; i++) {
+                            numbers.push(i);
+                        }
+                    }
                 }
 
+                if (activePlayer.sports_hints && activePlayer.sports_hints.length > 0) {
+                    _.each(activePlayer.sports_hints, function(row) {
+                        hint_stack.push(row.text);
+                        word_stack.push({
+                            text: row.text,
+                            index: row.appindex
+                        });
 
-
-                /*usedQuestions.push(rand);
-                store.set('usedquestions',JSON.stringify(usedQuestions));*/
+                        $.each($('.click_answer'), function(index, item) {
+                            var text = $(item).find('.zmd-lg').text();
+                            if (row.index == index) {
+                                if (_.isEmpty(text)) {
+                                    $(item).find('.zmd-lg').text(row.text);
+                                    $(item).find('.zmd-lg').attr('data-appindex', row.appindex);
+                                }
+                            }
+                        });
+                    });
+                }
             });
         } else if (params == 'country') {
             $('#game .leveling').text(formatN(activePlayer.country_level));
 
             game.getCountriesData().then(function(data) {
                 questions = data;
-                questions = _.shuffle(questions);
+                // questions = _.shuffle(questions);
 
-                question = questions[Math.floor(Math.random() * questions.length)];
-                console.log('question: ', question);
+                if (store.get(params) > -1) {
+                    num = store.get(params);
+                } else {
+                    num = Math.floor(Math.random() * questions.length);
+                    store.set(params, num);
+                }
+
+                question = questions[num];
                 if (!_.isEmpty(question)) {
 
                     generateGridThumbnails(question.images);
@@ -311,6 +385,32 @@ $(document).ready(function() {
                         $('#letter_' + i).text(row);
                     });
                     $('.contentinfo').show();
+
+                    if (numbers && numbers.length < 1) {
+                        for (var i = 0; i < word.length; i++) {
+                            numbers.push(i);
+                        }
+                    }
+                }
+
+                if (activePlayer.country_hints && activePlayer.country_hints.length > 0) {
+                    _.each(activePlayer.country_hints, function(row) {
+                        hint_stack.push(row.text);
+                        word_stack.push({
+                            text: row.text,
+                            index: row.appindex
+                        });
+
+                        $.each($('.click_answer'), function(index, item) {
+                            var text = $(item).find('.zmd-lg').text();
+                            if (row.index == index) {
+                                if (_.isEmpty(text)) {
+                                    $(item).find('.zmd-lg').text(row.text);
+                                    $(item).find('.zmd-lg').attr('data-appindex', row.appindex);
+                                }
+                            }
+                        });
+                    });
                 }
             });
         } else if (params == 'vocabulary') {
@@ -318,10 +418,16 @@ $(document).ready(function() {
 
             game.getVocabularyData().then(function(data) {
                 questions = data;
-                questions = _.shuffle(questions);
+                // questions = _.shuffle(questions);
 
-                question = questions[Math.floor(Math.random() * questions.length)];
-                console.log('question: ', question);
+                if (store.get(params) > -1) {
+                    num = store.get(params);
+                } else {
+                    num = Math.floor(Math.random() * questions.length);
+                    store.set(params, num);
+                }
+
+                question = questions[num];
                 if (!_.isEmpty(question)) {
 
                     generateGridThumbnails(question.images);
@@ -340,6 +446,32 @@ $(document).ready(function() {
                         $('#letter_' + i).text(row);
                     });
                     $('.contentinfo').show();
+
+                    if (numbers && numbers.length < 1) {
+                        for (var i = 0; i < word.length; i++) {
+                            numbers.push(i);
+                        }
+                    }
+                }
+
+                if (activePlayer.vocabulary_hints && activePlayer.vocabulary_hints.length > 0) {
+                    _.each(activePlayer.vocabulary_hints, function(row) {
+                        hint_stack.push(row.text);
+                        word_stack.push({
+                            text: row.text,
+                            index: row.appindex
+                        });
+
+                        $.each($('.click_answer'), function(index, item) {
+                            var text = $(item).find('.zmd-lg').text();
+                            if (row.index == index) {
+                                if (_.isEmpty(text)) {
+                                    $(item).find('.zmd-lg').text(row.text);
+                                    $(item).find('.zmd-lg').attr('data-appindex', row.appindex);
+                                }
+                            }
+                        });
+                    });
                 }
             });
         } else if (params == 'computer') {
@@ -347,9 +479,16 @@ $(document).ready(function() {
 
             game.getComputerData().then(function(data) {
                 questions = data;
-                questions = _.shuffle(questions);
+                // questions = _.shuffle(questions);
 
-                question = questions[Math.floor(Math.random() * questions.length)];
+                if (store.get(params) > -1) {
+                    num = store.get(params);
+                } else {
+                    num = Math.floor(Math.random() * questions.length);
+                    store.set(params, num);
+                }
+
+                question = questions[num];
                 if (!_.isEmpty(question)) {
 
                     generateGridThumbnails(question.images);
@@ -368,10 +507,35 @@ $(document).ready(function() {
                         $('#letter_' + i).text(row);
                     });
                     $('.contentinfo').show();
+
+                    if (numbers && numbers.length < 1) {
+                        for (var i = 0; i < word.length; i++) {
+                            numbers.push(i);
+                        }
+                    }
+                }
+
+                if (activePlayer.computer_hints && activePlayer.computer_hints.length > 0) {
+                    _.each(activePlayer.computer_hints, function(row) {
+                        hint_stack.push(row.text);
+                        word_stack.push({
+                            text: row.text,
+                            index: row.appindex
+                        });
+
+                        $.each($('.click_answer'), function(index, item) {
+                            var text = $(item).find('.zmd-lg').text();
+                            if (row.index == index) {
+                                if (_.isEmpty(text)) {
+                                    $(item).find('.zmd-lg').text(row.text);
+                                    $(item).find('.zmd-lg').attr('data-appindex', row.appindex);
+                                }
+                            }
+                        });
+                    });
                 }
             });
         }
-
 
 
 
@@ -391,7 +555,7 @@ $(document).ready(function() {
         if (activePlayer[params] < 50) {
             $('#showNotDialog').trigger('click');
             return;
-        }else{
+        } else {
             $('#showJokerDialog').trigger('click');
         }
     });
