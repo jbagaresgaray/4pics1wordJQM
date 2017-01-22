@@ -1,6 +1,6 @@
 $(document).ready(function() {
     'use strict';
-    
+
     var game = new GameServices();
 
     function getActivePlayer() {
@@ -37,6 +37,29 @@ $(document).ready(function() {
         console.log('ui-btn-scoreboard');
         store.set('actions', 'scoreboard');
         $.mobile.changePage("#category");
+    });
+
+    function exitFromApp() {
+        if (navigator.app) {
+            loopMediaflag = false;
+            if (app.my_media) {
+                app.my_media.stop()
+            }
+            navigator.app.exitApp();
+        } else if (navigator.device) {
+            loopMediaflag = false;
+            if (app.my_media) {
+                app.my_media.stop()
+            }
+            navigator.device.exitApp();
+        } else {
+            console.log('window.close();');
+        }
+    }
+
+    $(document).on("click", "#welcome #quitpopupDialog .ui-btn-quit", function() {
+        console.log('quit app');
+        exitFromApp();
     });
 
 });
