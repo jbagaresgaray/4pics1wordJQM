@@ -20,6 +20,7 @@
 var my_media = null;
 
 var app = {
+    my_media:null,
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -32,9 +33,21 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
         console.log('Media: ', Media);
+        console.log('Storage: ', store);
+        console.log('Device: ', device);
 
-        function getCordovaPath() {
-            var path = window.location.pathname;
+
+        app.initializeSounds()
+    },
+
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        console.log('Received Event: ' + id);
+    },
+
+    getCordovaPath() {
+        var path = window.location.pathname;
+        if (!!window.cordova) {
             if (device.platform == "Android") {
                 path = "/android_asset/www/";
             }
@@ -44,28 +57,31 @@ var app = {
             //path = path + 'audio/'+audiofile+'.mp3';
             return 'file://' + path;
         }
+    },
 
+
+    initializeSounds() {
+        console.log('initializeSounds')
         if (!!window.cordova) {
-            console.log('pumasok: ', getCordovaPath());
+            console.log('pumasok: ', this.getCordovaPath());
 
-            my_media = new Media(getCordovaPath() + 'assets/bgmusic2.mp3', function() {
+            this.my_media = new Media(this.getCordovaPath() + 'assets/bgmusic2.mp3', function() {
                 console.log("playAudio():Audio Success");
             }, function(err) {
                 console.log("playAudio():Audio Error: " + err);
             }, function(status) {
+                console.log('Media status: ',status);
                 if (status === Media.MEDIA_STOPPED) {
-                    my_media.play();
+                    this.my_media.play();
                 }
             });
-            my_media.play();
+            this.my_media.play();
         }
-    },
-
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        console.log('Received Event: ' + id);
     }
 };
 
-app.initialize();
+if (!store.get('isSounds')) {
+    store.set('isSounds', true);
+}
 
+app.initialize();

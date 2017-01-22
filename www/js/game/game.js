@@ -394,7 +394,31 @@ $(document).ready(function() {
     });
 
     $("#correctDialog").on("popupafterclose", function(event, ui) {
-        console.log('correctDialog has closed.');
+        if (question) {
+            if (question.hastip) {
+                setTimeout(function() {
+                    $('#showTipDialog').trigger('click');
+                }, 100);
+            } else {
+                generateGame();
+            }
+        }
+    });
+
+    $("#tipDialog").on("popupafteropen", function(event, ui) {
+        $('#tipDialog').find('.tipimage').empty()
+        if (question) {
+            if (question.hastip) {
+                if (!_.isEmpty(question.tipimage)) {
+                    $('#tipDialog').find('.tipimage').append('<img src="' + question.tipimage + '" border="0" style="height: 160px" />')
+                }
+                $('#tipDialog').find('.tip').html(question.tip)
+                $('#tipDialog').find('.nd2-title').html(question.answer.toUpperCase())
+            }
+        }
+    });
+
+    $("#tipDialog").on("popupafterclose", function(event, ui) {
         generateGame();
     });
 

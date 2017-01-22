@@ -290,6 +290,7 @@
     margin-top: -40px;
     margin-right: -20px;
 }
+
 #scoreboard .ui-thumbaward-small {
     width: 20px;
     float: right;
@@ -349,6 +350,25 @@
     top: 70px !important;
     left: 0 !important;
     max-width: 100% !important;
+}
+
+.ui-page-theme-a .tip-sheet {
+    height: 60px;
+}
+
+#game .ui-popup-container #tipDialog h2 {
+    padding-top: 10px;
+}
+
+#game .ui-popup-container#tipDialog-popup{
+    top: 0px !important;
+}
+
+#game .ui-popup-container #tipDialog {
+    top: -25px !important;
+    height: 100%;
+    width: 100%;
+    bottom: 0px !important;
 }
 
 #game .ui-popup .ui-header .ui-title {

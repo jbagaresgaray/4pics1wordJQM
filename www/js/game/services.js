@@ -1,3 +1,5 @@
+
+
 function playerIDGenerator() {
     var text = "";
     var charset = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -136,9 +138,13 @@ function GameServices() {
             }
         },
         getScoreboard(category) {
+            console.log('category: ',category);
+
             if (!!category) {
                 if (!_.isEmpty(store.get('players'))) {
                     var players = JSON.parse(store.get('players')) || [];
+                    console.log('players: ',players);
+                    
                     if (players && players.length > 0) {
                         var mapp = _.map(players, function(row) {
                             var categ = row[category];
@@ -158,7 +164,6 @@ function GameServices() {
                                 name: row.name,
                                 uuid: row.uuid,
                                 score: categ,
-                                sports: row.sports,
                                 level: level
                             }
                         });

@@ -17,16 +17,14 @@ $(document).ready(function() {
 
         if (gamerecords && gamerecords.length > 0) {
             _.each(gamerecords, function(row) {
-                if (row.score > 300) {
-                    scoreboards.push(row);
-                }
+                scoreboards.push(row);
             })
 
             if (scoreboards && scoreboards.length > 0) {
-                _.each(players, function(row) {
+                _.each(scoreboards, function(row) {
                     var html = '<li><a href="#" class="appplayer" data-ajax="true">\
                 <img src="assets/photo.png" class="ui-thumbnail ui-thumbnail-circular" />\
-                <h2 class="playername" data-uuid="' + row.uuid + '">' + row.name + '</h2></a></li>';
+                <h2 class="playername" data-uuid="' + row.uuid + '">' + row.name + '(' + row.score + ') </h2></a></li>';
 
                     $('#scoreboard .player-listview').append(html);
                 });

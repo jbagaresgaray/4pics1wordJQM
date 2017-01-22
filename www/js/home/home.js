@@ -27,21 +27,9 @@ $(document).ready(function() {
     }
 
 
-    function getCordovaPath() {
-        var path = window.location.pathname;
-        if (device.platform == "Android") {
-            path = "/android_asset/www/";
-        }
-        // path = cordova.file.applicationDirectory + 'www/'
-        // path = path.substr( path, path.length - 23 );
-
-        //path = path + 'audio/'+audiofile+'.mp3';
-        return 'file://' + path;
-    }
-
     $(document).on("click", ".ui-btn", function() {
         if (!!window.cordova) {
-            new Media(getCordovaPath() + 'assets/1.mp3', function() {
+            new Media(app.getCordovaPath() + 'assets/1.mp3', function() {
                 console.log("playAudio():Audio Success");
             }, function(err) {
                 console.log("playAudio():Audio Error: " + err);
@@ -49,6 +37,12 @@ $(document).ready(function() {
         }
     });
 
+    $(document).on("pageshow", "#home", function(event, data) { // When entering pagetwo
+        if (!!store.get('isSounds')) {
+            //play and stop the sounds
+            !store.get('isSounds') ? my_media.stop() : my_media.play()
+        }
+    });
 
 
     $(document).on("pageshow", "#name", function(event, data) { // When entering pagetwo
