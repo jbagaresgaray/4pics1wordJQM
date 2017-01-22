@@ -92,9 +92,13 @@ $(document).ready(function() {
                 }
             });
 
+            console.log('word_stack: ', word_stack)
+
             var answord = _.map(word_stack, function(row) {
                 return row.text
             }).join().replace(/,/g, "");
+
+            console.log('answord: ', answord)
 
             if (word_stack.length == word.length) {
                 if (answord == word) {
@@ -152,7 +156,6 @@ $(document).ready(function() {
                 return num;
             }
         }
-
 
         var boxindex = getRandomInt((word.length - 1));
         var letter = _.toArray(word);
@@ -250,7 +253,6 @@ $(document).ready(function() {
             $('#game .leveling').text(formatN(activePlayer.sports_level));
 
             game.getSportsData().then(function(data) {
-                console.log('sports: ', data);
                 questions = data;
                 questions = _.shuffle(questions);
 
@@ -286,7 +288,6 @@ $(document).ready(function() {
             $('#game .leveling').text(formatN(activePlayer.country_level));
 
             game.getCountriesData().then(function(data) {
-                console.log('countries: ', data);
                 questions = data;
                 questions = _.shuffle(questions);
 
@@ -316,7 +317,6 @@ $(document).ready(function() {
             $('#game .leveling').text(formatN(activePlayer.vocabulary_level));
 
             game.getVocabularyData().then(function(data) {
-                console.log('vocabulary: ', data);
                 questions = data;
                 questions = _.shuffle(questions);
 
@@ -346,7 +346,6 @@ $(document).ready(function() {
             $('#game .leveling').text(formatN(activePlayer.computer_level));
 
             game.getComputerData().then(function(data) {
-                console.log('computer: ', data);
                 questions = data;
                 questions = _.shuffle(questions);
 
@@ -380,17 +379,21 @@ $(document).ready(function() {
             $(item).addClass('clr-btn-indigo');
             $(item).removeClass('clr-btn-grey');
         });
-
     }
 
-
-
     $(document).on("pageshow", "#game", function(event, data) { // When entering pagetwo
-        console.log("game is now shown");
-
         $('#zoom_thumbnail').hide();
 
         generateGame();
+    });
+
+    $(document).on("click", ".generate-hint", function(event, data) {
+        if (activePlayer[params] < 50) {
+            $('#showNotDialog').trigger('click');
+            return;
+        }else{
+            $('#showJokerDialog').trigger('click');
+        }
     });
 
     $("#correctDialog").on("popupafterclose", function(event, ui) {
@@ -405,7 +408,7 @@ $(document).ready(function() {
         }
     });
 
-    $("#tipDialog").on( "popupcreate", function( event, ui ) {
+    $("#tipDialog").on("popupcreate", function(event, ui) {
         $('#tipDialog').find('.tipimage').empty()
     });
 
