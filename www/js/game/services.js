@@ -183,13 +183,9 @@ function GameServices() {
             }
         },
         getScoreboard: function(category) {
-            console.log('category: ', category);
-
             if (!!category) {
                 if (!_.isEmpty(store.get('players'))) {
                     var players = JSON.parse(store.get('players')) || [];
-                    console.log('players: ', players);
-
                     if (players && players.length > 0) {
                         var mapp = _.map(players, function(row) {
                             var categ = row[category];

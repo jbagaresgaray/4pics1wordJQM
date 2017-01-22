@@ -1,27 +1,30 @@
 $(document).ready(function() {
     'use strict';
 
-    var scoreboards = [];
+    $(document).on("pagehide", "#scoreboard", function(event, data) { // When entering pagetwo
+        console.log('pagehide')
+        $('#scoreboard .player-listview').empty();
+
+    });
 
     $(document).on("pageshow", "#scoreboard", function(event, data) { // When entering pagetwo
+
+        var scoreboards = [];
         var params = store.get('params')
         var game = new GameServices();
         var gamerecords = game.getScoreboard(params);
         console.log('gamerecords: ', gamerecords);
 
         $('#scoreboard .player-listview').empty();
-
         if (gamerecords && gamerecords.length > 0) {
             _.each(gamerecords, function(row) {
                 scoreboards.push(row);
             })
 
+            $('#scoreboard .player-listview').empty();
             if (scoreboards && scoreboards.length > 0) {
                 _.each(scoreboards, function(row) {
-                    var html = '<li><a href="#" class="appplayer" data-ajax="true">\
-                <img src="assets/photo.png" class="ui-thumbnail ui-thumbnail-circular" />\
-                <h2 class="playername" data-uuid="' + row.uuid + '">' + row.name + '(' + row.score + ') </h2></a></li>';
-
+                    var html = '<li><a href="#" class="appplayer" data-ajax="true"><img src="assets/photo.png" class="ui-thumbnail ui-thumbnail-circular" /><h2 class="playername" data-uuid="' + row.uuid + '">' + row.name + '(' + row.score + ') </h2></a></li>';
                     $('#scoreboard .player-listview').append(html);
                 });
                 $('#scoreboard .player-listview').listview('refresh');
@@ -37,5 +40,7 @@ $(document).ready(function() {
             }
         }
     });
+
+
 
 });
