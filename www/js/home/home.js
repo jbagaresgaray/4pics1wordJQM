@@ -18,8 +18,16 @@ $(document).ready(function() {
 
     function exitFromApp() {
         if (navigator.app) {
+            loopMediaflag = false;
+            if(app.my_media){
+                app.my_media.stop()
+            }
             navigator.app.exitApp();
         } else if (navigator.device) {
+            loopMediaflag = false;
+            if(app.my_media){
+                app.my_media.stop()
+            }
             navigator.device.exitApp();
         } else {
             console.log('window.close();');
@@ -31,16 +39,20 @@ $(document).ready(function() {
         if (!!window.cordova) {
             new Media(app.getCordovaPath() + 'assets/1.mp3', function() {
                 console.log("playAudio():Audio Success");
+                this.release();
             }, function(err) {
                 console.log("playAudio():Audio Error: " + err);
+                this.release();
             }).play();
         }
     });
 
     $(document).on("pageshow", "#home", function(event, data) { // When entering pagetwo
-        if (!!store.get('isSounds')) {
-            //play and stop the sounds
-            !store.get('isSounds') ? my_media.stop() : my_media.play()
+        if (!!window.cordova) {
+            if (!!store.get('isSounds')) {
+                //play and stop the sounds
+                !store.get('isSounds') ? app.my_media.stop() : app.my_media.play()
+            }
         }
     });
 

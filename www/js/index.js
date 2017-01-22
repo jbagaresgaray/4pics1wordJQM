@@ -18,12 +18,14 @@
  */
 
 var my_media = null;
+var loopMediaflag;
 
 var app = {
-    my_media:null,
+    my_media: null,
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        document.addEventListener("backbutton", this.onBackKeyDown.bind(this), false);
     },
 
     // deviceready Event Handler
@@ -36,8 +38,21 @@ var app = {
         console.log('Storage: ', store);
         console.log('Device: ', device);
 
+        loopMediaflag = true;
+
+        if (device.platform == "Android") {
+            $('body').addClass('platform-android')
+        } else if (device.platform == "iOS") {
+            $('body').addClass('platform-ios')
+        }
+
 
         app.initializeSounds()
+        if (store.get('isSounds') == "true") {
+            app.my_media.setVolume('1.0');
+        } else {
+            app.my_media.setVolume('0.0');
+        }
     },
 
     // Update DOM on a Received Event
@@ -62,21 +77,34 @@ var app = {
 
     initializeSounds() {
         console.log('initializeSounds')
-        if (!!window.cordova) {
-            console.log('pumasok: ', this.getCordovaPath());
 
+        var loop = function(status) {
+            console.log('Media status: ', status);
+            if (status === Media.MEDIA_STOPPED) {
+                if(loopMediaflag === true){
+                    app.my_media.play();    
+                }
+            }
+        };
+
+        if (!!window.cordova) {
             this.my_media = new Media(this.getCordovaPath() + 'assets/bgmusic2.mp3', function() {
                 console.log("playAudio():Audio Success");
             }, function(err) {
                 console.log("playAudio():Audio Error: " + err);
-            }, function(status) {
-                console.log('Media status: ',status);
-                if (status === Media.MEDIA_STOPPED) {
-                    this.my_media.play();
-                }
-            });
-            this.my_media.play();
+                app.my_media.release();
+            }, loop);
+
+            if (device.platform == "Android") {
+                this.my_media.play();
+            } else if (device.platform == "iOS") {
+                this.my_media.play({ numberOfLoops: 99 });
+            }
         }
+    },
+
+    onBackKeyDown:function(){
+        var hash = window.location.hash
     }
 };
 
