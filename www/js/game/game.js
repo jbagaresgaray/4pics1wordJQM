@@ -136,31 +136,41 @@ $(document).ready(function() {
 
     function removeWorkValue(obj) {
         if (word_stack.length > 0) {
+            var isHint = false;
             $.each($('.click_answer'), function(index, item) {
                 var appindex = $(item).find('.zmd-lg').attr('data-appindex');
+                var hasClass = $(item).hasClass('clr-btn-grey');
+                isHint = hasClass;
+
                 if (obj.appindex == appindex) {
-                    $(item).find('.zmd-lg').text('');
-                    $(item).find('.zmd-lg').attr('data-appindex', '');
-                    numbers.splice(index, 0, index);
-                    console.log('new numbers: ', numbers);
+                    if (!hasClass) {
+                        $(item).find('.zmd-lg').text('');
+                        $(item).find('.zmd-lg').attr('data-appindex', '');
+                        numbers.splice(index, 0, index);
+                        console.log('new numbers: ', numbers);
+                    }
                     return false;
                 }
             });
 
-            $.each($('.click_letter'), function(index, item) {
-                var indexs = $(this).find('.zmd-lg').data('index');
-                if (obj.appindex == indexs) {
-                    $(item).find('.zmd-lg').text(obj.text);
-                    $(item).addClass('clr-btn-indigo');
-                    $(item).removeClass('clr-btn-grey');
-                    return false;
-                }
+            if (!isHint) {
+                console.log('isHint: ',isHint)
+                $.each($('.click_letter'), function(index, item) {
+                    var indexs = $(this).find('.zmd-lg').data('index');
+                    if (obj.appindex == indexs) {
+                        $(item).find('.zmd-lg').text(obj.text);
+                        $(item).addClass('clr-btn-indigo');
+                        $(item).removeClass('clr-btn-grey');
+                        return false;
+                    }
+                });
 
-            });
-
-            word_stack = _.filter(word_stack, function(row) {
-                return (parseInt(row.index) !== parseInt(obj.appindex));
-            });
+                word_stack = _.filter(word_stack, function(row) {
+                    return (parseInt(row.index) !== parseInt(obj.appindex));
+                });
+            }else{
+                console.log('isHint2 : ',isHint)
+            }
         }
     }
 
@@ -193,6 +203,8 @@ $(document).ready(function() {
                 if (_.isEmpty(text)) {
                     $(item).find('.zmd-lg').text(letter[boxindex]);
                     $(item).find('.zmd-lg').attr('data-appindex', appindex);
+                    $(item).removeClass('clr-btn-blue-grey');
+                    $(item).addClass('clr-btn-grey');
 
                     hint_stack.push(letter[boxindex]);
                     word_stack.push({
@@ -207,6 +219,7 @@ $(document).ready(function() {
                         index: index
                     }, activePlayer);
                     game.saveLevel(params, activePlayer);
+
 
                     // Refresh Scoring
                     activePlayer = game.getActivePlayer();
@@ -282,7 +295,6 @@ $(document).ready(function() {
                         usedQuestions.push(i);
                     }
                 }
-                console.log('usedQuestions: ', usedQuestions);
 
                 if (activePlayer.sports_ques && activePlayer.sports_ques.length > 0) {
                     for (var i = 0; i < activePlayer.sports_ques.length; i++) {
@@ -292,7 +304,6 @@ $(document).ready(function() {
                         });
                     }
                 }
-                console.log('usedQuestions2: ', usedQuestions);
 
                 var rand = Math.floor(Math.random() * usedQuestions.length);
                 var randomNum = usedQuestions[rand];
@@ -300,11 +311,11 @@ $(document).ready(function() {
                 if (store.get(params) > -1) {
                     num = store.get(params);
                 } else {
-                    console.log('randomNum: ', randomNum);
                     num = randomNum;
                     store.set(params, num);
                 }
                 question = questions[num];
+                console.log('question: ', question);
                 if (!_.isEmpty(question)) {
 
                     generateGridThumbnails(question.images);
@@ -346,7 +357,19 @@ $(document).ready(function() {
                                 if (_.isEmpty(text)) {
                                     $(item).find('.zmd-lg').text(row.text);
                                     $(item).find('.zmd-lg').attr('data-appindex', row.appindex);
+                                    $(item).removeClass('clr-btn-blue-grey');
+                                    $(item).addClass('clr-btn-grey');
                                 }
+                            }
+                        });
+
+                        $.each($('.click_letter'), function(index, item) {
+                            var text = $(item).find('.zmd-lg').text();
+                            if (row.text == text) {
+                                $(item).find('.zmd-lg').text('');
+                                $(item).removeClass('clr-btn-indigo');
+                                $(item).addClass('clr-btn-grey');
+                                return false;
                             }
                         });
                     });
@@ -407,6 +430,8 @@ $(document).ready(function() {
                                 if (_.isEmpty(text)) {
                                     $(item).find('.zmd-lg').text(row.text);
                                     $(item).find('.zmd-lg').attr('data-appindex', row.appindex);
+                                    $(item).removeClass('clr-btn-blue-grey');
+                                    $(item).addClass('clr-btn-grey');
                                 }
                             }
                         });
@@ -468,6 +493,8 @@ $(document).ready(function() {
                                 if (_.isEmpty(text)) {
                                     $(item).find('.zmd-lg').text(row.text);
                                     $(item).find('.zmd-lg').attr('data-appindex', row.appindex);
+                                    $(item).removeClass('clr-btn-blue-grey');
+                                    $(item).addClass('clr-btn-grey');
                                 }
                             }
                         });
@@ -529,6 +556,8 @@ $(document).ready(function() {
                                 if (_.isEmpty(text)) {
                                     $(item).find('.zmd-lg').text(row.text);
                                     $(item).find('.zmd-lg').attr('data-appindex', row.appindex);
+                                    $(item).removeClass('clr-btn-blue-grey');
+                                    $(item).addClass('clr-btn-grey');
                                 }
                             }
                         });
