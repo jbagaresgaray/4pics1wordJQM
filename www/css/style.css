@@ -20,9 +20,9 @@
     transition: all .2s ease-in-out;
 }
 
-.ui-icon-myapp-email {
-    background-image: url("assets/app/top1.png") !important;
-    /*I added the !important, I found that this rule was being overwritten*/
+.platform-android .ui-header > .ui-btn {
+    width: 2em;
+    height: 2em;
 }
 
 
@@ -373,6 +373,10 @@
 
 #game .ui-popup .ui-header .ui-title {
     text-align: center;
+}
+
+.platform-android span.leveling {
+    padding-bottom: 12px;
 }
 
 span.leveling {
