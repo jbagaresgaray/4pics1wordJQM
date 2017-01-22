@@ -405,6 +405,10 @@ $(document).ready(function() {
         }
     });
 
+    $("#tipDialog").on( "popupcreate", function( event, ui ) {
+        $('#tipDialog').find('.tipimage').empty()
+    });
+
     $("#tipDialog").on("popupafteropen", function(event, ui) {
         $('#tipDialog').find('.tipimage').empty()
         if (question) {
