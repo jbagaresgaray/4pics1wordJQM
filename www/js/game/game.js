@@ -27,11 +27,12 @@ $(document).ready(function() {
         $('.word-gen').empty();
         for (var i = 0; i < len; i++) {
             var html;
-            if ((i + 1) > 6) {
-                html = ' <div class="col-xs-2 col-sm-2 col-md-2" style="padding-top: 10px;"><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
-            } else {
-                html = ' <div class="col-xs-2 col-sm-2 col-md-2"><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
-            }
+            // if ((i + 1) > 6) {
+            //     html = ' <div style="padding-top: 10px;"><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
+            // } else {
+            //     html = ' <div><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
+            // }
+            html = ' <div><div class="box"><button class="ui-btn ui-btn-inline clr-btn-blue-grey click_answer"><i id="word_gen_' + (i + 1) + '" data-index="' + (i + 1) + '" data-appindex="" class="zmd-lg"></i></button></div></div>';
             $('.word-gen').append(html);
         }
     }
@@ -381,6 +382,24 @@ $(document).ready(function() {
                 questions = data;
                 // questions = _.shuffle(questions);
 
+                if (usedQuestions && usedQuestions.length < 1) {
+                    for (var i = 0; i < questions.length; i++) {
+                        usedQuestions.push(i);
+                    }
+                }
+
+                if (activePlayer.country_ques && activePlayer.country_ques.length > 0) {
+                    for (var i = 0; i < activePlayer.country_ques.length; i++) {
+                        var index = activePlayer.country_ques[i];
+                        usedQuestions = _.filter(usedQuestions, function(row) {
+                            return row !== index;
+                        });
+                    }
+                }
+
+                var rand = Math.floor(Math.random() * usedQuestions.length);
+                var randomNum = usedQuestions[rand];
+
                 if (store.get(params) > -1) {
                     num = store.get(params);
                 } else {
@@ -444,6 +463,24 @@ $(document).ready(function() {
                 questions = data;
                 // questions = _.shuffle(questions);
 
+                if (usedQuestions && usedQuestions.length < 1) {
+                    for (var i = 0; i < questions.length; i++) {
+                        usedQuestions.push(i);
+                    }
+                }
+
+                if (activePlayer.vocabulary_ques && activePlayer.vocabulary_ques.length > 0) {
+                    for (var i = 0; i < activePlayer.vocabulary_ques.length; i++) {
+                        var index = activePlayer.vocabulary_ques[i];
+                        usedQuestions = _.filter(usedQuestions, function(row) {
+                            return row !== index;
+                        });
+                    }
+                }
+
+                var rand = Math.floor(Math.random() * usedQuestions.length);
+                var randomNum = usedQuestions[rand];
+
                 if (store.get(params) > -1) {
                     num = store.get(params);
                 } else {
@@ -506,6 +543,24 @@ $(document).ready(function() {
             game.getComputerData().then(function(data) {
                 questions = data;
                 // questions = _.shuffle(questions);
+
+                if (usedQuestions && usedQuestions.length < 1) {
+                    for (var i = 0; i < questions.length; i++) {
+                        usedQuestions.push(i);
+                    }
+                }
+
+                if (activePlayer.computer_ques && activePlayer.computer_ques.length > 0) {
+                    for (var i = 0; i < activePlayer.computer_ques.length; i++) {
+                        var index = activePlayer.computer_ques[i];
+                        usedQuestions = _.filter(usedQuestions, function(row) {
+                            return row !== index;
+                        });
+                    }
+                }
+
+                var rand = Math.floor(Math.random() * usedQuestions.length);
+                var randomNum = usedQuestions[rand];
 
                 if (store.get(params) > -1) {
                     num = store.get(params);
@@ -585,6 +640,14 @@ $(document).ready(function() {
             return;
         } else {
             $('#showJokerDialog').trigger('click');
+        }
+    });
+
+    $("#correctDialog").on("popupafteropen", function(event, ui) {
+        console.log('#correctDialog popupafteropen')
+        $('#correctDialog').find('.answer').empty();
+        if (question) {
+            $('#correctDialog').find('.answer').text(question.answer.toUpperCase());
         }
     });
 

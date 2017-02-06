@@ -1,3 +1,17 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
+
 .ui-listview {
     margin: 1em 0px !important;
 }
@@ -315,13 +329,11 @@
 }
 
 #game .click_answer {
-    /*height: 45px;
-    width: 49px;
-    box-shadow: 0px 0px 10px 1px #fff;*/
-    height: 35px;
-    width: 39px;
+    height: 30px;
+    width: 30px;
     box-shadow: 0px 0px 10px 1px #fff;
-    font-size: 10px;
+    font-size: 8px;
+    margin: 2px;
 }
 
 .ui-mobile #game.ui-page {
@@ -360,7 +372,7 @@
     padding-top: 10px;
 }
 
-#game .ui-popup-container#tipDialog-popup{
+#game .ui-popup-container#tipDialog-popup {
     top: 0px !important;
 }
 
@@ -373,6 +385,18 @@
 
 #game .ui-popup .ui-header .ui-title {
     text-align: center;
+}
+
+#game .grid-media {
+    text-align: center;
+}
+
+#game .grid-media img {
+    height: 100px;
+}
+
+#game .card-media img {
+    height: 200px;
 }
 
 .platform-android span.leveling {
