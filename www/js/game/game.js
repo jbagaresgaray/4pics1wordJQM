@@ -40,7 +40,11 @@ $(document).ready(function() {
     function generateGridThumbnails(array) {
         $('#grid_thumbnail').empty();
         for (var i = 0; i < array.length; i++) {
-            var html = '<div class="col-xs-6 col-sm-6 col-md-6"><div class="grid-media"><img src="' + array[i] + '" height="100%" class="img-thumbnail"></div></div>';
+            if(i % 2 === 0){
+                var html = '<div class="col-xs-6 col-sm-6 col-md-6"><div class="grid-media text-right"><img src="' + array[i] + '" height="100%" class="img-thumbnail"></div></div>';
+            }else{
+                var html = '<div class="col-xs-6 col-sm-6 col-md-6"><div class="grid-media text-left"><img src="' + array[i] + '" height="100%" class="img-thumbnail"></div></div>';
+            }
             $('#grid_thumbnail').append(html);
         }
     }
