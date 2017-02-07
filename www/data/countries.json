@@ -6,7 +6,7 @@
         "assets/countries/brunei/3.jpg",
         "assets/countries/brunei/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/brunei/AnswerMeaning/1.jpg",
     "tip": "independent sultanate &amp; former British protectorate NW Borneo ∗ Bandar Seri Begawan area 2226 square miles (5788 square kilometers), pop 332,844."
 },{
@@ -17,7 +17,7 @@
         "assets/countries/cambodia/3.jpg",
         "assets/countries/cambodia/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/cambodia/AnswerMeaning/1.jpg",
     "tip": "country SE Asia bordering on Gulf of Thailand ∗ Phnom Penh area 69,898 square miles (181,036 square kilometers), pop 14,400,000."
 },{
@@ -28,7 +28,7 @@
         "assets/countries/china/3.jpg",  
         "assets/countries/china/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/china/AnswerMeaning/1.jpg",
     "tip": "sea section of the W Pacific; divided into East China & South China seas."
 },{
@@ -39,7 +39,7 @@
         "assets/countries/denmark/3.jpg",
         "assets/countries/denmark/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/denmark/AnswerMeaning/1.jpg",
     "tip": "country in Europe occupying most of Jutland Peninsula &amp; adjacent islands in Baltic &amp; North seas; a kingdom ∗ Copenhagen area 16,629 square miles (43,069 square kilometers), pop5,500,000."
 },{
@@ -50,7 +50,7 @@
         "assets/countries/france/3.jpg",
         "assets/countries/france/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/france/AnswerMeaning/1.jpg",
     "tip": "country W Europe between English Channel &amp; the Mediterranean; a republic ∗ Paris area210,025 square miles (543,965 square kilometers), pop 62,962,000."
 },{
@@ -61,7 +61,7 @@
         "assets/countries/greece/3.jpg",
         "assets/countries/greece/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/greece/AnswerMeaning/1.jpg",
     "tip": "country S Europe at S end of Balkan Peninsula; a republic ∗ Athens area 50,944 square miles(131,945 square kilometers), pop 10,964,020."
 },{
@@ -72,7 +72,7 @@
         "assets/countries/india/3.jpg",
         "assets/countries/india/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/india/AnswerMeaning/1.gif",
     "tip": "peninsula region (often called a subcontinent) S Asia S of the Himalayas between Bay of Bengal &amp; Arabian Sea occupied by India, Pakistan, &amp; Bangladesh &amp; formerly often considered to include Burma (but not Ceylon)"
 },{
@@ -83,7 +83,7 @@
         "assets/countries/indonesia/3.jpg",
         "assets/countries/indonesia/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/indonesia/AnswerMeaning/1.gif",
     "tip": "country SE Asia in Malay Archipelago comprising Sumatra, Java, S &amp; E Borneo, Sulawesi, W Timor, W New Guinea, the Moluccas,&amp; many adjacent smaller islands; formerly (as Netherlands Indies) an overseas territory of the Netherlands ∗ Jakarta area 739,773 square miles (1,916,103 square kilometers), pop 232,500,000."
 },{
@@ -94,7 +94,7 @@
         "assets/countries/iraq/3.jpg",
         "assets/countries/iraq/4.png"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/iraq/AnswerMeaning/1.jpg",
     "tip": "country SW Asia in Mesopotamia; a republic since 1958,formerly a kingdom ∗ Baghdad area168,927 square miles (437,521 square kilometers), pop 31,500,000."
 },{
@@ -105,7 +105,7 @@
         "assets/countries/italy/3.png",
         "assets/countries/italy/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/italy/AnswerMeaning/1.jpg",
     "tip": "country comprising the peninsula of Italy, Sicily, Sardinia, &amp; numerous other islands; a republic since 1946, formerly a kingdom ∗ Rome area 116,313 square miles (302,251 square kilometers), pop 57,844,017."
 },{
@@ -116,7 +116,7 @@
         "assets/countries/japan/3.jpg",
         "assets/countries/japan/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/japan/AnswerMeaning/1.gif",
     "tip": "country E Asia comprising Honshu, Hokkaido, Kyushu, Shikoku, &amp; other islands in the W Pacific; a constitutional monarchy ∗ Tokyo area 143,619 square miles (371,973 square kilometers), pop127,756,815."
 },{
@@ -127,7 +127,7 @@
         "assets/countries/malaysia/3.png",
         "assets/countries/malaysia/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/malaysia/AnswerMeaning/1.jpg",
     "tip": "country SE Asia, a union of Malaya, Sabah (North Borneo),Sarawak, &amp; (until 1965) Singapore; a federal constitutional monarchy in the Commonwealth of Nations ∗ Kuala Lumpur area 128,727 square miles (333,403 square kilometers), pop 27,500,000"
 },{
@@ -138,7 +138,7 @@
         "assets/countries/mongolia/3.jpg",
         "assets/countries/mongolia/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/mongolia/AnswerMeaning/1.gif",
     "tip": "or Outer Mongolia country E Asia comprising major portion of region of Mongolia; a republic ∗ Ulaanbaatar area 604,247 square miles (1,565,000 square kilometers), pop2,800,000."
 },{
@@ -149,7 +149,7 @@
         "assets/countries/nepal/3.jpg",
         "assets/countries/nepal/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/nepal/AnswerMeaning/1.jpg",
     "tip": "country Asia on NE border of India in the Himalayas; ∗ Kathmandu area 54,362 square miles(140,798 square kilometers), pop 23,151,423."
 },{
@@ -160,7 +160,7 @@
         "assets/countries/north_korea/3.jpg",
         "assets/countries/north_korea/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/north_korea/AnswerMeaning/1.jpg",
     "tip": "(∗ Pyongyang area 46,609 sq miles or 120,717 sq kilometers,pop 24,051,200)."
 },{
@@ -171,7 +171,7 @@
         "assets/countries/pakistan/3.jpg",
         "assets/countries/pakistan/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/pakistan/AnswerMeaning/1.jpg",
     "tip": "country S Asia originally comprising an E division &amp; a W division; a dominion 1947–56, an Islamic republic since 1956, &amp; a member of the Commonwealth of Nations 1956–72; formed from parts of former British India; ∗ Islamabad area 307,373 square miles (796,096 square kilometers), pop 153,047,500."
 },{
@@ -182,7 +182,7 @@
         "assets/countries/philippines/3.jpg",
         "assets/countries/philippines/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/philippines/AnswerMeaning/1.png",
     "tip": "country E Asia comprising the Philippine Islands; a republic; once a Spanish possession &amp; (1898–1946) a United States possession ∗ Manila land area 115,651 square miles (299,536 square kilometers), pop 93,600,000."
 },{
@@ -193,7 +193,7 @@
         "assets/countries/poland/3.jpg",
         "assets/countries/poland/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/poland/AnswerMeaning/1.jpg",
     "tip": "country E cen Europe bordering on Baltic Sea; in medieval period a kingdom, at one time extending to the lower Dnieper; partitioned 1772, 1793, 1795 among Russia, Prussia, &amp; Austria; again a kingdom 1815–30; lost autonomy 1830–1918; since 1918 a republic ∗ Warsaw area120,756 square miles (312,758 square kilometers), pop 38,038,400."
 },{
@@ -204,7 +204,7 @@
         "assets/countries/south_korea/3.jpg",
         "assets/countries/south_korea/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/south_korea/AnswerMeaning/1.jpg",
     "tip": "(∗ Seoul area 38,022 sq miles or 98,477 sq kilometers, pop 50,200,000)."
 },{
@@ -215,20 +215,9 @@
         "assets/countries/thailand/3.jpg",
         "assets/countries/thailand/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/thailand/AnswerMeaning/1.jpg",
     "tip": "country SE Asia on Gulf of Thailand; a kingdom ∗ Bangkok area 198,455 square miles (513,998 square kilometers), pop 66,000,000."
-},{
-    "answer": "unitedkingdom",
-    "images": [
-        "assets/countries/united_kingdom/1.jpg",
-        "assets/countries/united_kingdom/2.jpg",
-        "assets/countries/united_kingdom/3.jpg",
-        "assets/countries/united_kingdom/4.jpg"
-    ],
-    "hastip": false,
-    "tipimage": "assets/countries/united_kingdom/AnswerMeaning/1.gif",
-    "tip": "or United Kingdom of Great Britain and Northern Ireland country W Europe in British Isles comprising Great Britain &amp; Northern Ireland ∗ London area 94,251 square miles(244,110 square kilometers), pop 58,789,194"
 },{
     "answer": "vietnam",
     "images": [
@@ -237,7 +226,7 @@
         "assets/countries/vietnam/3.jpg",
         "assets/countries/vietnam/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/vietnam/AnswerMeaning/1.jpg",
     "tip": "country SE Asia in Indochina; state, including Tonkin &amp; N Annam, set up 1945–46; with S Annam &amp; Cochin China, an associated state of French Union 1950–54; after civil war, divided 1954–75 at 17th parallel into republics of North Vietnam (∗ Hanoi) &amp; South Vietnam (∗ Saigon); reunited 1975 ∗ Hanoi area 127,207 square miles (330,738 square kilometers), pop 87,100,000."
 },{
@@ -248,7 +237,7 @@
         "assets/countries/yemen/3.jpg",
         "assets/countries/yemen/4.jpg"
     ],
-    "hastip": false,
+    "hastip": true,
     "tipimage": "assets/countries/yemen/AnswerMeaning/1.gif",
     "tip": "Country S Arabia bordering on Red Sea &amp; Gulf of Aden; a republic formed 1990 by merger of Yemen Arab Republic (∗ Sanaa) with People&#39;s Democratic Republic of Yemen or Southern Yemen (∗ Aden) ∗ Sanaa area 203,849 square miles (527,969 square kilometers), pop 19,700,000."
 }]
