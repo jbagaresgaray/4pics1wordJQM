@@ -631,6 +631,12 @@ $(document).ready(function() {
     $(document).on("pageshow", "#game", function(event, data) { // When entering pagetwo
         $('#zoom_thumbnail').hide();
 
+        $(this).on('touchmove', function(e) {
+            //prevent native touch activity like scrolling
+            console.log('asdasd')
+            e.preventDefault();
+        });
+
         generateGame();
     });
 
