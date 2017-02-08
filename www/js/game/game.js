@@ -40,9 +40,9 @@ $(document).ready(function() {
     function generateGridThumbnails(array) {
         $('#grid_thumbnail').empty();
         for (var i = 0; i < array.length; i++) {
-            if(i % 2 === 0){
+            if (i % 2 === 0) {
                 var html = '<div class="col-xs-6 col-sm-6 col-md-6"><div class="grid-media text-right"><img src="' + array[i] + '" height="100%" class="img-thumbnail"></div></div>';
-            }else{
+            } else {
                 var html = '<div class="col-xs-6 col-sm-6 col-md-6"><div class="grid-media text-left"><img src="' + array[i] + '" height="100%" class="img-thumbnail"></div></div>';
             }
             $('#grid_thumbnail').append(html);
@@ -654,14 +654,15 @@ $(document).ready(function() {
     });
 
     $("#correctDialog").on("popupafteropen", function(event, ui) {
-        console.log('#correctDialog popupafteropen')
+        console.log('#correctDialog popupafteropen: ')
         $('#correctDialog').find('.answer').empty();
-        if (question) {
+        if (!_.isEmpty(question)) {
             $('#correctDialog').find('.answer').text(question.answer.toUpperCase());
         }
     });
 
     $("#correctDialog").on("popupafterclose", function(event, ui) {
+        $('#correctDialog').find('.answer').empty();
         if (question) {
             if (question.hastip) {
                 setTimeout(function() {
@@ -694,6 +695,10 @@ $(document).ready(function() {
     });
 
     $("#tipDialog").on("popupafterclose", function(event, ui) {
+        $('#tipDialog').find('.tipimage').empty()
+        $('#tipDialog').find('.tip').empty()
+        $('#tipDialog').find('.nd2-title').empty()
+
         var game = new GameServices();
         game.clearHintCache(params, activePlayer);
 
