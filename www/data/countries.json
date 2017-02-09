@@ -1,4 +1,37 @@
 [{
+    "answer": "austria",
+    "images": [
+        "assets/countries/austria/1.jpg",
+        "assets/countries/austria/2.jpg",
+        "assets/countries/austria/3.jpg",
+        "assets/countries/austria/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/austria/AnswerMeaning/1.jpg",
+    "tip": "Land locked country of central Europe in and north of the eastern Alps mountain system with the Danube River crossing it in the north; a republic; capital Vienna area 32,375 square miles (84,175 square kilometers), population 8,401,940"
+},{
+    "answer": "bangladesh",
+    "images": [
+        "assets/countries/bangladesh/1.jpg",
+        "assets/countries/bangladesh/2.jpg",
+        "assets/countries/bangladesh/3.jpg",
+        "assets/countries/bangladesh/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/bangladesh/AnswerMeaning/1.jpg",
+    "tip": "country S Asia E of India on Bay of Bengal; a republic in the Commonwealth of Nations since 1971 ∗ Dhaka area 55,126 square miles (143,328 square kilometers), pop 129,247,233."
+},{
+    "answer": "belgium",
+    "images": [
+        "assets/countries/belgium/1.jpg",
+        "assets/countries/belgium/2.jpg",
+        "assets/countries/belgium/3.jpg",
+        "assets/countries/belgium/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/belgium/AnswerMeaning/1.gif",
+    "tip": "country of western Europe bordering on the North Sea and comprising the Dutch-speaking region of Flanders and the French-speaking region of Wallonia; a constitutional monarchy; capital Brussels area 11,781 square miles (30,513 square kilometers), population 10,951,266."
+},{
     "answer": "brunei",
     "images": [
         "assets/countries/brunei/1.gif",
@@ -31,6 +64,17 @@
     "hastip": true,
     "tipimage": "assets/countries/china/AnswerMeaning/1.jpg",
     "tip": "sea section of the W Pacific; divided into East China & South China seas."
+},{
+    "answer": "cyprus",
+    "images": [
+        "assets/countries/cyprus/1.jpg",
+        "assets/countries/cyprus/2.jpg",
+        "assets/countries/cyprus/3.jpg",  
+        "assets/countries/cyprus/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/cyprus/AnswerMeaning/1.jpg",
+    "tip": "country coextensive with the island of Cyprus; a republic of the Commonwealth of Nations, but since 1974 partitioned along Greek and Turkish ethnic lines; capital Nicosia area 3572 square miles (9287 square kilometers), population 1,100,000"
 },{
     "answer": "denmark",
     "images": [
@@ -65,6 +109,17 @@
     "tipimage": "assets/countries/greece/AnswerMeaning/1.jpg",
     "tip": "country S Europe at S end of Balkan Peninsula; a republic ∗ Athens area 50,944 square miles(131,945 square kilometers), pop 10,964,020."
 },{
+    "answer": "hungary",
+    "images": [
+        "assets/countries/hungary/1.jpg",
+        "assets/countries/hungary/2.jpg",
+        "assets/countries/hungary/3.png",
+        "assets/countries/hungary/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/hungary/AnswerMeaning/1.gif",
+    "tip": "Land locked country in central Europe; formerly a kingdom, since 1946 a republic; capital Budapest area 35,919 square miles (93,030 square kilometers), population 9,937,628"
+},{
     "answer": "india",
     "images": [
         "assets/countries/india/1.jpg",
@@ -97,6 +152,17 @@
     "hastip": true,
     "tipimage": "assets/countries/iraq/AnswerMeaning/1.jpg",
     "tip": "country SW Asia in Mesopotamia; a republic since 1958,formerly a kingdom ∗ Baghdad area168,927 square miles (437,521 square kilometers), pop 31,500,000."
+},{
+    "answer": "israel",
+    "images": [
+        "assets/countries/israel/1.jpg",
+        "assets/countries/israel/2.jpg",
+        "assets/countries/israel/3.jpg",
+        "assets/countries/israel/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/israel/AnswerMeaning/1.jpg",
+    "tip": "Country SW Asia bordering on the Mediterranean; a republic established 1948 ∗ Jerusalem area 7993 square miles (20,782 square kilometers), pop 7,300,000."
 },{
     "answer": "italy",
     "images": [
