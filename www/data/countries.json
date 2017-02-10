@@ -186,6 +186,17 @@
     "tipimage": "assets/countries/japan/AnswerMeaning/1.gif",
     "tip": "country E Asia comprising Honshu, Hokkaido, Kyushu, Shikoku, &amp; other islands in the W Pacific; a constitutional monarchy ∗ Tokyo area 143,619 square miles (371,973 square kilometers), pop127,756,815."
 },{
+    "answer": "laos",
+    "images": [
+        "assets/countries/laos/1.jpg",
+        "assets/countries/laos/2.jpg",
+        "assets/countries/laos/3.jpg",
+        "assets/countries/laos/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/laos/AnswerMeaning/1.png",
+    "tip": "country E Asia comprising Honshu, Hokkaido, Kyushu, Shikoku, &amp; other islands in the W Pacific; a constitutional monarchy ∗ Tokyo area 143,619 square miles (371,973 square kilometers), pop127,756,815."
+},{
     "answer": "malaysia",
     "images": [
         "assets/countries/malaysia/1.gif",
@@ -196,6 +207,17 @@
     "hastip": true,
     "tipimage": "assets/countries/malaysia/AnswerMeaning/1.jpg",
     "tip": "country SE Asia, a union of Malaya, Sabah (North Borneo),Sarawak, &amp; (until 1965) Singapore; a federal constitutional monarchy in the Commonwealth of Nations ∗ Kuala Lumpur area 128,727 square miles (333,403 square kilometers), pop 27,500,000"
+},{
+    "answer": "maldives",
+    "images": [
+        "assets/countries/maldives/1.jpg",
+        "assets/countries/maldives/2.png",
+        "assets/countries/maldives/3.jpg",
+        "assets/countries/maldives/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/maldives/AnswerMeaning/1.jpg",
+    "tip": "low-lying islands (atolls) in the Indian Ocean south of the Laccadive Islands; a sultanate under British protection until 1965; now an independent member of the Commonwealth of Nations; capital Male area 115 square miles (299 square kilometers), population 298,968"
 },{
     "answer": "mongolia",
     "images": [
@@ -262,6 +284,72 @@
     "hastip": true,
     "tipimage": "assets/countries/poland/AnswerMeaning/1.jpg",
     "tip": "country E cen Europe bordering on Baltic Sea; in medieval period a kingdom, at one time extending to the lower Dnieper; partitioned 1772, 1793, 1795 among Russia, Prussia, &amp; Austria; again a kingdom 1815–30; lost autonomy 1830–1918; since 1918 a republic ∗ Warsaw area120,756 square miles (312,758 square kilometers), pop 38,038,400."
+},{
+    "answer": "portugal",
+    "images": [
+        "assets/countries/portugal/1.jpg",
+        "assets/countries/portugal/2.jpg",
+        "assets/countries/portugal/3.jpg",
+        "assets/countries/portugal/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/portugal/AnswerMeaning/1.jpg",
+    "tip": "country in southwestern Europe in the western Iberian Peninsula bordering on the Atlantic Ocean; a kingdom before 1910; now a republic; capital Lisbon area (not including the Azores and Madeira) 35,383 square miles (91,642 square kilometers), population 10,562,178"
+},{
+    "answer": "romania",
+    "images": [
+        "assets/countries/romania/1.jpg",
+        "assets/countries/romania/2.jpg",
+        "assets/countries/romania/3.jpg",
+        "assets/countries/romania/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/romania/AnswerMeaning/1.jpg",
+    "tip": "Country in southeastern Europe bordering on the Black Sea; capital Bucharest area 91,699 square miles (237,500 square kilometers), population 20,121,641"
+},{
+    "answer": "russia",
+    "images": [
+        "assets/countries/russia/1.jpg",
+        "assets/countries/russia/2.jpg",
+        "assets/countries/russia/3.jpg",
+        "assets/countries/russia/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/russia/AnswerMeaning/1.jpg",
+    "tip": "Russian Federation independent country in eastern Europe and northern Asia bordering on the Arctic and Pacific oceans and on the Baltic and Black seas and covering the largest area of any country in the world; capital Moscow area 6,592,812 square miles (17,075,383 square kilometers), population 143,300,000 ◆From 1922 to 1991, Russia was a constituent republic of the U.S.S.R. called the Russian Republic or Soviet Russia."
+},{
+    "answer": "sanmarino",
+    "images": [
+        "assets/countries/san_marino/1.jpg",
+        "assets/countries/san_marino/2.jpg",
+        "assets/countries/san_marino/3.png",
+        "assets/countries/san_marino/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/san_marino/AnswerMeaning/1.jpg",
+    "tip": "Country in southern Europe on the Italian Peninsula south-southwest of Rimini and completely surrounded by Italy; a republic area 24 square miles (62 square kilometers), population 32,500"
+},{
+    "answer": "singapore",
+    "images": [
+        "assets/countries/singapore/1.jpg",
+        "assets/countries/singapore/2.jpg",
+        "assets/countries/singapore/3.png",
+        "assets/countries/singapore/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/singapore/AnswerMeaning/1.jpg",
+    "tip": "Island of the Malay Archipelago in the South China Sea off the southern end of the Malay Peninsula area 255 square miles (660 square kilometers), population 5,076,700.Singapore was formerly a British crown colony and from 1963 to 1965 a state of the country of Malaysia. It has been an independent republic in the Commonwealth of Nations since 1965."
+},{
+    "answer": "slovakia",
+    "images": [
+        "assets/countries/slovakia/1.jpg",
+        "assets/countries/slovakia/2.jpg",
+        "assets/countries/slovakia/3.png",
+        "assets/countries/slovakia/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/slovakia/AnswerMeaning/1.gif",
+    "tip": "country cen Europe; a constituent republic of Czechoslovakia 1918–92 ∗ Bratislava area 18,923 square miles (49,011 square kilometers), pop 5,379,455."
 },{
     "answer": "southkorea",
     "images": [
