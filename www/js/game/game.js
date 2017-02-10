@@ -299,6 +299,9 @@ $(document).ready(function() {
                         usedQuestions.push(i);
                     }
                 }
+                activePlayer.sports_ques = _.uniq(activePlayer.sports_ques,function(e){
+                    return e;
+                })
 
                 if (activePlayer.sports_ques && activePlayer.sports_ques.length > 0) {
                     for (var i = 0; i < activePlayer.sports_ques.length; i++) {
@@ -391,6 +394,9 @@ $(document).ready(function() {
                         usedQuestions.push(i);
                     }
                 }
+                activePlayer.country_ques = _.uniq(activePlayer.country_ques,function(e){
+                    return e;
+                })
 
                 if (activePlayer.country_ques && activePlayer.country_ques.length > 0) {
                     for (var i = 0; i < activePlayer.country_ques.length; i++) {
@@ -473,6 +479,10 @@ $(document).ready(function() {
                     }
                 }
 
+                activePlayer.vocabulary_ques = _.uniq(activePlayer.vocabulary_ques,function(e){
+                    return e;
+                })
+
                 if (activePlayer.vocabulary_ques && activePlayer.vocabulary_ques.length > 0) {
                     for (var i = 0; i < activePlayer.vocabulary_ques.length; i++) {
                         var index = activePlayer.vocabulary_ques[i];
@@ -553,6 +563,10 @@ $(document).ready(function() {
                         usedQuestions.push(i);
                     }
                 }
+
+                activePlayer.computer_ques = _.uniq(activePlayer.computer_ques,function(e){
+                    return e;
+                })
 
                 if (activePlayer.computer_ques && activePlayer.computer_ques.length > 0) {
                     for (var i = 0; i < activePlayer.computer_ques.length; i++) {
