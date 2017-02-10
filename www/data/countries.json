@@ -263,7 +263,7 @@
     "tipimage": "assets/countries/poland/AnswerMeaning/1.jpg",
     "tip": "country E cen Europe bordering on Baltic Sea; in medieval period a kingdom, at one time extending to the lower Dnieper; partitioned 1772, 1793, 1795 among Russia, Prussia, &amp; Austria; again a kingdom 1815–30; lost autonomy 1830–1918; since 1918 a republic ∗ Warsaw area120,756 square miles (312,758 square kilometers), pop 38,038,400."
 },{
-    "answer": "southkorea",
+    "answer": "spain",
     "images": [
         "assets/countries/south_korea/1.jpg",
         "assets/countries/south_korea/2.jpg",
@@ -273,6 +273,28 @@
     "hastip": true,
     "tipimage": "assets/countries/south_korea/AnswerMeaning/1.jpg",
     "tip": "(∗ Seoul area 38,022 sq miles or 98,477 sq kilometers, pop 50,200,000)."
+},{
+    "answer": "spain",
+    "images": [
+        "assets/countries/spain/1.jpg",
+        "assets/countries/spain/2.jpg",
+        "assets/countries/spain/3.jpg",
+        "assets/countries/spain/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/spain/AnswerMeaning/1.jpg",
+    "tip": "Country in southwestern Europe that occupies most of the Iberian Peninsula and borders on the Atlantic Ocean (including the Bay of Biscay and the Gulf of Cadiz) and the Mediterranean Sea area 194,881 square miles (504,742 square kilometers), population 46,815,916. Spain is a kingdom with Madrid as its capital."
+},{
+    "answer": "switzerland",
+    "images": [
+        "assets/countries/switzerland/1.jpg",
+        "assets/countries/switzerland/2.jpg",
+        "assets/countries/switzerland/3.jpg",
+        "assets/countries/switzerland/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/countries/switzerland/AnswerMeaning/1.jpg",
+    "tip": "Land locked country (a federal republic) in Western Europe in the Alps; capital Bern area 15,940 square miles (41,285 square kilometers), population 7,870,000."
 },{
     "answer": "thailand",
     "images": [
