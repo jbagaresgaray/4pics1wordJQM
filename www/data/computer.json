@@ -1,4 +1,15 @@
 [{
+    "answer": "binoculars",
+    "images": [
+        "assets/technology/binoculars/1.jpg",
+        "assets/technology/binoculars/2.png",
+        "assets/technology/binoculars/3.jpg",
+        "assets/technology/binoculars/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/binoculars/ANS/1.png",
+    "tip": "an optical instrument with a lens for each eye, used for viewing distant objects"
+},{
     "answer": "blender",
     "images": [
     	"assets/technology/blender/1.png",
@@ -9,6 +20,39 @@
     "hastip": true,
     "tipimage": "assets/technology/blender/ANS/1.jpg",
     "tip": "a person or thing that mixes things together, in particular an electric mixing machine used in food preparation for liquefying, chopping, or pureeing."
+},{
+    "answer": "boombox",
+    "images": [
+        "assets/technology/boombox/1.png",
+        "assets/technology/boombox/2.png",
+        "assets/technology/boombox/3.jpg",
+        "assets/technology/boombox/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/boombox/ANS/1.jpg",
+    "tip": "a portable sound system, typically including radio and cassette or CD player, capable of powerful sound."
+},{
+    "answer": "canopener",
+    "images": [
+        "assets/technology/canopener/1.png",
+        "assets/technology/canopener/2.png",
+        "assets/technology/canopener/3.jpg",
+        "assets/technology/canopener/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/canopener/ANS/1.jpg",
+    "tip": "Canned food was invented for the British Navy in the early 1800s-- but the modern can opener didn&#39;t come along until 1870, when American William Lyman created a simple device with a cutting wheel that rolls around the can&#39;s rim. Previously, can-opening instructions for British sailors read, &quot;Cut round the top near the outer edge with a chisel and hammer.&quot;"
+},{
+    "answer": "carjack",
+    "images": [
+        "assets/technology/carjack/1.jpg",
+        "assets/technology/carjack/2.jpg",
+        "assets/technology/carjack/3.png",
+        "assets/technology/carjack/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/carjack/ANS/1.jpg",
+    "tip": "Richard Dudgeon invented the compact, portable hydraulic jack, in 1851. when he was just 32 years old. Now a staple of every auto shop and pit row in the land, its original habitats were shipyards and railroad repair shops."
 },{
     "answer": "cooler",
     "images": [
@@ -32,9 +76,20 @@
     "tipimage": "assets/technology/duck_tape/ANS/1.png",
     "tip": "NASA astronauts have used it to make repairs on the moon and in space. The MythBusters built a boat and held a car together with the stuff. Brookhaven National Laboratory fixed their particle accelerator with it. And enthusiasts have used it to make prom dresses and wallets. You might say it&#39;s a material, not a gadget, but trust us: Duct tape is the ultimate multitool."
 },{
+    "answer": "dvdplayer",
+    "images": [
+        "assets/technology/dvdplayer/1.jpg",
+        "assets/technology/dvdplayer/2.jpg",
+        "assets/technology/dvdplayer/3.jpg",
+        "assets/technology/dvdplayer/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/dvdplayer/ANS/1.jpg",
+    "tip": "The prototype DVD player, developed in 1994 by Toshiba, was a pile of circuit boards nicknamed the &quot;fire watchtower.&quot; Though unstable, it proved that DVD quality crushed that of VHS. Players came out in 1996; the first DVD movie release, Twister, in 1997."
+},{
     "answer": "flashdrive",
     "images": [
-    	"assets/technology/flash_drive/1.jpg",
+    	"assets/technology/flashlight/1.jpg",
     	"assets/technology/flash_drive/2.png",
     	"assets/technology/flash_drive/3.jpg",
     	"assets/technology/flash_drive/4.jpg"
@@ -42,6 +97,28 @@
     "hastip": true,
     "tipimage": "assets/technology/flash_drive/ANS/1.jpg",
     "tip": "a small electronic device containing flash memory that is used for storing data or transferring it to or from a computer, digital camera, etc."
+},{
+    "answer": "flashlight",
+    "images": [
+        "assets/technology/flashlight/1.jpg",
+        "assets/technology/flashlight/2.png",
+        "assets/technology/flashlight/3.jpg",
+        "assets/technology/flashlight/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/flashlight/ANS/1.jpg",
+    "tip": "Although a flashlight is a relatively simple device-- a small electric bulb with a power switch-- it wasn&#39;t invented until 1896 simply because it required a portable power source: the dry cell battery. Early carbon filament bulbs were inefficient and the batteries weak, mustering just enough current to keep the light on for a few seconds at a time-- hence, flashlight."
+},{
+    "answer": "hairdryer",
+    "images": [
+        "assets/technology/hairdryer/1.jpg",
+        "assets/technology/hairdryer/2.png",
+        "assets/technology/hairdryer/3.jpg",
+        "assets/technology/hairdryer/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/hairdryer/ANS/1.jpg",
+    "tip": "an electrical device for drying a person&#39;s hair by blowing warm air over it."
 },{
     "answer": "hearingaid",
     "images": [
@@ -53,6 +130,50 @@
     "hastip": true,
     "tipimage": "assets/technology/hearing_aid/ANS/1.jpg",
     "tip": "According to the National Institutes of Health, only one out of five people who could benefit from a hearing aid actually wear one."
+},{
+    "answer": "leafbloower",
+    "images": [
+        "assets/technology/leafbloower/1.jpg",
+        "assets/technology/leafbloower/2.jpg",
+        "assets/technology/leafbloower/3.jpg",
+        "assets/technology/leafbloower/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/leafbloower/ANS/1.jpg",
+    "tip": "A leaf blower (often referred to as simply a blower) is a gardening tool that propels air out of a nozzle to move debris such as leaves and grass cuttings. Leaf blowers are powered by electric or gasoline motors."
+},{
+    "answer": "leatherman",
+    "images": [
+        "assets/technology/leatherman/1.png",
+        "assets/technology/leatherman/2.jpg",
+        "assets/technology/leatherman/3.jpg",
+        "assets/technology/leatherman/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/leatherman/ANS/1.jpg",
+    "tip": "Invented in 1983 by Tim Leatherman, the Pocket Survival Tool (PST) has 14 tools, including a can opener, pliers, a file and four screwdrivers. Today, the Leatherman Surge features 21 tools."
+},{
+    "answer": "lunchbox",
+    "images": [
+        "assets/technology/lunchbox/1.jpg",
+        "assets/technology/lunchbox/2.jpg",
+        "assets/technology/lunchbox/3.jpg",
+        "assets/technology/lunchbox/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/lunchbox/ANS/1.jpg",
+    "tip": "a container in which to carry a packed meal."
+},{
+    "answer": "printer",
+    "images": [
+        "assets/technology/printer/1.jpg",
+        "assets/technology/printer/2.jpg",
+        "assets/technology/printer/3.jpg",
+        "assets/technology/printer/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/printer/ANS/1.jpg",
+    "tip": "a person whose job or business is commercial printing."
 },{
     "answer": "roomba",
     "images": [
@@ -76,6 +197,17 @@
     "tipimage": "assets/technology/stapler/ANS/1.jpg",
     "tip": "a device for fastening together sheets of paper with a staple or staples."
 },{
+    "answer": "stopwatch",
+    "images": [
+        "assets/technology/stopwatch/1.png",
+        "assets/technology/stopwatch/2.jpg",
+        "assets/technology/stopwatch/3.jpg",
+        "assets/technology/stopwatch/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/stopwatch/ANS/1.jpg",
+    "tip": "a special watch with buttons that start, stop, and then zero the hands, used to time races."
+},{
     "answer": "sunglasses",
     "images": [
     	"assets/technology/sunglasses/1.jpg",
@@ -97,4 +229,15 @@
     "hastip": false,
     "tipimage": "",
     "tip": ""
+},{
+    "answer": "zipper",
+    "images": [
+        "assets/technology/zipper/1.jpg",
+        "assets/technology/zipper/2.jpg",
+        "assets/technology/zipper/3.jpg",
+        "assets/technology/zipper/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/technology/zipper/ANS/1.jpg",
+    "tip": "a device consisting of two flexible strips of metal or plastic with interlocking projections closed or opened by pulling a slide along them, used to fasten garments, bags, and other items."
 }]
