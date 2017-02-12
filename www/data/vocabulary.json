@@ -1,4 +1,15 @@
 [{
+    "answer": "angry",
+    "images": [
+        "assets/vocabulary/angry/1.jpg",
+        "assets/vocabulary/angry/2.jpg",
+        "assets/vocabulary/angry/3.jpg",
+        "assets/vocabulary/angry/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": ": feeling or showing anger &lt;an angry crowd&gt; :  indicative of or proceeding from anger &lt;angry words&gt;b :  seeming to show anger or to threaten in an angry manner &lt;an angry sky&gt; :  painfully inflamed &lt;an angry rash&gt;"
+},{
     "answer": "big",
     "images": [
         "assets/vocabulary/big/1.jpg",
@@ -20,6 +31,28 @@
     "hastip": true,
     "tipimage": "",
     "tip": ": to drive out or destroy the property of by fire : to cause to fail, wear out, or become exhausted especially from overwork or overuse"
+},{
+    "answer": "children",
+    "images": [
+        "assets/vocabulary/children/1.jpg",
+        "assets/vocabulary/children/2.jpg",
+        "assets/vocabulary/children/3.jpg",
+        "assets/vocabulary/children/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": ":  an unborn or recently born person b dialect :  a female infant :  a young person especially between infancy and youth &lt;a play for both children and adults&gt;b : a childlike or childish person &lt;He is a child in most business matters.&gt;c :  a person not yet of age &lt;Under the law she is still a child.&gt;"
+},{
+    "answer": "cute",
+    "images": [
+        "assets/vocabulary/cute/1.jpg",
+        "assets/vocabulary/cute/2.jpg",
+        "assets/vocabulary/cute/3.jpg",
+        "assets/vocabulary/cute/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "clever or shrewd often in an underhanded manner &lt;“ … he&#39;s a true patriot and statesman … and a most particular cute lawyer.” — Thomas Chandler Haliburton&gt;b :  IMPERTINENT, SMART- ALECKY &lt;Don&#39;t get cute with me.&gt; :  attractive or pretty especially in a childish, youthful, or delicate way &lt;a cute puppy&gt; &lt;a cute smile&gt;"
 },{
     "answer": "dirty",
     "images": [
@@ -43,6 +76,17 @@
     "tipimage": "",
     "tip": ""
 },{
+    "answer": "father",
+    "images": [
+        "assets/vocabulary/father/1.jpg",
+        "assets/vocabulary/father/2.jpg",
+        "assets/vocabulary/father/3.jpg",
+        "assets/vocabulary/father/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "a man who has begotten a child; also :  SIRE 3b capitalized (1) :  GOD 1 (2) :  the first person of the Trinity (see Trinity 1) :  FOREFATHER &lt;the founding fathers&gt; :  one related to another in a way suggesting that of father to childb :  an old man —used as a respectful form of address"
+},{
     "answer": "gesture",
     "images": [
         "assets/vocabulary/gesture/1.jpg",
@@ -53,6 +97,83 @@
     "hastip": true,
     "tipimage": "",
     "tip": "movement usually of the body or limbs that expresses or emphasizes an idea, sentiment, or attitude :  the use of motions of the limbs or body as a means of expression :  something said or done by way of formality or courtesy, as a symbol or token, or for its effect on the attitudes of others &lt;a political gesture to draw popular support — V. L. Parrington&gt;"
+},{
+    "answer": "grimace",
+    "images": [
+        "assets/vocabulary/grimace/1.jpg",
+        "assets/vocabulary/grimace/2.jpg",
+        "assets/vocabulary/grimace/3.jpg",
+        "assets/vocabulary/grimace/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "a facial expression usually of disgust, disapproval, or pain &lt;a grimace of hate and rage&gt;"
+},{
+    "answer": "hard",
+    "images": [
+        "assets/vocabulary/hard/1.png",
+        "assets/vocabulary/hard/2.jpg",
+        "assets/vocabulary/hard/3.jpg",
+        "assets/vocabulary/hard/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "not easily penetrated :  not easily yielding to pressure &lt;hard surfaces&gt; &lt;an uncomfortably hard chair&gt;b of cheese :  not capable of being spread :  very firm"
+},{
+    "answer": "heavy",
+    "images": [
+        "assets/vocabulary/heavy/1.jpg",
+        "assets/vocabulary/heavy/2.jpg",
+        "assets/vocabulary/heavy/3.jpg",
+        "assets/vocabulary/heavy/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "having great weight; also : characterized by mass or weight &lt;how heavy is it?&gt;b :  having a high specific gravity :  having great weight in proportion to bulk &lt;Lead and gold are heavy metals.&gt;c (1) of an isotope :  having or being atoms of greater than normal mass for that element &lt;heavy carbons&gt; (2) of a chemical compound :  containing heavy isotopes &lt;heavy ammonia&gt; :  difficult to bear; specifically :  causing or characterized by severe pain or suffering &lt;a heavy sorrow&gt;"
+},{
+    "answer": "knot",
+    "images": [
+        "assets/vocabulary/knot/1.jpg",
+        "assets/vocabulary/knot/2.jpg",
+        "assets/vocabulary/knot/3.jpg",
+        "assets/vocabulary/knot/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "an interlacement of the parts of one or more flexible bodies forming a lump or knob (as for fastening or tying together)b :  the lump or knob so formedc :  a tight constriction or the sense of constriction &lt;my stomach was all in knots&gt; :  something hard to solve :  PROBLEM &lt;a matter full of legal knots&gt;"
+},{
+    "answer": "leave",
+    "images": [
+        "assets/vocabulary/leave/1.jpg",
+        "assets/vocabulary/leave/2.jpg",
+        "assets/vocabulary/leave/3.jpg",
+        "assets/vocabulary/leave/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": ":  BEQUEATH, DEVISE &lt;left a fortune to his son&gt; (2) :  to have remaining after one&#39;s death &lt;leaves a widow and two children&gt;b :  to cause to remain as a trace or aftereffect &lt;oil leaves a stain&gt; &lt;the wound left an ugly scar&gt;:  to cause or allow to be or remain in a specified condition &lt;leave the door open&gt; &lt;his manner left me cold&gt;b :  to fail to include or take along &lt;left the notes at home&gt; &lt;the movie leaves a lot out&gt;c :  to have as a remainder &lt;4 from 7 leaves 3&gt;d :  to permit to be or remain subject to another&#39;s action or control &lt;just leave everything to me&gt;e :  LETf :  to cause or allow to be or remain available &lt;leave room for expansion&gt; &lt;left myself an out&gt; :  to go away from :  DEPART &lt;leave the room&gt;"
+},{
+    "answer": "mother",
+    "images": [
+        "assets/vocabulary/mother/1.jpg",
+        "assets/vocabulary/mother/2.jpg",
+        "assets/vocabulary/mother/3.jpg",
+        "assets/vocabulary/mother/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "a female parent &lt;She&#39;s the mother of three small children.&gt;b  :  a woman in authority; specifically :  the superior of a religious community of women &lt;Mother Theresa&gt; (2) :  an old or elderly woman &lt;Mother Hubbard"
+},{
+    "answer": "narrow",
+    "images": [
+        "assets/vocabulary/narrow/1.png",
+        "assets/vocabulary/narrow/2.jpg",
+        "assets/vocabulary/narrow/3.jpg",
+        "assets/vocabulary/narrow/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "of slender width &lt;a long and narrow room&gt;b :  of less than standard or usual width &lt;a narrow sidewalk&gt;c of a textile :  woven in widths usually less than 18 inches (46 centimeters)"
 },{
     "answer": "pair",
     "images": [
@@ -75,6 +196,17 @@
     "hastip": true,
     "tipimage": "",
     "tip": "any of a family (Palmae syn. Arecaceae) of mostly tropical or subtropical monocotyledonous trees, shrubs, or vines with usually a simple stem and a terminal crown of large pinnate or fan-shaped leaves :  a leaf of the palm as a symbol of victory or rejoicing; also :  a branch (as of laurel) similarly used :  a symbol of triumph or superiority; also :  VICTORY, TRIUMPH :  an addition to a military decoration in the form of a palm frond especially to indicate a second award of the basic decoration"
+},{
+    "answer": "pretty",
+    "images": [
+        "assets/vocabulary/pretty/1.jpg",
+        "assets/vocabulary/pretty/2.jpg",
+        "assets/vocabulary/pretty/3.jpg",
+        "assets/vocabulary/pretty/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "pleasing by delicacy or graceb :  having conventionally accepted elements of beautyc :  appearing or sounding pleasant or nice but lacking strength, force, manliness, purpose, or intensity &lt;pretty words that make no sense — Elizabeth B. Browning&gt;"
 },{
     "answer": "produce",
     "images": [
@@ -120,6 +252,17 @@
     "tipimage": "",
     "tip": ":  affected with or expressive of grief or unhappiness :  DOWNCASTb (1) :  causing or associated with grief or unhappiness :  DEPRESSING &lt;sad news&gt; (2) :  REGRETTABLE, DEPLORABLE &lt;a sad relaxation of morals — C. W. Cunnington&gt;c :  of little worth"
 },{
+    "answer": "smile",
+    "images": [
+        "assets/vocabulary/smile/1.jpg",
+        "assets/vocabulary/smile/2.jpg",
+        "assets/vocabulary/smile/3.jpg",
+        "assets/vocabulary/smile/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": ":  to have, produce, or exhibit a smile :  to look or regard with amusement or ridicule &lt;smiled at his own folly — Martin Gardner&gt;b :  to bestow approval &lt;feeling that Heaven smiled on his labors — Sheila Rowlands&gt;c :  to appeare pleasant or agreeable"
+},{
     "answer": "soft",
     "images": [
         "assets/vocabulary/soft/1.jpg",
@@ -130,6 +273,28 @@
     "hastip": true,
     "tipimage": "",
     "tip": "- pleasing or agreeable to the senses : bringing ease, comfort, or quiet &lt;the soft influences of home&gt;b :  having a bland or mellow rather than a sharp or acid tastec (1) :  not bright or glaring :  SUBDUED (2) : having or producing little contrast or a relatively short range of tones &lt;a soft photographic print&gt;d :  quiet in pitch or volumee of the eyes :  having a liquid or gentle appearancef :  smooth or delicate in texture, grain, or fiber &lt;soft cashmere&gt; &lt;soft fur&gt;g (1) :  balmy, mild, or clement in weather or temperature (2) :  moving or falling with slight force or impact :  not violent &lt;soft breezes&gt;"
+},{
+    "answer": "sunny",
+    "images": [
+        "assets/vocabulary/sunny/1.jpg",
+        "assets/vocabulary/sunny/2.jpg",
+        "assets/vocabulary/sunny/3.jpg",
+        "assets/vocabulary/sunny/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "- marked by brilliant sunlight : full of sunshine :  CHEERFUL, OPTIMISTIC &lt;a sunny disposition :  exposed to, brightened by, or warmed by the sun &lt;a sunny room&gt;"
+},{
+    "answer": "ugly",
+    "images": [
+        "assets/vocabulary/ugly/1.jpg",
+        "assets/vocabulary/ugly/2.jpg",
+        "assets/vocabulary/ugly/3.jpg",
+        "assets/vocabulary/ugly/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "",
+    "tip": "- offensive to the sight :  HIDEOUS b : offensive or unpleasant to any sense :  morally offensive or objectionable &lt;corruption—the ugliest stain of all&gt; :  likely to cause inconvenience or discomfort &lt;the ugly truth&gt;"
 },{
     "answer": "stink",
     "images": [
