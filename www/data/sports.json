@@ -1,4 +1,15 @@
 [{
+    "answer": "archery",
+    "images": [
+        "assets/sports/archery/1.jpg",
+        "assets/sports/archery/2.jpg",
+        "assets/sports/archery/3.jpg",
+        "assets/sports/archery/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/archery/definition/1.jpg",
+    "tip": "the sport or skill of shooting with a bow and arrow"
+},{
     "answer": "backalley",
     "images": [
         "assets/sports/back_alley/1.jpg",
@@ -54,6 +65,50 @@
     "tipimage": "assets/sports/backswing/definition/1.jpg",
     "tip": "the movement of a club, racket, bat, or arm backward to a position from which the forward or downward swing is made."
 },{
+    "answer": "badminton",
+    "images": [
+        "assets/sports/badminton/1.jpg",
+        "assets/sports/badminton/2.jpg",
+        "assets/sports/badminton/3.jpg",
+        "assets/sports/badminton/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/badminton/definition/1.jpg",
+    "tip": "a court game played with light long-handled rackets and a shuttlecock volleyed over a net"
+},{
+    "answer": "barbell",
+    "images": [
+        "assets/sports/barbell/1.jpg",
+        "assets/sports/barbell/2.jpg",
+        "assets/sports/barbell/3.jpg",
+        "assets/sports/barbell/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/barbell/definition/1.jpg",
+    "tip": "is a piece of exercise equipment used in weight training, bodybuilding, weightlifting and powerlifting, consisting of a long bar, usually with weights attached at each end."
+},{
+    "answer": "baseball",
+    "images": [
+        "assets/sports/baseball/1.jpg",
+        "assets/sports/baseball/2.jpg",
+        "assets/sports/baseball/3.jpg",
+        "assets/sports/baseball/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/baseball/definition/1.jpg",
+    "tip": ": a game played on a large field by two teams of nine players who try to score runs by hitting a small ball with a bat and then running to each of the four bases without being put out."
+},{
+    "answer": "baseballbat",
+    "images": [
+        "assets/sports/baseball_bat/1.gif",
+        "assets/sports/baseball_bat/2.jpg",
+        "assets/sports/baseball_bat/3.jpg",
+        "assets/sports/baseball_bat/4.png"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/baseball_bat/definition/1.jpg",
+    "tip": ":is a smooth wooden or metal club used in the sport of baseball to hit the ball after it is thrown by the pitcher. By regulation it may be no more than 2.75 inches in diameter at the thickest part and no more than 42 inches (1,100 mm) long."
+},{
     "answer": "baseline",
     "images": [
         "assets/sports/baseline/1.png",
@@ -63,6 +118,17 @@
     ],
     "hastip": true,
     "tipimage": "assets/sports/baseline/definition/1.png",
+    "tip": "a line serving as a basis; especially :  one of known measure or position used (as in surveying or navigation) to calculate or locate something"
+},{
+    "answer": "basketball",
+    "images": [
+        "assets/sports/basketball/1.jpg",
+        "assets/sports/basketball/2.jpg",
+        "assets/sports/basketball/3.jpg",
+        "assets/sports/basketball/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/basketball/definition/1.jpg",
     "tip": "a line serving as a basis; especially :  one of known measure or position used (as in surveying or navigation) to calculate or locate something"
 },{
     "answer": "block",
@@ -87,6 +153,72 @@
     "tipimage": "assets/sports/bounce_pass/definition/1.png",
     "tip": "a pass to a teammate that is made by bouncing the ball once"
 },{
+    "answer": "bowling",
+    "images": [
+        "assets/sports/bowling/1.jpg",
+        "assets/sports/bowling/2.jpg",
+        "assets/sports/bowling/3.jpg",
+        "assets/sports/bowling/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/bowling/definition/1.jpg",
+    "tip": "any of several games in which balls are rolled on a green or down an alley at an object or group of objects."
+},{
+    "answer": "bowlingball",
+    "images": [
+        "assets/sports/bowlingball/1.jpg",
+        "assets/sports/bowlingball/2.jpg",
+        "assets/sports/bowlingball/3.jpg",
+        "assets/sports/bowlingball/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/bowlingball/definition/1.jpg",
+    "tip": "is a piece of sporting equipment used to hit bowling pins in the sport of bowling. Ten-pin bowling balls are typically hard spheres with three holes drilled in them, one each for the ring and middle fingers, and one for the thumb."
+},{
+    "answer": "boxing",
+    "images": [
+        "assets/sports/boxing/1.jpg",
+        "assets/sports/boxing/2.jpg",
+        "assets/sports/boxing/3.jpg",
+        "assets/sports/boxing/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/boxing/definition/1.gif",
+    "tip": "the art of attack and defense with the fists practiced as a sport"
+},{
+    "answer": "chess",
+    "images": [
+        "assets/sports/chess/1.jpg",
+        "assets/sports/chess/2.jpg",
+        "assets/sports/chess/3.jpg",
+        "assets/sports/chess/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/chess/definition/1.jpg",
+    "tip": "a game for 2 players each of whom moves 16 pieces according to fixed rules across a checkerboard and tries to checkmate the opponent&#39;s king"
+},{
+    "answer": "chessboard",
+    "images": [
+        "assets/sports/chessboard/1.jpg",
+        "assets/sports/chessboard/2.jpg",
+        "assets/sports/chessboard/3.jpg",
+        "assets/sports/chessboard/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/chessboard/definition/1.jpg",
+    "tip": "is the type of checkerboard used in the classic board game chess, and consists of 64 squares (eight rows and eight columns) and 32 pieces. The squares are arranged in two alternating colors (light and dark). Wooden boards may use naturally light and dark brown woods, while plastic and vinyl boards often use brown or green for the dark squares and shades such as buff or cream for the light squares."
+},{
+    "answer": "chessclock",
+    "images": [
+        "assets/sports/chessclock/1.gif",
+        "assets/sports/chessclock/2.jpg",
+        "assets/sports/chessclock/3.jpg",
+        "assets/sports/chessclock/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/chessclock/definition/1.jpg",
+    "tip": "consists of two adjacent clocks with buttons to stop one clock while starting the other, so that the two clocks never run simultaneously. Chess clocks are used in chess and other two-player games where the players move in turn. The purpose is to keep track of the total time each player takes for their own moves, and ensure that neither player overly delays the game."
+},{
     "answer": "crosscourt",
     "images": [
         "assets/sports/crosscourt/1.jpg",
@@ -97,6 +229,39 @@
     "hastip": true,
     "tipimage": "assets/sports/crosscourt/definition/1.jpg",
     "tip": "to or toward the opposite side of a court (as in tennis or basketball)"
+},{
+    "answer": "curling",
+    "images": [
+        "assets/sports/curling/1.jpg",
+        "assets/sports/curling/2.jpg",
+        "assets/sports/curling/3.jpg",
+        "assets/sports/curling/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/curling/definition/1.jpg",
+    "tip": "a game in which two teams of four players slide special stones over ice toward a circle"
+},{
+    "answer": "cycling",
+    "images": [
+        "assets/sports/cycling/1.jpg",
+        "assets/sports/cycling/2.jpg",
+        "assets/sports/cycling/3.jpg",
+        "assets/sports/cycling/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/cycling/definition/1.jpg",
+    "tip": "also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport. [1]  Persons engaged in cycling are referred to as &quot;cyclists&quot;, [2]  &quot;bikers&quot;, [3]  or less commonly, as &quot;bicyclists&quot;. [4]  Apart from two-wheeled bicycles, &quot;cycling&quot; also includes the riding of unicycles, tricycles, quadracycles, recumbent and similar human-powered vehicles (HPVs)."
+},{
+    "answer": "diving",
+    "images": [
+        "assets/sports/diving/1.jpg",
+        "assets/sports/diving/2.jpg",
+        "assets/sports/diving/3.jpg",
+        "assets/sports/diving/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/diving/definition/1.jpg",
+    "tip": "is the sport of jumping or falling into water from a platform or springboard, usually while performing acrobatics. Diving is an internationally recognized sport that is part of the Olympic Games. In addition, unstructured and non-competitive diving is a recreational pastime."
 },{
     "answer": "fastbreak",
     "images": [
@@ -109,6 +274,17 @@
     "tipimage": "assets/sports/fast_break/definition/1.jpg",
     "tip": "a quick offensive drive toward a goal (as in basketball) in an attempt to score before the opponent&#39;s defense is set up"
 },{
+    "answer": "fencing",
+    "images": [
+        "assets/sports/fencing/1.jpg",
+        "assets/sports/fencing/2.jpg",
+        "assets/sports/fencing/3.jpg",
+        "assets/sports/fencing/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/fencing/definition/1.jpg",
+    "tip": "the art or practice of attack and defense with the foil, épée, or saber"
+},{
     "answer": "forehand",
     "images": [
         "assets/sports/forehand/1.jpg",
@@ -119,6 +295,105 @@
     "hastip": true,
     "tipimage": "assets/sports/forehand/definition/1.jpg",
     "tip": "a quick offensive drive toward a goal (as in basketball) in an attempt to score before the opponent&#39;s defense is set up"
+},{
+    "answer": "golf",
+    "images": [
+        "assets/sports/golf/1.jpg",
+        "assets/sports/golf/2.jpg",
+        "assets/sports/golf/3.jpg",
+        "assets/sports/golf/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/golf/definition/1.jpg",
+    "tip": "a game in which a player using special clubs attempts to sink a ball with as few strokes as possible into each of the 9 or 18 successive holes on a course"
+},{
+    "answer": "golfball",
+    "images": [
+        "assets/sports/golfball/1.jpg",
+        "assets/sports/golfball/2.jpg",
+        "assets/sports/golfball/3.jpg",
+        "assets/sports/golfball/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/golfball/definition/1.jpg",
+    "tip": "is a special ball designed to be used in the game of golf."
+},{
+    "answer": "iceskates",
+    "images": [
+        "assets/sports/iceskates/1.jpg",
+        "assets/sports/iceskates/2.jpg",
+        "assets/sports/iceskates/3.jpg",
+        "assets/sports/iceskates/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/iceskates/definition/1.jpg",
+    "tip": "are boots with blades attached to the bottom, used to propel the bearer across a sheet of ice while ice skating."
+},{
+    "answer": "judo",
+    "images": [
+        "assets/sports/judo/1.jpg",
+        "assets/sports/judo/2.jpg",
+        "assets/sports/judo/3.jpg",
+        "assets/sports/judo/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/judo/definition/1.jpg",
+    "tip": "a sport developed from jujitsu that emphasizes the use of quick movement and leverage to throw an opponent"
+},{
+    "answer": "karate",
+    "images": [
+        "assets/sports/karate/1.jpg",
+        "assets/sports/karate/2.jpg",
+        "assets/sports/karate/3.jpg",
+        "assets/sports/karate/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/karate/definition/1.jpg",
+    "tip": "a Japanese art of self-defense employing hand strikes and kicks to disable or subdue an opponent"
+},{
+    "answer": "kickboxing",
+    "images": [
+        "assets/sports/kickboxing/1.jpg",
+        "assets/sports/kickboxing/2.jpg",
+        "assets/sports/kickboxing/3.jpg",
+        "assets/sports/kickboxing/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/kickboxing/definition/1.jpg",
+    "tip": "boxing in which boxers are permitted to kick with bare feet as in karate"
+},{
+    "answer": "mouthguard",
+    "images": [
+        "assets/sports/mouthguard/1.jpg",
+        "assets/sports/mouthguard/2.jpg",
+        "assets/sports/mouthguard/3.jpg",
+        "assets/sports/mouthguard/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/mouthguard/definition/1.jpg",
+    "tip": "Many variants exists from standard plastic guards to custom-moldable &quot;boil and bite&quot; compounds that make speaking easier. In the days past, many hockey players had the front teeth missing and this was because of the failure to protect the teeth from knock downs and fights. Today, most hockey players wear mouth guards to protect their teeth and jaw. The mouth piece can also soften blows to the face and prevent jaw fractures."
+},{
+    "answer": "net",
+    "images": [
+        "assets/sports/net/1.jpg",
+        "assets/sports/net/2.jpg",
+        "assets/sports/net/3.jpg",
+        "assets/sports/net/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/net/definition/1.jpg",
+    "tip": "are used for tennis, volleyball, football, basketball, hockey and badminton."
+},{
+    "answer": "rugby",
+    "images": [
+        "assets/sports/rugby/1.jpg",
+        "assets/sports/rugby/2.jpg",
+        "assets/sports/rugby/3.jpg",
+        "assets/sports/rugby/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/rugby/definition/1.jpg",
+    "tip": "a football game in which play is continuous without time-outs or substitutions, interference and forward passing are not permitted, and kicking, dribbling, lateral passing, and tackling are featured."
 },{
     "answer": "sidespin",
     "images": [
@@ -131,6 +406,50 @@
     "tipimage": "assets/sports/sidespin/definition/1.jpg",
     "tip": "a rotary motion that causes a ball to revolve horizontally"
 },{
+    "answer": "ski",
+    "images": [
+        "assets/sports/ski/1.jpg",
+        "assets/sports/ski/2.jpg",
+        "assets/sports/ski/3.jpg",
+        "assets/sports/ski/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/ski/definition/1.jpg",
+    "tip": "one of a pair of narrow strips of wood, metal, or plastic curving upward in front that are used especially for gliding over snow"
+},{
+    "answer": "soccer",
+    "images": [
+        "assets/sports/soccer/1.png",
+        "assets/sports/soccer/2.jpg",
+        "assets/sports/soccer/3.jpg",
+        "assets/sports/soccer/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/soccer/definition/1.jpg",
+    "tip": "a game played on a field between two teams of 11 players each with the object to propel a round ball into the opponent&#39;s goal by kicking or by hitting it with any part of the body except the hands and arms —called also association football"
+},{
+    "answer": "sumo",
+    "images": [
+        "assets/sports/sumo/1.jpg",
+        "assets/sports/sumo/2.jpg",
+        "assets/sports/sumo/3.jpg",
+        "assets/sports/sumo/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/sumo/definition/1.jpg",
+    "tip": "a Japanese form of wrestling in which a contestant loses if he is forced out of the ring or if any part of his body except the soles of his feet touches the ground"
+},{
+    "answer": "surfing",
+    "images": [
+        "assets/sports/surfing/1.jpg",
+        "assets/sports/surfing/2.jpg",
+        "assets/sports/surfing/3.jpg",
+        "assets/sports/surfing/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/surfing/definition/1.jpg",
+    "tip": "the sport of riding the surf especially on a surfboard."
+},{
     "answer": "sweeping",
     "images": [
         "assets/sports/sweeping/1.png",
@@ -141,4 +460,37 @@
     "hastip": true,
     "tipimage": "assets/sports/sweeping/definition/1.jpg",
     "tip": "moving or extending in a wide curve or over a wide area Yellow card - yellow card that a referee holds in the air to indicate that a player has broken the rules of the game and is being officially warned"
+},{
+    "answer": "tabletennis",
+    "images": [
+        "assets/sports/tabletennis/1.jpg",
+        "assets/sports/tabletennis/2.jpg",
+        "assets/sports/tabletennis/3.jpg",
+        "assets/sports/tabletennis/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/tabletennis/definition/1.jpg",
+    "tip": "a game resembling tennis that is played on a tabletop with wooden paddles and a small hollow plastic ball"
+},{
+    "answer": "tennis",
+    "images": [
+        "assets/sports/tennis/1.jpg",
+        "assets/sports/tennis/2.jpg",
+        "assets/sports/tennis/3.jpg",
+        "assets/sports/tennis/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/tennis/definition/1.jpg",
+    "tip": "an indoor or outdoor game that is played with rackets and a light elastic ball by two players or pairs of players on a level court (as of clay or grass) divided by a low net."
+},{
+    "answer": "tennis",
+    "images": [
+        "assets/sports/tennis/1.jpg",
+        "assets/sports/tennis/2.jpg",
+        "assets/sports/tennis/3.jpg",
+        "assets/sports/tennis/4.jpg"
+    ],
+    "hastip": true,
+    "tipimage": "assets/sports/tennis/definition/1.jpg",
+    "tip": "a game played by volleying an inflated ball over a net; also :  the ball used in this game"
 }]
